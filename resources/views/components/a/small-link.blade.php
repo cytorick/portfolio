@@ -1,0 +1,1 @@
+<a {{ $attributes->merge([ 'class' => 'text-blue-700 hover:text-blue-800 text-cool-gray-700 text-xs leading-4 focus:outline-none focus:text-cool-gray-800 focus:underline transition duration-150 ease-in-out' . ($attributes ?? ''->get('disabled') ? ' opacity-75 cursor-pointer' : '') ]) }}>{{ $slot }}</a>
