@@ -4,15 +4,15 @@
     'title' => false,
     'summary' => false,
     'madeBy' => false,
+    'center'   => false,
+    'transparent' => 'false'
 ])
 
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
     <div class="flex-shrink-0">
-        <img class="h-48 w-full object-cover"
-             src="{{ asset('img/'. $image) }}"
-             alt="">
+        {{ $image }}
     </div>
-    <div class="flex-1 bg-gray-200 dark:bg-gray-900 p-6 flex flex-col justify-between">
+    <div class="flex-1 bg-gray-200 dark:bg-gray-900 {{ $transparent = 'bg-transparent'}} p-6 flex flex-col justify-between">
         <div class="flex-1">
             <p class="text-sm font-medium text-error">
                 {{ $subTitle }}

@@ -121,9 +121,9 @@
             </div>
             <div class="grid grid-cols-9 gap-5">
                 <div class="col-span-5">
-                    <x-input.group stacked for="image" label="{{ __('Image*') }}" :error="$errors->first('image')">
-                        <x-input.file-upload id="image" wire:model.lazy="image" name="image"
-                                             :error="$errors->first('image')"/>
+                    <x-input.group stacked for="image" label="{{ __('Image*') }}" :error="$errors->first('editing.image')">
+                        <x-input.file-upload id="image" wire:model.lazy="editing.image" name="editing.image"
+                                             :error="$errors->first('editing.image')"/>
                     </x-input.group>
                     @if ($image)
                         Photo Preview:

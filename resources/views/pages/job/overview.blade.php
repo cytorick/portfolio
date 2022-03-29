@@ -10,8 +10,10 @@
             </p>
         </div>
         <div class="col-span-3">
-            <img src="{{ asset('img/'. $job->image) }}" alt=""
-                 class="inline-block align-middle">
+            <a href="{{ $job->website }}" target="_blank">
+                <img src="{{ asset('img/'. $job->image) }}" alt=""
+                     class="inline-block align-middle">
+            </a>
         </div>
     </div>
 

@@ -18,12 +18,7 @@
 
 
     <div class="space-y-8">
-        <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak. This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.</p>
+        {!! $certificate->introduction !!}
         <section>
 
             <dl class="grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -34,9 +29,9 @@
                     </dt>
                     <dd class="mt-1 flex items-baseline">
                         <p class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                            {{ date('M Y', strtotime($certificate->start_date)) }} -
+                            {{ date('M Y', strtotime($certificate->start_date)) }}
                             @if($certificate->end_date == !null)
-                                {{ date('M Y', strtotime($certificate->end_date)) }}
+                                - {{ date('M Y', strtotime($certificate->end_date)) }}
                             @endif
                         </p>
                     </dd>
@@ -44,11 +39,15 @@
 
                 <div class="px-4 py-5 bg-gray-200 dark:bg-gray-900 shadow rounded-lg overflow-hidden sm:p-6">
                     <dt class="text-sm font-medium text-gray-500 dark:text-gray-200 truncate">
-                        {{ __('Contract') }}
+                        {{ __('Validity') }}
                     </dt>
                     <dd class="mt-1 flex items-baseline">
                         <p class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                            {{ $certificate->contract_type }}
+                            @if($certificate->end_date == null)
+                                Indefinitely
+                            @else
+                                Certain period of time
+                            @endif
                         </p>
                     </dd>
                 </div>
@@ -67,12 +66,7 @@
             </dl>
 
         </section>
-        <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.  This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.</p>
+        {!! $certificate->summary !!}
     </div>
 
 @endsection

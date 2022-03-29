@@ -3,11 +3,14 @@
         <div class="lg:gap-8 lg:items-center">
 
             <div>
-                <h3 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">The <span class="text-error">schools</span> I went to</h3>
+                <h3 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">The <span
+                        class="text-error">schools</span> I went to</h3>
 
                 <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach($schools as $school)
-                        <x-card.card title="{{ $school->name }}" sub-title="{{ $school->school }}" image="{{ $school->image }}" address="{{ $school->street }}, {{ $school->place }}" hover>
+                        <x-card.card title="{{ $school->name }}" sub-title="{{ $school->school }}"
+                                     image="{{ $school->image }}" address="{{ $school->street }}, {{ $school->place }}"
+                                     hover>
                             <x-slot name="link">
                                 {{ route('school.show', ['schoolId' => $school->id, 'page' => 'overview']) }}
                             </x-slot>
@@ -19,7 +22,7 @@
                                     {{ date('M Y', strtotime($school->end_date)) }}
                                 @endif
                             </x-slot>
-                            <x-card.status status="{{ $school->status }}" />
+                            <x-card.status status="{{ $school->status }}"/>
                         </x-card.card>
                     @endforeach
                 </dl>

@@ -16,15 +16,35 @@
                 </div>
             </div>
         </div>
-            <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-                @foreach($blogs as $blog)
-                    <x-blog.card title="{{ $blog->title }}" summary="{{ $blog->summary }}" sub-title="{{ $blog->category }}" image="{{ $blog->image }}">
-                        <x-blog.madeBy created-at="{{ $blog->created_at->format('d M Y') }}" read-time="{{ $blog->read_time }}">
-                            <x-blog.readTime read-time="{{ $blog->read_time }}" />
-                        </x-blog.madeBy>
-                    </x-blog.card>
-                @endforeach
-            </div>
+        <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            @forelse($blogs as $blog)
+                <x-blog.card title="{{ $blog->title }}" summary="{{ $blog->summary }}" sub-title="{{ $blog->category }}"
+                             image="{{ $blog->image }}">
+                    <x-slot name="image">
+                        <img class="h-48 w-full object-cover"
+                             src="{{ asset('img/'. $blog->image) }}"
+                             alt="{{ $blog->image }}">
+                    </x-slot>
+                    <x-blog.madeBy created-at="{{ $blog->created_at->format('d M Y') }}"
+                                   read-time="{{ $blog->read_time }}">
+                        <x-blog.readTime read-time="{{ $blog->read_time }}" />
+                    </x-blog.madeBy>
+                </x-blog.card>
+            @empty
+                <div class="flex flex-col rounded-lg overflow-hidden">
+                    <div class="flex-1 bg-transparent p-6 flex flex-col justify-between">
+                    </div>
+                </div>
+                <x-blog.card>
+                    <x-slot name="title">
+                        Oh oh... its <span class="text-error">empty</span> here
+                    </x-slot>
+                    <x-slot name="summary">
+                        At this moment there are no <span class="text-error">blogs</span> yet... in the future there will be some.
+                    </x-slot>
+                </x-blog.card>
+            @endforelse
+        </div>
 
     </div>
 </div>

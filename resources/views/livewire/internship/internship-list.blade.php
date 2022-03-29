@@ -19,6 +19,7 @@
 
         <x-table>
             <x-slot name="head">
+                <x-table.heading class="dark:bg-gray-900 pr-0 w-8"><x-input.checkbox wire:model="selectPage" /></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">#</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Image</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Company</x-table.heading>
@@ -30,8 +31,25 @@
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
             </x-slot>
             <x-slot name="body">
+                @if ($selectPage)
+                    <x-table.row class="bg-gray-200" wire:key="row-message">
+                        <x-table.cell colspan="10">
+                            @unless ($selectAll)
+                                <div>
+                                    <span>You have selected <strong>{{ $internships->count() }}</strong> internships, do you want to select all <strong>{{ $internships->total() }}</strong>?</span>
+                                    <x-button.link wire:click="selectAll" class="ml-1 text-blue-600">Select All</x-button.link>
+                                </div>
+                            @else
+                                <span>You are currently selecting all <strong>{{ $internships->total() }}</strong> internships.</span>
+                            @endif
+                        </x-table.cell>
+                    </x-table.row>
+                @endif
                 @forelse($internships as $internship)
                     <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $internship->id }}" >
+                        <x-table.cell class="pr-0">
+                            <x-input.checkbox wire:model="selected" value="{{ $internship->id }}" />
+                        </x-table.cell>
                         <x-table.cell>
                             {{ $internship->id }}
                         </x-table.cell>

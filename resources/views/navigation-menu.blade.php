@@ -9,7 +9,7 @@
                         <i class="fa-solid fa-r h-8 block text-error text-2xl"></i>
                         <i class="fa-solid fa-v h-8 block text-error text-2xl"></i>
                     </a>
-                    <div class="
+                    <div class=""></div>
                 </div>
 
 
@@ -40,37 +40,37 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin.skill') }}" :active="request()->routeIs('admin.skill')">
+                    <x-jet-nav-link href="{{ route('admin.skill') }}" :active="request()->routeIs('admin.skill*')">
                         {{ __('Skills') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')">
+                    <x-jet-nav-link href="{{ route('admin.certificate') }}" :active="request()->routeIs('admin.certificate*')">
                         {{ __('Certificates') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')">
+                    <x-jet-nav-link href="{{ route('admin.project') }}" :active="request()->routeIs('admin.project*')">
                         {{ __('Projects') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')">
+                    <x-jet-nav-link href="{{ route('admin.blogs') }}" :active="request()->routeIs('admin.blogs')">
                         {{ __('Blogs') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')">
-                        {{ __('Pages') }}
-                    </x-jet-nav-link>
-                </div>
+{{--                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">--}}
+{{--                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('')">--}}
+{{--                        {{ __('Pages') }}--}}
+{{--                    </x-jet-nav-link>--}}
+{{--                </div>--}}
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
 
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
+                <div class="ml-3 relative justify-end">
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

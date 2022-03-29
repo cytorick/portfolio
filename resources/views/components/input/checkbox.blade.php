@@ -4,9 +4,9 @@
 ])
 
 @php
-    
+
     // Basses classes, not depending on state.
-    $baseClasses = 'form-checkbox border-gray-300 block transition duration-150 ease-in-out sm:leading-5 mr-2';
+    $baseClasses = 'form-checkbox border-gray-300 block transition duration-150 ease-in-out sm:leading-5 mr-2 dark:bg-gray-700';
 
     // Size classes.
     $sizeClasses = $large

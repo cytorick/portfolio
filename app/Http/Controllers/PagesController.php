@@ -37,7 +37,10 @@ class PagesController extends Controller
         return view('pages.projects.index');
     }
 
-
+    public function renderContact ()
+    {
+        return view('pages.contact.index');
+    }
 
     public function renderSchoolShow ($schoolId, string $page = 'overview')
     {

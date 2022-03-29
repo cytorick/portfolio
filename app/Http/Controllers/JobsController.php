@@ -24,6 +24,12 @@ class JobsController extends Controller
             ->with('job', $this->getJob($jobId));
     }
 
+    public function renderDetails ($jobId)
+    {
+        return view('pages.job.details')
+            ->with('job', $this->getJob($jobId));
+    }
+
     private function getJob ($jobId)
     {
         try {

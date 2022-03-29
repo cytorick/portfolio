@@ -8,14 +8,33 @@
             <div class="text-center">
                 <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">My
                     <span class="text-error">projects</span></h2>
-                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-100 sm:mt-4">Over the years I have done a few <span class="text-error">projects</span>. Some small, some a little bigger.</p>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-100 sm:mt-4">Over the years I have
+                    done a few <span class="text-error">projects</span>. Some small, some a little bigger.</p>
             </div>
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-                @foreach($projects as $project)
-                   <x-blog.card sub-title="{{ $project->company }}" title="{{ $project->title }}" image="{{ $project->image_1 }}">
-                        <x-blog.madeBy created-at="{{ $project->made_at }}" />
-                   </x-blog.card>
-                @endforeach
+                @forelse($projects as $project)
+                    <x-blog.card sub-title="{{ $project->company }}" title="{{ $project->title }}">
+                        <x-slot name="image">
+                            <img class="h-48 w-full object-cover"
+                                 src="{{ asset('img/'. $project->image_1) }}"
+                                 alt="{{ $project->image_1 }}">
+                        </x-slot>
+                        <x-blog.madeBy created-at="{{ $project->made_at }}"/>
+                    </x-blog.card>
+                @empty
+                    <div class="flex flex-col rounded-lg overflow-hidden">
+                        <div class="flex-1 bg-transparent p-6 flex flex-col justify-between">
+                        </div>
+                    </div>
+                    <x-blog.card>
+                        <x-slot name="title">
+                            Oh oh... its <span class="text-error">empty</span> here
+                        </x-slot>
+                        <x-slot name="summary">
+                            At this moment there are no <span class="text-error">projects</span> yet... in the future there will be some.
+                        </x-slot>
+                    </x-blog.card>
+                @endforelse
             </div>
 
         </div>

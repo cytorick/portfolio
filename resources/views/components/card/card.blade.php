@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="col-span-1 text-center my-auto">
-                    <span class="text-yellow-400"><i class="fa-solid fa-calendar-days"></i></span>
+                    <span class="text-yellow-400" wire:loading.class.remove="text-yellow-400"><i class="fa-solid fa-calendar-days"></i></span>
                 </div>
                 <div class="col-span-9 ml-1 my-auto">
                     <p class="text-sm">

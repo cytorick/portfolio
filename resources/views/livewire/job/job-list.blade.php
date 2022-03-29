@@ -19,6 +19,7 @@
 
         <x-table>
             <x-slot name="head">
+                <x-table.heading class="dark:bg-gray-900 pr-0 w-8"><x-input.checkbox wire:model="selectPage" /></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">#</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Image</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Company</x-table.heading>
@@ -30,8 +31,25 @@
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
             </x-slot>
             <x-slot name="body">
+                @if ($selectPage)
+                    <x-table.row class="bg-gray-200" wire:key="row-message">
+                        <x-table.cell colspan="10">
+                            @unless ($selectAll)
+                                <div>
+                                    <span>You have selected <strong>{{ $jobs->count() }}</strong> jobs, do you want to select all <strong>{{ $jobs->total() }}</strong>?</span>
+                                    <x-button.link wire:click="selectAll" class="ml-1 text-blue-600">Select All</x-button.link>
+                                </div>
+                            @else
+                                <span>You are currently selecting all <strong>{{ $jobs->total() }}</strong> jobs.</span>
+                            @endif
+                        </x-table.cell>
+                    </x-table.row>
+                @endif
                 @forelse($jobs as $job)
                     <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $job->id }}" >
+                        <x-table.cell class="pr-0">
+                            <x-input.checkbox wire:model="selected" value="{{ $job->id }}" />
+                        </x-table.cell>
                         <x-table.cell>
                             {{ $job->id }}
                         </x-table.cell>
@@ -62,6 +80,7 @@
                             {{ $job->website }}
                         </x-table.cell>
                         <x-table.cell>
+                            <x-a.link class="dark:text-gray-100 dark:hover:text-red-400" href="{{ route('admin.job.details', ['jobId' => $job->id]) }}"><x-icon.eye /></x-a.link>
                             <x-a.link class="dark:text-gray-100 dark:hover:text-red-400" href="{{ route('admin.edit.job', ['jobId' => $job->id]) }}"><i class="fa-solid fa-pen-to-square"></i></x-a.link>
                         </x-table.cell>
                     </x-table.row>

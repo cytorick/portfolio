@@ -31,7 +31,7 @@
 
     @include('layouts.includes.nav')
 
-    <div class="min-h-100">
+    <div class="min-h-screen">
         {{ $slot }}
     </div>
 

@@ -10,8 +10,10 @@
             </p>
         </div>
         <div class="col-span-3">
-            <img src="{{ asset('img/'. $job->image) }}" alt=""
-                 class="inline-block align-middle">
+            <a href="{{ $job->website }}" target="_blank">
+                <img src="{{ asset('img/'. $job->image) }}" alt=""
+                     class="inline-block align-middle">
+            </a>
         </div>
     </div>
 
@@ -19,24 +21,7 @@
 
     <div class="space-y-8">
 
-        <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak. This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.</p>
-        <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.  This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.</p>
-        <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.  This <span class="text-error">website</span> is my personal portfolio, here you can find my
-            experience, the schools I went to, my certificates, my skills, my past projects and the
-            languages I speak.</p>
+    {!! $job->learned !!}
 
     </div>
 
