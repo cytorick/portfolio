@@ -7,7 +7,7 @@
 @php
     $classes = ($active ?? false)
                 ? 'bg-gray-200 text-blue-900 flex items-center px-3 py-2 text-base font-medium rounded-md transition mt-1'
-                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-base font-medium rounded-md transition mt-1';
+                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-base font-medium rounded-md transition mt-1'
 @endphp
 
 <a {{ $attributes->merge([ 'class' => $classes ]) }} aria-current="page">

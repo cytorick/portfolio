@@ -149,7 +149,7 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
     </nav>
 <div class="text-center lg:hidden ">
     @foreach(\App\Models\Link::all() as $link)
-        <a href="@if($link->name == 'Email') mailto: @endif @if($link->name == 'Tel') tel: @endif {{ $link->link }}"
+        <a href="@if($link->name == 'Email') mailto: @endif @if($link->name == 'Call me') tel: @endif {{ $link->link }}"
            class="mx-2" target="_blank">{!! $link->icon !!}</a>
     @endforeach
 </div>

@@ -3,6 +3,7 @@
 namespace App\Search;
 
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Builder;
 
 class Searcher
 {
@@ -15,9 +16,9 @@ class Searcher
 
 	/**
 	 * Create a new search engine instance.
-	 * 
+	 *
 	 * @param String $type Auction or platform products.
-	 * 
+	 *
 	 * @return void
 	 */
 	public function __construct ($type)
@@ -27,10 +28,10 @@ class Searcher
 
 	/**
 	 * Get platform item collection with the given filters applied.
-	 * 
+	 *
 	 * @param Array $filters
-	 * 
-	 * @return \Illuminate\Database\Eloquent\Builder
+	 *
+	 * @return Builder
 	 */
 	public function apply ($filters)
 	{
@@ -54,7 +55,7 @@ class Searcher
 			{
 				// Format filter method name.
 				$filterMethod = 'apply' . ucfirst($filterName) . 'Filter';
-		
+
 				// Apply the current filter.
 				$builder = $this->$filterMethod($builder, $filters[$filterName]);
 			}
@@ -66,11 +67,11 @@ class Searcher
 
 	/**
 	 * Apply platform filter.
-	 * 
+	 *
 	 * @param Builder $builder
 	 * @param String $value
-	 * 
-	 * @return \Illuminate\Database\Eloquent\Builder
+	 *
+	 * @return Builder
 	 */
 	protected function applyPlatformFilter ($builder, $value)
 	{
@@ -89,11 +90,11 @@ class Searcher
 
 	/**
 	 * Apply includables filter.
-	 * 
+	 *
 	 * @param Builder $builder
 	 * @param Array $values
-	 * 
-	 * @return \Illuminate\Database\Eloquent\Builder
+	 *
+	 * @return Builder
 	 */
 	protected function applySearchFilter ($builder, $values)
 	{
@@ -126,11 +127,11 @@ class Searcher
 
 	/**
 	 * Apply exclude filter.
-	 * 
+	 *
 	 * @param Builder $builder
 	 * @param Array $values
-	 * 
-	 * @return \Illuminate\Database\Eloquent\Builder
+	 *
+	 * @return Builder
 	 */
 	protected function applyExcludeFilter ($builder, $values)
 	{
@@ -163,8 +164,8 @@ class Searcher
 
 	/**
 	 * Create a new query builder instance.
-	 * 
-	 * @return \Illuminate\Database\Eloquent\Builder
+	 *
+	 * @return Builder
 	 */
 	protected function getQueryBuilder ()
 	{
@@ -177,9 +178,9 @@ class Searcher
 
 	/**
 	 * Split filter values to OR ('|') or AND ('&') groups.
-	 * 
+	 *
 	 * @param Array $values
-	 * 
+	 *
 	 * @return Array
 	 */
     private static function splitToGroups ($values, $operator)

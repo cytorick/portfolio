@@ -5,7 +5,8 @@
     'summary' => false,
     'madeBy' => false,
     'center'   => false,
-    'transparent' => 'false'
+    'transparent' => 'false',
+    'link' => 'false',
 ])
 
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -17,7 +18,7 @@
             <p class="text-sm font-medium text-error">
                 {{ $subTitle }}
             </p>
-            <a href="#" class="block mt-2">
+            <a href="{{ $link }}" class="block mt-2">
                 <p class="text-xl font-semibold text-gray-900 dark:text-gray-100">{{ $title }}</p>
                 <p class="mt-3 text-base text-gray-500 dark:text-gray-300">{{ $summary }}</p>
             </a>

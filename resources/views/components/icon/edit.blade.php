@@ -3,8 +3,8 @@
 ])
 
 
-@php 
-	
+@php
+
 	// Base classes.
 	$baseClasses = 'self-center flex-shrink-0 inline ml-0.5';
 
@@ -12,7 +12,7 @@
 	$sizeClasses = $small ? ' h-4 w-4' : ' h-5 w-5';
 
 	// Merged classes.
-	$mergedClasses = $baseClasses . $sizeClasses;
+	$mergedClasses = $baseClasses . $sizeClasses
 
 @endphp
 

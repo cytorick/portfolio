@@ -1,5 +1,7 @@
 <x-guest-layout>
 
+    @section('title', $certificate->name)
+
     <div class="bg-gray-100 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
 

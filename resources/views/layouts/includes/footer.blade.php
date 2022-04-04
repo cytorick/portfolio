@@ -18,7 +18,7 @@
             </div>
 
             <div class="px-5 py-2">
-                <a href="#" class="text-base text-black dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-600"> Contact </a>
+                <a href="{{ route('contact') }}" class="text-base text-black dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-600"> Contact </a>
             </div>
         </nav>
         <div class="mt-8 flex justify-center space-x-6">

@@ -1,5 +1,7 @@
 <x-app-layout class="w-full">
 
+    @section('title', 'Certificates')
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight dark:text-gray-100">
             {{ __('Certificates') }}

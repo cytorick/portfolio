@@ -13,7 +13,15 @@
             </div>
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                 @forelse($blogs as $blog)
-                    <x-blog.card title="{{ $blog->title }}" summary="{{ $blog->summary }}" sub-title="{{ $blog->category }}" image="{{ $blog->image }}">
+                    <x-blog.card title="{{ $blog->title }}" summary="{{ $blog->summary }}" sub-title="{{ $blog->category }}">
+                        <x-slot name="image">
+                            <img class="h-48 w-full object-cover"
+                                 src="{{ asset('img/'. $blog->image) }}"
+                                 alt="{{ $blog->image }}">
+                        </x-slot>
+                        <x-slot name="link">
+                            {{ route('blog.show', ['blogId' => $blog->id]) }}
+                        </x-slot>
                         <x-blog.madeBy created-at="{{ $blog->created_at->format('d M Y') }}" read-time="{{ $blog->read_time }}">
                             <x-blog.readTime read-time="{{ $blog->read_time }}" />
                         </x-blog.madeBy>

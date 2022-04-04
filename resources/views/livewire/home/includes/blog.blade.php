@@ -25,6 +25,9 @@
                              src="{{ asset('img/'. $blog->image) }}"
                              alt="{{ $blog->image }}">
                     </x-slot>
+                    <x-slot name="link">
+                        {{ route('blog.show', ['blogId' => $blog->id]) }}
+                    </x-slot>
                     <x-blog.madeBy created-at="{{ $blog->created_at->format('d M Y') }}"
                                    read-time="{{ $blog->read_time }}">
                         <x-blog.readTime read-time="{{ $blog->read_time }}" />

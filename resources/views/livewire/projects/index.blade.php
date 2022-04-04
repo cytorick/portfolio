@@ -13,7 +13,7 @@
             </div>
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                 @forelse($projects as $project)
-                    <x-blog.card sub-title="{{ $project->company }}" title="{{ $project->title }}">
+                    <x-blog.card sub-title="{{ $project->company }}" summary="{{ $project->description }}" title="{{ $project->title }}">
                         <x-slot name="image">
                             <img class="h-48 w-full object-cover"
                                  src="{{ asset('img/'. $project->image_1) }}"

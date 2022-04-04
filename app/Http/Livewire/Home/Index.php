@@ -14,10 +14,6 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $jobs, $internships, $languages, $skills, $schools, $certificates, $blogs, $age;
-
-    public $showSchoolModal = false;
-
     public function mount()
     {
         $this->age = Carbon::parse('1999-12-29')->age;
@@ -27,16 +23,7 @@ class Index extends Component
         $this->skills = Skill::where('archived', 0)->orderBy('id', 'asc')->get();
         $this->schools = School::where('archived', 0)->orderBy('end_date', 'desc')->get();
         $this->certificates = Certificate::where('archived', 0)->orderBy('start_date', 'desc')->get();
-        $this->blogs = Blog::where('archived', 0)->take(3)->orderBy('id', 'desc')->get();
-    }
-
-    public function SchoolModal($schoolId)
-    {
-        $school = School::where('id', $schoolId)->get();
-
-        $this->showSchoolModal = false;
-
-        return $school;
+        $this->blogs = Blog::where('archived', 0)->take(3)->orderBy('created_at', 'desc')->get();
     }
 
     public function render()

@@ -20,6 +20,7 @@ Route::get('search', [ SearchController::class, 'search' ])->name('search');
 Route::controller(PagesController::class)->group( function (){
     Route::get('/', 'renderHome')->name('home');
     Route::get('contact', 'renderContact')->name('contact');
+    Route::get('contact/send-mail', 'sendmail')->name('contact.send-mail');
     Route::prefix('experience')->group( function () {
         Route::get('/', 'renderExperienceIndex')->name('experience');
         Route::prefix('school')->group( function () {
@@ -40,6 +41,7 @@ Route::controller(PagesController::class)->group( function (){
     });
     Route::prefix('blog')->group( function () {
         Route::get('/', 'renderBlogIndex')->name('blog');
+        Route::get('/{blogId}/show', 'renderBlogShow')->name('blog.show');
     });
     Route::prefix('projects')->group( function () {
         Route::get('/', 'renderProjectsIndex')->name('projects');

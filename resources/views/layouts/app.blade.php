@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('title') - {{ config('app.name') }}</title>
 
 
         <!-- Fonts -->
@@ -25,6 +25,16 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-THCCJHCYDC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-THCCJHCYDC');
+        </script>
     </head>
     <body class="bg-gray-100 dark:bg-gray-700 selection:bg-red-300 min-h-screen">
         <x-jet-banner />
