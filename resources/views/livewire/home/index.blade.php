@@ -12,6 +12,6 @@
 
     @include('livewire.home.includes.certificates')
 
-    @include('livewire.home.includes.blog')
+    @include('livewire.home.includes.projects')
 
 </section>

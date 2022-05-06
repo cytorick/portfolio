@@ -39,10 +39,6 @@ Route::controller(PagesController::class)->group( function (){
     Route::prefix('about-me')->group( function () {
         Route::get('/', 'renderAboutIndex')->name('about');
     });
-    Route::prefix('blog')->group( function () {
-        Route::get('/', 'renderBlogIndex')->name('blog');
-        Route::get('/{blogId}/show', 'renderBlogShow')->name('blog.show');
-    });
     Route::prefix('projects')->group( function () {
         Route::get('/', 'renderProjectsIndex')->name('projects');
     });
@@ -85,11 +81,6 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group( functio
     });
     Route::controller(ProjectsController::class)->prefix('projects')->group( function () {
         Route::get('/', 'renderIndex')->name('admin.project');
-//        Route::get('/create','renderCreateForm')->name('admin.create.school');
-//        Route::get('/{schoolId}/edit','renderEditForm')->name('admin.edit.school');
-    });
-    Route::controller(BlogsController::class)->prefix('blogs')->group( function () {
-        Route::get('/', 'renderIndex')->name('admin.blogs');
 //        Route::get('/create','renderCreateForm')->name('admin.create.school');
 //        Route::get('/{schoolId}/edit','renderEditForm')->name('admin.edit.school');
     });

@@ -1,3 +1,3 @@
 <div class="flex rounded-md shadow-sm">
-    <textarea {{ $attributes }} class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md rounded-r-md sm:text-sm dark:border-gray-700 dark:bg-gray-700"></textarea>
+    <textarea {{ $attributes }} class="flex-1 block w-full rounded-l-md rounded-r-md sm:text-sm dark:border-gray-700 dark:bg-gray-700 rounded-md border-gray-300 focus:ring-gray-900 focus:border-gray-900 p-2"></textarea>
 </div>

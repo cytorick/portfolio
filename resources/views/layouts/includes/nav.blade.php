@@ -95,19 +95,34 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
                 Projects
             </a>
 
-            <a href="{{ route('blog') }}"
-               class="{{ (request()->is('blog*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
-               aria-current="page" x-state:on="Current" x-state:off="Default"
-               x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
-                Blogs
-            </a>
-
             <a href="{{ route('contact') }}"
                class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 Contact
             </a>
+
+           @auth()
+                <a href="{{ route('dashboard') }}"
+                   class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-white bg-red-400 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+                   aria-current="page" x-state:on="Current" x-state:off="Default"
+                   x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    Admin dashboard
+                </a>
+
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+                    <a href="{{ route('logout') }}" @click.prevent="$root.submit();"
+                       class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-red-600 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+                       aria-current="page" x-state:on="Current" x-state:off="Default"
+                       x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
+                </form>
+
+
+           @endauth
+
 
         </nav>
     </div>
@@ -133,11 +148,6 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
                class="{{ (request()->is('projects*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Projects</a>
-
-            <a href="{{ route('blog') }}"
-               class="{{ (request()->is('blog*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
-               aria-current="page" x-state:on="Current" x-state:off="Default"
-               x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Blogs</a>
 
             <a href="{{ route('contact') }}"
                class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"

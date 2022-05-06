@@ -14,10 +14,6 @@
             </div>
 
             <div class="px-5 py-2">
-                <a href="{{ route('blog') }}" class="text-base text-black dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-600"> Blog </a>
-            </div>
-
-            <div class="px-5 py-2">
                 <a href="{{ route('contact') }}" class="text-base text-black dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-600"> Contact </a>
             </div>
         </nav>
@@ -32,7 +28,7 @@
             @endforeach
         </div>
         <div class="mt-8 flex justify-center space-x-6">
-            <a href="https://www.digitalocean.com/?refcode=33fae74bbc4c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
+            <a href="https://www.digitalocean.com/?refcode=33fae74bbc4c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" ><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
         </div>
         <p class="mt-8 text-center text-base text-gray-400">&copy; {{ now()->format('Y') }} Rick Visser | All rights reserved.</p>
     </div>
