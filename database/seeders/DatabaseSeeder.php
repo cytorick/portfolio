@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
         DB::table('schools')->insert([
             'id' => '1',
             'name' => 'Software Developer',
-            'school' => 'Alfa College',
+            'schools' => 'Alfa College',
             'image' => 'alfacollege.png',
             'street' => 'Boumaboulevard 573',
             'place' => 'Groningen',
@@ -148,7 +148,7 @@ class DatabaseSeeder extends Seeder
         DB::table('schools')->insert([
             'id' => '2',
             'name' => 'Civil Engineering',
-            'school' => 'Alfa College',
+            'schools' => 'Alfa College',
             'image' => 'alfacollege.png',
             'street' => 'Admiraal de Ruyterlaan 2',
             'place' => 'Groningen',
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
         DB::table('schools')->insert([
             'id' => '3',
             'name' => 'VMBO-TL (mavo)',
-            'school' => 'CSG Selion',
+            'schools' => 'CSG Selion',
             'image' => 'selion.png',
             'street' => 'Diamantlaan 14',
             'place' => 'Groningen',
@@ -174,7 +174,7 @@ class DatabaseSeeder extends Seeder
         DB::table('certificates')->insert([
             'id' => '1',
             'name' => 'Forklift',
-            'school' => 'SBK Opleidingen',
+            'schools' => 'SBK Opleidingen',
             'image' => 'sbk.png',
             'street' => 'Bornholmstraat 15',
             'place' => 'Groningen',
@@ -185,7 +185,7 @@ class DatabaseSeeder extends Seeder
         DB::table('certificates')->insert([
             'id' => '2',
             'name' => 'VCA Vol',
-            'school' => 'STE Examenbureau',
+            'schools' => 'STE Examenbureau',
             'image' => 'ste.png',
             'street' => 'Admiraal de Ruyterlaan 2',
             'place' => 'Groningen',
@@ -196,7 +196,7 @@ class DatabaseSeeder extends Seeder
         DB::table('certificates')->insert([
             'id' => '3',
             'name' => 'Programming with SQL',
-            'school' => 'Oracle',
+            'schools' => 'Oracle',
             'image' => 'oracle.png',
             'street' => 'Boumaboulevard 573',
             'place' => 'Groningen',
@@ -207,7 +207,7 @@ class DatabaseSeeder extends Seeder
         DB::table('certificates')->insert([
             'id' => '4',
             'name' => 'Database Designer',
-            'school' => 'Oracle',
+            'schools' => 'Oracle',
             'image' => 'oracle.png',
             'street' => 'Boumaboulevard 573',
             'place' => 'Groningen',
@@ -218,7 +218,7 @@ class DatabaseSeeder extends Seeder
         DB::table('certificates')->insert([
             'id' => '5',
             'name' => 'Drivers License B',
-            'school' => 'CBR',
+            'schools' => 'CBR',
             'image' => 'cbr.png',
             'street' => 'Protonstraat 3',
             'place' => 'Groningen',

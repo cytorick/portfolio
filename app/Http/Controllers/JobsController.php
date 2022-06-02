@@ -10,27 +10,21 @@ class JobsController extends Controller
 {
     public function renderIndex ()
     {
-        return view('pages.job.list');
+        return view('pages.admin.job.list');
     }
 
     public function renderCreateForm ()
     {
-        return view('pages.job.form');
+        return view('pages.admin.job.form');
     }
 
     public function renderEditForm ($jobId)
     {
-        return view('pages.job.form')
-            ->with('job', $this->getJob($jobId));
+        return view('pages.admin.job.form')
+            ->with('jobs', $this->getRows($jobId));
     }
 
-    public function renderDetails ($jobId)
-    {
-        return view('pages.job.details')
-            ->with('job', $this->getJob($jobId));
-    }
-
-    private function getJob ($jobId)
+    private function getRows ($jobId)
     {
         try {
             return Job::findOrFail($jobId);

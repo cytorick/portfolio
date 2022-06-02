@@ -1,7 +1,7 @@
 @props([
 	'type' => 'button',
 	'disabled' => false,
-	'enabledClasses' => ' text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500',
+	'enabledClasses' => ' text-white bg-red-400 hover:bg-red-500 focus:ring-red-900',
 	'disabledClasses' => ' text-gray-400 bg-gray-200 cursor-default',
 ])
 

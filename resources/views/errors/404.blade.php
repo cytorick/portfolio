@@ -65,14 +65,13 @@
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-base font-medium text-gray-900 dark:text-gray-100">
                 <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-400">
-                  <a href="{{ route('blog') }}" class="focus:outline-none">
+                  <a href="{{ route('projects') }}" class="focus:outline-none">
                     <span class="absolute inset-0" aria-hidden="true"></span>
-                    Blog
+                    Projects
                   </a>
                 </span>
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-200">Read my latest news and
-                                    articles</p>
+                                <p class="text-base text-gray-500 dark:text-gray-200">See my latest projects I did.</p>
                             </div>
                             <div class="flex-shrink-0 self-center">
                                 <!-- Heroicon name: solid/chevron-right -->

@@ -21,6 +21,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../path/to/flowbite/dist/flowbite.js"></script>
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -46,6 +47,8 @@
     </div>
 
     @include('layouts.includes.footer')
+    @include('assets.alpine-tooltip')
+    @stack('scripts-body-after')
 
 </div>
 </body>

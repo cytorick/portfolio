@@ -10,21 +10,21 @@ class SkillsController extends Controller
 {
     public function renderIndex ()
     {
-        return view('pages.skill.list');
+        return view('pages.admin.skill.list');
     }
 
     public function renderCreateForm ()
     {
-        return view('pages.skill.form');
+        return view('pages.admin.skill.form');
     }
 
     public function renderEditForm ($skillId)
     {
-        return view('pages.skill.form')
-            ->with('skill', $this->getSkill($skillId));
+        return view('pages.admin.skill.form')
+            ->with('skills', $this->getRows($skillId));
     }
 
-    private function getSkill ($skillId)
+    private function getRows ($skillId)
     {
         try {
             return Skill::findOrFail($skillId);

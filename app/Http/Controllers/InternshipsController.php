@@ -10,21 +10,21 @@ class InternshipsController extends Controller
 {
     public function renderIndex ()
     {
-        return view('pages.internship.list');
+        return view('pages.admin.internship.list');
     }
 
     public function renderCreateForm ()
     {
-        return view('pages.internship.form');
+        return view('pages.admin.internship.form');
     }
 
     public function renderEditForm ($internshipId)
     {
-        return view('pages.internship.form')
-            ->with('internship', $this->getInternships($internshipId));
+        return view('pages.admin.internship.form')
+            ->with('internships', $this->getRows($internshipId));
     }
 
-    private function getInternships ($internshipId)
+    private function getRows ($internshipId)
     {
         try {
             return Internship::findOrFail($internshipId);

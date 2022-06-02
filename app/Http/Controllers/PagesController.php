@@ -17,88 +17,51 @@ class PagesController extends Controller
 {
     public function renderHome ()
     {
-        return view('pages.home.index');
+        return view('pages.public.home.index');
     }
 
     public function renderExperienceIndex ()
     {
-        return view('pages.experience.index');
+        return view('pages.public.experience.index');
     }
 
     public function renderAboutIndex ()
     {
-        return view('pages.about.index');
-    }
-
-    public function renderBlogIndex ()
-    {
-        return view('pages.blog.index');
-    }
-
-
-    public function renderBlogShow ($blogId)
-    {
-        return view('pages.blog.show')->with('blog', $this->getBlog($blogId));
-    }
-
-    private function getBlog ($blogId)
-    {
-        try {
-            return Blog::findOrFail($blogId);
-        }
-        catch (ModelNotFoundException $exception) {
-            abort(404);
-        }
+        return view('pages.public.about.index');
     }
 
     public function renderProjectsIndex ()
     {
-        return view('pages.projects.index');
+        return view('pages.public.projects.index');
     }
 
     public function renderContact ()
     {
-        return view('pages.contact.index');
+        return view('pages.public.contact.index');
     }
 
     public function renderSchoolShow ($schoolId, string $page = 'overview')
     {
-        return view('pages.school.'  . $page)
-            ->with('school', $this->getSchool($schoolId));
+        return view('pages.public.experience.schools.'  . $page)
+            ->with('schools', $this->getSchool($schoolId));
     }
 
     public function renderJobShow ($jobId, string $page = 'overview')
     {
-        return view('pages.job.'  . $page)
-            ->with('job', $this->getJob($jobId));
+        return view('pages.public.experience.jobs.'  . $page)
+            ->with('jobs', $this->getJob($jobId));
     }
 
     public function renderInternshipShow ($internshipId, string $page = 'overview')
     {
-        return view('pages.internship.'  . $page)
-            ->with('internship', $this->getInternship($internshipId));
-    }
-
-    public function renderCertificateShow ($certificateId, string $page = 'overview')
-    {
-        return view('pages.certificate.'  . $page)
-            ->with('certificate', $this->getCertificate($certificateId));
+        return view('pages.public.experience.internships.'  . $page)
+            ->with('internships', $this->getInternship($internshipId));
     }
 
     private function getInternship ($internshipId)
     {
         try {
             return Internship::findOrFail($internshipId);
-        }
-        catch (ModelNotFoundException $exception) {
-            abort(404);
-        }
-    }
-
-    private function getCertificate ($certificateId)
-    {
-        try {
-            return Certificate::findOrFail($certificateId);
         }
         catch (ModelNotFoundException $exception) {
             abort(404);

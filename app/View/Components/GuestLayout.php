@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Link;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -14,6 +15,9 @@ class GuestLayout extends Component
      */
     public function render()
     {
-        return view('layouts.guest');
+        $this->links = Link::where('archived', 0)->get();
+
+        return view('layouts.guest')
+            ->with('links', $this->links);
     }
 }

@@ -19,7 +19,7 @@
         </nav>
         <div class="mt-8 flex justify-center space-x-6">
             @foreach(\App\Models\Link::all() as $link)
-                <a href="@if($link->name == 'Email') mailto: @endif @if($link->name == 'Tel') tel: @endif {{ $link->link }}" class="text-gray-400 hover:text-gray-500" target="_blank">
+                <a href="{{ $link->link }}" class="text-gray-400 hover:text-gray-500" target="_blank">
                     <span class="sr-only">{{ $link->name }}</span>
                     <span class="text-lg">
                            {!! $link->icon !!}

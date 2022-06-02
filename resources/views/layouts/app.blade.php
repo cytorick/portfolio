@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title') - {{ config('app.name') }}</title>
+        <title>Admin - {{ config('app.name') }}</title>
 
 
         <!-- Fonts -->
@@ -22,9 +22,15 @@
 
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="../path/to/flowbite/dist/flowbite.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js"
+            defer
+        ></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-THCCJHCYDC"></script>
@@ -57,8 +63,12 @@
             </main>
         </div>
 
+        <x-notification />
+
         @stack('modals')
 
         @livewireScripts
+        @include('assets.alpine-tooltip')
+        @stack('scripts-body-after')
     </body>
 </html>

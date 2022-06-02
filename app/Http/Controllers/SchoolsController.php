@@ -11,21 +11,21 @@ class SchoolsController extends Controller
 {
     public function renderIndex ()
     {
-        return view('pages.school.list');
+        return view('pages.admin.school.list');
     }
 
     public function renderCreateForm ()
     {
-        return view('pages.school.form');
+        return view('pages.admin.school.form');
     }
 
     public function renderEditForm ($schoolId)
     {
-        return view('pages.school.form')
-            ->with('school', $this->getSchool($schoolId));
+        return view('pages.admin.school.form')
+            ->with('schools', $this->getRows($schoolId));
     }
 
-    private function getSchool ($schoolId)
+    private function getRows ($schoolId)
     {
         try {
             return School::findOrFail($schoolId);

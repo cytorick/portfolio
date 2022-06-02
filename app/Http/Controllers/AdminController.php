@@ -8,6 +8,6 @@ class AdminController extends Controller
 {
     public function renderDashboard ()
     {
-        return view('dashboard');
+        return view('pages.admin.dashboard.dashboard');
     }
 }

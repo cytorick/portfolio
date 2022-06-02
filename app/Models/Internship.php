@@ -4,10 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Internship extends Model
+class Internship extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
+
+    protected $casts = [
+        'start_date' => 'date:Y-m-d',
+        'end_date' => 'date:Y-m-d'
+    ];
+
+    public function registerMediaCollections(): void
+    {
+        $this
+            ->addMediaCollection('internships-logo')
+            ->singleFile();
+    }
 
     public function scopeWithFilters ($query, $filters)
     {
@@ -18,17 +32,4 @@ class Internship extends Model
                 ->orWhere('place', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('street', 'like', '%' . $filters['search'] . '%'));
     }
-
-    public function hasDates ()
-    {
-        return $this->start_date && $this->end_date;
-    }
-
-    public function getStartDateForHumansAttribute () { return $this->start_date ? $this->start_date->format('d-m-Y H:i') : null; }
-    public function getEndDateFromForHumansAttribute () { return $this->end_date ? $this->end_date->format('d-m-Y H:i') : null; }
-
-    protected $casts = [
-        'start_date' => 'datetime',
-        'end_date' => 'datetime',
-    ];
 }
