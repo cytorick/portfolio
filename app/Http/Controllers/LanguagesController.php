@@ -21,7 +21,7 @@ class LanguagesController extends Controller
     public function renderEditForm ($languageId)
     {
         return view('pages.admin.language.form')
-            ->with('languages', $this->getRows($languageId));
+            ->with('language', $this->getRows($languageId));
     }
 
 

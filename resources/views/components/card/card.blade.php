@@ -11,7 +11,7 @@
 
 
 <div
-    class="bg-gray-200 dark:bg-gray-900 pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden max-h-100 {{ $link ? 'hover:bg-error hover:text-gray-100' : ''}}">
+    class="bg-gray-200 dark:bg-gray-900 pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden max-h-100 {{ $link ? 'hover:bg-green-600 hover:text-gray-100' : ''}}">
     @if($link)
         <a href="{{ $link }}">
             @endif

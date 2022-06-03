@@ -4,7 +4,7 @@
 
             <div>
                 <h3 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">The <span
-                        class="text-error">schools</span> I went to</h3>
+                        class="text-green-500">schools</span> I went to</h3>
 
                 <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach($schools as $school)

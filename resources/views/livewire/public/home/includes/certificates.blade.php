@@ -11,12 +11,12 @@
                 @endforeach
             </div>
             <div>
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">The <span class="text-error">certificates</span> I got</h2>
-                <p class="mt-3 max-w-3xl text-lg text-gray-500 dark:text-gray-200">Over the years I have collected a few <span class="text-error">certificates</span>. If you would like to see all my <span class="text-error">certificates</span> you can click the button.</p>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">The <span class="text-green-600">certificates</span> I got</h2>
+                <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">Over the years I have collected a few <span class="text-green-600">certificates</span>. If you would like to see all my <span class="text-green-600">certificates</span> you can click the button.</p>
                 <div class="mt-8 sm:flex">
                     <div class="rounded-md shadow">
                         <a href="{{ route('experience') }}"
-                           class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-error hover:bg-red-500">
+                           class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
                             All certificates </a>
                     </div>
                 </div>

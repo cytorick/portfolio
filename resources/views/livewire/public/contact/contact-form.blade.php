@@ -6,7 +6,7 @@
         <div class="px-4 pb-5 sm:px-6">
             <div class="flex justify-between items-center">
                 <div>
-                    <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Or send me a <span class="text-red-400">message!</span></h3>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Or send me a <span class="text-green-600">message!</span></h3>
                 </div>
             </div>
         </div>

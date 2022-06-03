@@ -21,7 +21,7 @@ class SkillsController extends Controller
     public function renderEditForm ($skillId)
     {
         return view('pages.admin.skill.form')
-            ->with('skills', $this->getRows($skillId));
+            ->with('skill', $this->getRows($skillId));
     }
 
     private function getRows ($skillId)

@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-gray-200 dark:border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-gray-200 dark:border-green-600 px-4 py-5 sm:px-6 space-y-4">
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
@@ -30,9 +30,9 @@
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
                             <x-input.group stacked for="function" label="{{ __('School*') }}"
-                                           :error="$errors->first('editing.schools')">
+                                           :error="$errors->first('editing.school')">
                                 <x-input.text id="function" wire:model.lazy="editing.school"
-                                              :error="$errors->first('editing.schools')"/>
+                                              :error="$errors->first('editing.school')"/>
                             </x-input.group>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
             {{--            </div>--}}
             {{--        </div>--}}
             {{--        --}}{{-- CONTENT PANEL --}}
-            {{--        <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">--}}
+            {{--        <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">--}}
             {{--            <div class="grid grid-cols-9 gap-5">--}}
             {{--                <div class="col-span-5">--}}
             {{--                    <x-input.group stacked for="street" label="Street" :error="$errors->first('editing.street')">--}}
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
                             <div>
@@ -148,7 +148,7 @@
             {{--            </div>--}}
             {{--        </div>--}}
             {{--        --}}{{-- CONTENT PANEL --}}
-            {{--        <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">--}}
+            {{--        <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">--}}
             {{--            <x-input.group stacked for="introduction" label="{{ __('Introduction') }}" :error="$errors->first('editing.introduction')">--}}
             {{--                <x-input.textarea id="introduction" wire:model.lazy="editing.introduction" rows="7"--}}
             {{--                                  :error="$errors->first('editing.introduction')"/>--}}

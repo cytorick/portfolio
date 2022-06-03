@@ -15,7 +15,7 @@
     </div>
     <div class="flex-1 bg-gray-200 dark:bg-gray-900 {{ $transparent = 'bg-transparent'}} p-6 flex flex-col justify-between">
         <div class="flex-1">
-            <p class="text-sm font-medium text-error">
+            <p class="text-sm font-medium text-green-600">
                 {{ $subTitle }}
             </p>
             <span class="block mt-2">

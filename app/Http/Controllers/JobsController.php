@@ -21,7 +21,7 @@ class JobsController extends Controller
     public function renderEditForm ($jobId)
     {
         return view('pages.admin.job.form')
-            ->with('jobs', $this->getRows($jobId));
+            ->with('job', $this->getRows($jobId));
     }
 
     private function getRows ($jobId)

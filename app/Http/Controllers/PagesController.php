@@ -42,20 +42,20 @@ class PagesController extends Controller
 
     public function renderSchoolShow ($schoolId, string $page = 'overview')
     {
-        return view('pages.public.experience.schools.'  . $page)
-            ->with('schools', $this->getSchool($schoolId));
+        return view('pages.public.experience.school.'  . $page)
+            ->with('school', $this->getSchool($schoolId));
     }
 
     public function renderJobShow ($jobId, string $page = 'overview')
     {
-        return view('pages.public.experience.jobs.'  . $page)
-            ->with('jobs', $this->getJob($jobId));
+        return view('pages.public.experience.job.'  . $page)
+            ->with('job', $this->getJob($jobId));
     }
 
     public function renderInternshipShow ($internshipId, string $page = 'overview')
     {
-        return view('pages.public.experience.internships.'  . $page)
-            ->with('internships', $this->getInternship($internshipId));
+        return view('pages.public.experience.internship.'  . $page)
+            ->with('internship', $this->getInternship($internshipId));
     }
 
     private function getInternship ($internshipId)

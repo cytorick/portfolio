@@ -22,7 +22,7 @@ class ProjectsController extends Controller
     public function renderEditForm($projectId)
     {
         return view('pages.admin.projects.form')
-            ->with('projects', $this->getRows($projectId));
+            ->with('project', $this->getRows($projectId));
     }
 
     private function getRows($projectId)

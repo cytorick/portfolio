@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-gray-200 dark:border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-gray-200 dark:border-green-600 px-4 py-5 sm:px-6 space-y-4">
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     <x-input.group stacked for="description" label="{{ __('Description*') }}"
                                    :error="$errors->first('editing.description')">
                         <x-input.textarea id="description" wire:model.lazy="editing.description" rows="5"
@@ -144,7 +144,7 @@
                         <div class="space-y-4">
                             <div class="text-lg leading-6 font-medium space-y-1">
                                 <h3 class="dark:text-gray-100">{{ $this->editing->title }}</h3>
-                                <p class="text-red-400 text-sm">{{ $this->editing->company }}</p>
+                                <p class="text-green-600 text-sm">{{ $this->editing->company }}</p>
                             </div>
                             <div class="text-lg">
                                 <p class="text-gray-500 dark:text-gray-200">

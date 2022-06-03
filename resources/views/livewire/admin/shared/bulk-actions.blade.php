@@ -14,7 +14,7 @@
 </form>
 <div x-data="{ tooltip: 'This is crazy!' }">
     <a x-tooltip="Create record" href="{{ $route }}"
-       class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white hover:text-red-400 bg-red-400 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+       class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white hover:text-green-600 bg-green-600 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
        }}>
         <x-icon.plus/>
     </a>

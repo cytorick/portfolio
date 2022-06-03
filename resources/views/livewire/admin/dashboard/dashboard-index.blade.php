@@ -4,7 +4,7 @@
         <div>
             <dl class="mt-5 text-center">
                 <div class="px-4 py-5 bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden sm:p-6">
-                    <dd class="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-100">Welcome <span class="text-red-400">{{ auth()->user()->name }}</span></dd>
+                    <dd class="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-100">Welcome <span class="text-green-600">{{ auth()->user()->name }}</span></dd>
                 </div>
             </dl>
         </div>

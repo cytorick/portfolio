@@ -66,7 +66,7 @@
                         </x-table.cell>
                         <x-table.cell class="text-right pr-6">
                             <div x-data="{ tooltip: 'This is crazy!' }">
-                            <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-red-400" href="{{ route('admin.edit.link', ['linkId' => $link->id]) }}"><i class="fa-solid fa-pen-to-square"></i></x-a.link>
+                            <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-green-600" href="{{ route('admin.edit.link', ['linkId' => $link->id]) }}"><i class="fa-solid fa-pen-to-square"></i></x-a.link>
                             </div>
                         </x-table.cell>
                     </x-table.row>

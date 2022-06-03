@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-gray-200 dark:border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-gray-200 dark:border-green-600 px-4 py-5 sm:px-6 space-y-4">
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
                             <x-input.group stacked for="street" label="Street"
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
                             <div>
@@ -124,8 +124,9 @@
                         <div class="col-span-5">
                             <x-input.group stacked for="active" label="{{ __('Is this your current jobs?') }}"
                                            :error="$errors->first('editing.is_active')">
-                                <x-input.checkbox id="active" wire:model.lazy="editing.is_active"
-                                                  :error="$errors->first('editing.is_active')"/>
+{{--                                <x-input.checkbox  wire:model.lazy="editing.is_active"--}}
+{{--                                                  :error="$errors->first('editing.is_active')"/>--}}
+                                <input type="checkbox" id="active" class="toggle" wire:model.lazy="editing.is_active" />
                             </x-input.group>
                         </div>
 
@@ -179,7 +180,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     <x-input.group stacked for="introduction" label="{{ __('Introduction') }}"
                                    :error="$errors->first('editing.introduction')">
                         <x-input.textarea id="introduction" wire:model.lazy="editing.introduction" rows="7"
@@ -240,7 +241,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+            <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                 <p class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     {!! $this->editing->introduction !!}
                 </p>
@@ -256,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-red-400 px-4 py-5 sm:px-6 space-y-4">
+            <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
                     {!! $this->editing->description !!}
             </div>
         </div>

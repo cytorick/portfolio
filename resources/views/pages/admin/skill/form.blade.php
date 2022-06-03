@@ -16,9 +16,14 @@
                     Saving...
                 </div>
                 <div>
-                    <x-a.error href="{{ route('admin.skills') }}">
-                        {{ __('Back to skills') }}
-                    </x-a.error>
+                    <div x-data="{ tooltip: 'This is crazy!' }">
+                        <a href="{{ route('admin.skills') }}"
+                           x-tooltip="Back to Skills"
+                           class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-green-600 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-green-600 text-white mr-2
+                       ">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

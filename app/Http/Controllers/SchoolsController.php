@@ -22,7 +22,7 @@ class SchoolsController extends Controller
     public function renderEditForm ($schoolId)
     {
         return view('pages.admin.school.form')
-            ->with('schools', $this->getRows($schoolId));
+            ->with('school', $this->getRows($schoolId));
     }
 
     private function getRows ($schoolId)

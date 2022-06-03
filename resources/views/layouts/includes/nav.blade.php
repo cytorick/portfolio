@@ -1,11 +1,11 @@
-<header x-data="{ open: false }" class="border-gray-200 px-4 sm:px-4 py-2.5 rounded bg-gray-900 py-4">
+<header x-data="{ open: false }" class="border-gray-200 px-4 sm:px-4 py-2.5 rounded bg-gray-200 dark:bg-gray-900 py-4">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
         <div class="relative h-16 flex justify-between">
             <div class="relative z-10 px-2 flex lg:px-0">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <i class="fa-solid fa-r h-8 block text-error text-2xl"></i>
-                        <i class="fa-solid fa-v h-8 block text-error text-2xl"></i>
+                        <i class="fa-solid fa-r h-8 block text-green-500 text-2xl"></i>
+                        <i class="fa-solid fa-v h-8 block text-green-500 text-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -44,7 +44,7 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
                     <div>
                         @foreach($links as $link)
                             <a href="{{ $link->link }}"
-                               class="mx-2" target="_blank">{!! $link->icon !!}</a>
+                               class="mx-2 hover:text-green-600" target="_blank">{!! $link->icon !!}</a>
                         @endforeach
                     </div>
 
@@ -55,34 +55,34 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
         <nav class="hidden lg:py-2 lg:flex lg:space-x-8 justify-center" aria-label="Global">
 
             <a href="{{ route('home') }}"
-               class="{{ (request()->is('/')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+               class="{{ (request()->is('/')) ? 'bg-green-500 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 Home
             </a>
             <a href="{{ route('about') }}"
-               class="{{ (request()->is('about*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+               class="{{ (request()->is('about*')) ? 'bg-green-500 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 About me
             </a>
 
             <a href="{{ route('experience') }}"
-               class="{{ (request()->is('experience*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+               class="{{ (request()->is('experience*')) ? 'bg-green-500 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 Experience
             </a>
 
             <a href="{{ route('projects') }}"
-               class="{{ (request()->is('projects*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+               class="{{ (request()->is('projects*')) ? 'bg-green-500 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 Projects
             </a>
 
             <a href="{{ route('contact') }}"
-               class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
+               class="{{ (request()->is('contact*')) ? 'bg-green-500 text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' : 'dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-sm font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
                 Contact
@@ -127,38 +127,38 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
         <div class="pt-2 pb-3 px-2 space-y-1">
 
             <a href="{{ route('home') }}"
-               class="{{ (request()->is('/')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
+               class="{{ (request()->is('/')) ? 'bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Home</a>
 
             <a href="{{ route('about') }}"
-               class="{{ (request()->is('about*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
+               class="{{ (request()->is('about*')) ? 'bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">About
                 me</a>
 
             <a href="{{ route('experience') }}"
-               class="{{ (request()->is('experience*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
+               class="{{ (request()->is('experience*')) ? 'bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Experience</a>
 
             <a href="{{ route('projects') }}"
-               class="{{ (request()->is('projects*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
+               class="{{ (request()->is('projects*')) ? 'bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Projects</a>
 
             <a href="{{ route('contact') }}"
-               class="{{ (request()->is('contact*')) ? 'bg-red-400 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
+               class="{{ (request()->is('contact*')) ? 'bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 hover:text-white block rounded-md py-2 px-3 text-base font-medium' }}"
                aria-current="page" x-state:on="Current" x-state:off="Default"
                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Contact</a>
 
 
         </div>
     </nav>
-    <div class="text-center lg:hidden ">
-        @foreach(\App\Models\Link::all() as $link)
-            <a href="@if($link->name == 'Email') mailto: @endif @if($link->name == 'Call me') tel: @endif {{ $link->link }}"
-               class="mx-2" target="_blank">{!! $link->icon !!}</a>
+    <div class="text-center lg:hidden">
+        @foreach(\App\Models\Link::where('archived', 0)->get() as $link)
+            <a href="{{ $link->link }}"
+               class="mx-2 hover:text-green-600" target="_blank">{!! $link->icon !!}</a>
         @endforeach
     </div>
 </header>

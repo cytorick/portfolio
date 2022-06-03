@@ -3,11 +3,11 @@
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div class="space-y-5 sm:space-y-4">
                 <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl dark:text-gray-200">
-                    My <span class="text-error">projects</span>
+                    My <span class="text-green-600">projects</span>
                 </h2>
                 <p class="text-xl text-gray-500 dark:text-gray-100">
                     Over the years I have
-                    done a few <span class="text-error">projects</span>. Some small, some a little bigger.
+                    done a few <span class="text-green-600">projects</span>. Some small, some a little bigger.
                 </p>
             </div>
             <div class="lg:col-span-2">
@@ -26,7 +26,7 @@
                                             <h3 class="dark:text-gray-100">{{ $project->title }}         @if($project->link)
                                                     <a href="{{ $project->link }}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                                 @endif</h3>
-                                            <p class="text-red-400 text-sm">{{ $project->company }}</p>
+                                            <p class="text-green-600 text-sm">{{ $project->company }}</p>
                                         </div>
                                         <div class="text-lg">
                                             <p class="text-gray-500 dark:text-gray-200">

@@ -5,7 +5,7 @@
 <div class="grid grid-cols-12">
     <div class="col-span-9">
         <h3 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">{{ $school->name }}</h3>
-        <p class="mt-0 text-red-400 sm:text-xl lg:text-lg xl:text-xl">
+        <p class="mt-0 text-green-600 sm:text-xl lg:text-lg xl:text-xl">
             {{ $school->school }}
         </p>
     </div>

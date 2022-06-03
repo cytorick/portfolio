@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 {{-- CONTENT PANEL --}}
-                <div class="border-t border-gray-200 dark:border-red-400 px-4 py-5 sm:px-6 space-y-4">
+                <div class="border-t border-gray-200 dark:border-green-600 px-4 py-5 sm:px-6 space-y-4">
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">

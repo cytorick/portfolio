@@ -22,7 +22,7 @@ class CertificatesController extends Controller
     public function renderEditForm ($certificateId)
     {
         return view('pages.admin.certificate.form')
-            ->with('certificates', $this->getRows($certificateId));
+            ->with('certificate', $this->getRows($certificateId));
     }
 
     private function getRows ($certificateId)

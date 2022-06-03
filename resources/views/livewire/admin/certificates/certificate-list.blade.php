@@ -82,7 +82,7 @@
                         </x-table.cell>
                         <x-table.cell class="text-right pr-6">
                             <div x-data="{ tooltip: 'This is crazy!' }">
-                                <x-a.link class="dark:text-gray-100 dark:hover:text-red-400 my-auto" x-tooltip="Edit"
+                                <x-a.link class="dark:text-gray-100 dark:hover:text-green-600 my-auto" x-tooltip="Edit"
                                           href="{{ route('admin.edit.certificates', ['certificateId' => $certificate->id]) }}">
                                     <i class="fa-solid fa-pen-to-square"></i></x-a.link>
                             </div>

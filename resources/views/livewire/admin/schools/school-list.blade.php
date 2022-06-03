@@ -87,9 +87,9 @@
                             @endif
                         </x-table.cell>
                         <x-table.cell class="text-right pr-6">
-                            {{--                            <x-a.link class="dark:text-red-600 dark:hover:text-red-400 mr-2 my-auto" href="{{ route('admin.schools.delete', ['schoolId' => $schools->id]) }}"><i class="fa-solid fa-trash"></i></x-a.link>--}}
+                            {{--                            <x-a.link class="dark:text-red-600 dark:hover:text-green-600 mr-2 my-auto" href="{{ route('admin.schools.delete', ['schoolId' => $schools->id]) }}"><i class="fa-solid fa-trash"></i></x-a.link>--}}
                             <div x-data="{ tooltip: 'This is crazy!' }">
-                                <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-red-400"
+                                <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-green-600"
                                           href="{{ route('admin.edit.schools', ['schoolId' => $school->id]) }}"><i
                                         class="fa-solid fa-pen-to-square"></i></x-a.link>
                             </div>

@@ -21,7 +21,7 @@ class InternshipsController extends Controller
     public function renderEditForm ($internshipId)
     {
         return view('pages.admin.internship.form')
-            ->with('internships', $this->getRows($internshipId));
+            ->with('internship', $this->getRows($internshipId));
     }
 
     private function getRows ($internshipId)
