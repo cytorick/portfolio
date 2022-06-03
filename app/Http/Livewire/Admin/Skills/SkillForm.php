@@ -17,6 +17,7 @@ class SkillForm extends Component
             'editing.icon' => ['required'],
             'editing.name' => ['required'],
             'editing.color' => ['nullable'],
+            'editing.description' => ['nullable', 'max:200'],
         ];
     }
 
@@ -26,6 +27,7 @@ class SkillForm extends Component
             'editing.icon' => ['required'],
             'editing.name' => ['required'],
             'editing.color' => ['nullable'],
+            'editing.description' => ['nullable', 'max:200'],
         ]);
     }
 

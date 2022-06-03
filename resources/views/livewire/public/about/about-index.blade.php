@@ -226,7 +226,7 @@
                                                     style="color: {{ $skill->color }}">{!! $skill->icon !!}</span> {{ $skill->name }}
                                             </div>
                                             <div class="collapse-content px-3">
-                                                <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                                                <p>{!! $skill->description !!}</p>
                                             </div>
                                         </div>
                                     </div>

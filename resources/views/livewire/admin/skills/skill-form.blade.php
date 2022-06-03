@@ -45,6 +45,25 @@
                 </div>
             </div>
 
+            <div class="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg">
+                {{-- HEADER --}}
+                <div class="px-4 py-5 sm:px-6">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">{{ __('Other information') }}</h3>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                {{-- CONTENT PANEL --}}
+                <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
+                    <x-input.group stacked for="description" label="{{ __('Description') }}" :error="$errors->first('editing.description')">
+                        <x-input.textarea id="description" wire:model.lazy="editing.description" max="200" rows="7"
+                                          :error="$errors->first('editing.description')"/>
+                    </x-input.group>
+                </div>
+            </div>
+
             {{-- FORM TOOLS --}}
             <div class="mt-6">
                 <div class="text-right">
@@ -64,6 +83,32 @@
                         <span style="color: {{ $this->editing->color }} @if($this->editing->name == 'Mac') black @endif">{!! $this->editing->icon !!}</span> {{ $this->editing->name }}
                     </p>
                 </div>
+
+            <div class="mt-5">
+                <div class="collapse collapse-open collapse-arrow bg-white dark:bg-gray-900 shadow-xl rounded-box px-3">
+                    <input type="checkbox"/>
+                    <div class="collapse-title text-xl font-medium">
+                                                <span
+                                                    style="color: {{ $this->editing->color }}">{!! $this->editing->icon !!}</span> {{ $this->editing->name }}
+                    </div>
+                    <div class="collapse-content px-3">
+                        <p>{!! $this->editing->description !!}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg mt-5">
+            {{-- HEADER --}}
+            <div class="px-4 py-5 sm:px-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">{{ __('Description') }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-600 px-4 py-5 sm:px-6 space-y-4">
+                {!! $this->editing->description !!}
+            </div>
         </div>
     </div>
 
