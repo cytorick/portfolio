@@ -48,7 +48,9 @@
 
     <x-notification />
 
-    @include('layouts.includes.footer')
+    @stack('modals')
+
+    @livewireScripts
     @include('assets.alpine-tooltip')
     @stack('scripts-body-after')
 
