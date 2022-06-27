@@ -37,7 +37,7 @@ class ContactForm extends Component
             'message' => $this->message
         );
 
-        Mail::to('rickvisser99@gmail.com')->send(new SendMail($data));
+        Mail::to('info@cytorick.com')->send(new SendMail($data));
         $this->clearFields();
         return back()->with('success', 'Thanks for contacting me!');
     }

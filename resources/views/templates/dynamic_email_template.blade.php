@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-5 text-center">
-                <h5 style="font-size: 30px; color: #d63384">RV</h5>
+                <h5 style="font-size: 30px; color: rgb(22 163 74 / var(--tw-text-opacity))">RV</h5>
             </div>
             <div class="col-md-6 col-12 mb-3">
                 <div class="card">
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="col-12 text-center">
-                <p>©2022 - <a href="//cytorick.nl" style="color: #d63384">cytorick.nl</a></p>
+                <p>©2022 - <a href="https://cytorick.nl" style="color: rgb(22 163 74 / var(--tw-text-opacity))">cytorick.nl</a></p>
             </div>
         </div>
     </div>
