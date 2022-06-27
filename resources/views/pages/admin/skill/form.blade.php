@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $skill )
+        @section('title', 'Edit skill')
+    @else
+        @section('title', 'Create skill')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $language )
+        @section('title', 'Edit language')
+    @else
+        @section('title', 'Create language')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

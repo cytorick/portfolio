@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $internship )
+        @section('title', 'Edit internship')
+    @else
+        @section('title', 'Create internship')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

@@ -1,5 +1,7 @@
 <x-app-layout class="w-full">
 
+    @section('title', 'Skills')
+
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center justify-between">

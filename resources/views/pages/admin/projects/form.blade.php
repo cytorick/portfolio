@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $project )
+        @section('title', 'Edit project')
+    @else
+        @section('title', 'Create project')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

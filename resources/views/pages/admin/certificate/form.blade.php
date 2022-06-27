@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $certificate )
+        @section('title', 'Edit certificate')
+    @else
+        @section('title', 'Create certificate')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">
