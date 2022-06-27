@@ -46,6 +46,8 @@
         {{ $slot }}
     </div>
 
+    <x-notification />
+
     @include('layouts.includes.footer')
     @include('assets.alpine-tooltip')
     @stack('scripts-body-after')
