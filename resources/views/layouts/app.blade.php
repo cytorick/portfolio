@@ -42,7 +42,7 @@
             gtag('config', 'G-THCCJHCYDC');
         </script>
     </head>
-    <body class="bg-gray-100 dark:bg-gray-700 selection:bg-red-300 min-h-screen">
+    <body class="bg-gray-100 dark:bg-gray-700 selection:bg-green-300 min-h-screen">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-700">

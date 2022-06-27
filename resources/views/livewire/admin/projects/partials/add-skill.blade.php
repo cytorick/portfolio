@@ -39,22 +39,24 @@
                     @endforeach
                 </div>
             </div>
-            <div class="grid grid-cols-9 gap-5">
+            <div class="grid grid-cols-10 gap-5">
                 <div class="col-span-5">
                         <x-a.link wire:click.prevent="add({{$i}})">
                             <x-icon.plus/>
                             add another skill
                         </x-a.link>
                 </div>
+                <div class="col-span-5">
+                    <div class="">
+                        <div class="text-right">
+                            <x-button.submit>
+                                {{__('Save skills')}}
+                            </x-button.submit>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-        <div class="m-6">
-            <div class="text-right">
-                <x-button.submit>
-                    {{__('Save skills')}}
-                </x-button.submit>
-            </div>
         </div>
     </div>
 </form>

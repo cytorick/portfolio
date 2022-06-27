@@ -19,9 +19,21 @@
 </div>
 
 <div class="bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-3xl mx-auto px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-12">
+        <div class="col-span-4">
+            <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-        @livewire('public.contact.contact-form')
+                <img src="{{ asset('img/rick-standing-4.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80 mt-10 mx-auto">
 
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-8">
+            <div class="max-w-3xl px-4 pb-8 sm:px-6 lg:px-8">
+
+                @livewire('public.contact.contact-form')
+
+            </div>
+        </div>
     </div>
+
 </div>

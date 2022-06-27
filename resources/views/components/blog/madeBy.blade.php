@@ -6,7 +6,7 @@
     <div class="flex-shrink-0">
         <span class="sr-only">Rick Visser</span>
         <img class="h-10 w-10 rounded-full"
-             src="{{ asset('img/rick-standing.jpeg') }}"
+             src="{{ asset('img/rick-standing.png') }}"
              alt="">
     </div>
     <div class="ml-3">

@@ -95,13 +95,8 @@
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4 pl-2">
                                                     <div>
                                                         <p class="text-sm text-gray-600 dark:text-gray-200">Got a
-                                                            internship at
-                                                            @if($internship->company == 'Custom Website')
-                                                                <span class="text-blue-600">Custom</span> <span
-                                                                    class="dark:text-white text-black">Website</span>!
-                                                            @elseif($internship->company == 'Praes')
-                                                                <span class="text-sky-600">Praes</span>!
-                                                            @endif</p>
+                                                            internship at <span class="font-bold text-green-600">{{ $internship->company }}</span>!
+                                                           </p>
                                                     </div>
                                                     <div
                                                         class="text-right text-sm whitespace-nowrap text-gray-600 dark:text-gray-300">
@@ -199,7 +194,7 @@
 
             <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-                <img src="{{ asset('img/rick-standing.jpeg') }}" alt="" class="rounded-xl hidden sm:block">
+                <img src="{{ asset('img/rick-standing.png') }}" alt="" class="rounded-xl hidden sm:block">
 
             </div>
 

@@ -15,7 +15,7 @@ class GuestLayout extends Component
      */
     public function render()
     {
-        $this->links = Link::where('archived', 0)->get();
+        $this->links = Link::where('archived', 0)->where('featured', 1)->get();
 
         return view('layouts.guest')
             ->with('links', $this->links);

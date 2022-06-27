@@ -9,6 +9,11 @@
                     Over the years I have
                     done a few <span class="text-green-600">projects</span>. Some small, some a little bigger.
                 </p>
+                <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
+
+                    <img src="{{ asset('img/rick-standing-4.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80">
+
+                </div>
             </div>
             <div class="lg:col-span-2">
                 <ul role="list" class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
