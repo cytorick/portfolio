@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $link )
+        @section('title', 'Edit link')
+    @else
+        @section('title', 'Create link')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

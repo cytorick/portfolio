@@ -1,5 +1,11 @@
 <x-app-layout>
 
+    @isset( $school )
+        @section('title', 'Edit school')
+    @else
+        @section('title', 'Create school')
+    @endif
+
     {{-- HERO SECTION --}}
     <x-slot name="header">
         <div class="max-w-7xl mx-auto">

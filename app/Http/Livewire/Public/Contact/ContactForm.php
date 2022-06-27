@@ -37,7 +37,7 @@ class ContactForm extends Component
             'message' => $this->message
         );
 
-        Mail::to('info@cytorick.com')->send(new SendMail($data));
+        Mail::to('info@cytorick.nl')->send(new SendMail($data));
         $this->clearFields();
         $this->dispatchBrowserEvent('notify', 'Cache successfully flushed.');
     }
