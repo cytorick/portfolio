@@ -11,7 +11,7 @@
                 </p>
                 <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-                    <img src="{{ asset('img/rick-standing-4.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80">
+                    <img src="{{ asset('img/rick-standing-7.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80">
 
                 </div>
             </div>
