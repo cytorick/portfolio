@@ -46,6 +46,8 @@
         {{ $slot }}
     </div>
 
+    @include('layouts.includes.footer')
+
     <x-notification />
 
     @stack('modals')

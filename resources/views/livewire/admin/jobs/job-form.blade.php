@@ -216,7 +216,7 @@
             <x-card.card title="{{ $this->editing->function }}" sub-title="{{ $this->editing->company }}"
                          address="{{ $this->editing->street }}, {{ $this->editing->place }}">
                 <x-slot name="image">
-                    @if($this->editing)
+                    @if($this->editing->image)
                         <img
                             src="{{ asset('img/' . $this->editing->media[0]->id .'/'. $this->editing->media[0]->file_name) }}"
                             alt="{{ $this->editing->media[0]->file_name }}" class="inline-block align-middle px-3">
