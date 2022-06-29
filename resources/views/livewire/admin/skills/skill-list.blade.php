@@ -28,7 +28,7 @@
             <x-slot name="body">
                 @if ($selectPage)
                     <x-table.row class="bg-gray-200" wire:key="row-message">
-                        <x-table.cell colspan="10">
+                        <x-table.cell colspan="12">
                             @unless ($selectAll)
                                 <div>
                                     <span>{{__('You have selected ')}}<strong>{{ $skills->count() }}</strong> {{__('skills, do you want to select all')}} <strong>{{ $skills->total() }}</strong>?</span>
@@ -86,7 +86,7 @@
                     </x-table.row>
                 @empty
                     <x-table.row wire:loading.class.delay="opacity-50">
-                        <x-table.cell colspan="8" class="py-8">
+                        <x-table.cell colspan="12" class="py-8">
                             <x-table.no-data route="admin.create.skill" title="No skill found"
                                              button-label="new skill">
                                 {{__('Get started by creating a new skills.')}}
