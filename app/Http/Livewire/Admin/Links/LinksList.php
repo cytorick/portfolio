@@ -41,6 +41,7 @@ class LinksList extends Component
 
         $this->deselectAll();
 
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' link(s)');
     }
 
     public function featureSelected()
@@ -61,7 +62,7 @@ class LinksList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' links');
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' link(s)');
     }
 
     public function deleteSelected()
@@ -74,7 +75,7 @@ class LinksList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' links');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' link(s)');
     }
 
     public function getRowsQueryProperty ()

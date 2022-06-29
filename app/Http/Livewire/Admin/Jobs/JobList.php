@@ -41,7 +41,28 @@ class JobList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' jobs');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' job(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($job) {
+            if ($job->featured == 0) {
+                Job::where('id', $job->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Job::where('id', $job->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' job(s)');
     }
 
     public function deleteSelected()
@@ -54,7 +75,7 @@ class JobList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' jobs');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' job(s)');
     }
 
     public function getRowsQueryProperty ()

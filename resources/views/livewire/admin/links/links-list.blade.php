@@ -5,13 +5,6 @@
             @include('livewire.admin.shared.search', ['subject' => 'links'])
         </div>
         <div class="space-x-2 flex items-center">
-            <form wire:submit.prevent="featureSelected">
-                <div x-data="{ tooltip: 'This is crazy!' }">
-                    <button x-tooltip="Feature record(s)" type="submit"
-                            class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-blue-400">
-                        <i class="fa-solid fa-eye"></i></button>
-                </div>
-            </form>
             @include('livewire.admin.shared.bulk-actions', ['route' => route('admin.create.link')])
         </div>
     </div>

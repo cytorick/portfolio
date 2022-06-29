@@ -36,7 +36,28 @@ class SchoolList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' schools');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' school(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($school) {
+            if ($school->featured == 0) {
+                School::where('id', $school->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                School::where('id', $school->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' school(s)');
     }
 
     public function deleteSelected()
@@ -49,7 +70,7 @@ class SchoolList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' schools');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' school(s)');
     }
 
     public function getRowsQueryProperty ()

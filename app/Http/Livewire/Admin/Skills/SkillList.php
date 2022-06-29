@@ -33,8 +33,30 @@ class SkillList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' skills');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' skill(s)');
     }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($skill) {
+            if ($skill->featured == 0) {
+                Skill::where('id', $skill->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Skill::where('id', $skill->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' skill(s)');
+    }
+
 
     public function archiveSelected()
     {
@@ -54,7 +76,7 @@ class SkillList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' skills');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' skill(s)');
     }
 
     public function getRowsQueryProperty()
