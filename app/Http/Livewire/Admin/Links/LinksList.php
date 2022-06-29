@@ -41,7 +41,27 @@ class LinksList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' links');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($link) {
+            if ($link->featured == 0) {
+                Link::where('id', $link->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Link::where('id', $link->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' links');
     }
 
     public function deleteSelected()
