@@ -17,6 +17,7 @@ class LinksForm extends Component
             'editing.name' => ['required'],
             'editing.link' => ['nullable'],
             'editing.icon' => ['nullable'],
+            'editing.featured' => ['nullable'],
         ];
     }
 
@@ -26,6 +27,7 @@ class LinksForm extends Component
             'editing.name' => ['required'],
             'editing.link' => ['nullable'],
             'editing.icon' => ['nullable'],
+            'editing.featured' => ['nullable'],
         ]);
     }
 
