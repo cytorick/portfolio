@@ -14,7 +14,7 @@ class InternshipList extends Component
 
     public $search;
 
-    protected $defaultSorting = [ 'field' => 'id', 'order' => 'desc' ];
+    protected $defaultSorting = [ 'field' => 'end_date', 'order' => 'desc' ];
 
     protected $listeners = [ 'refreshInternships' => '$refresh' ];
 
