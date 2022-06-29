@@ -26,6 +26,7 @@
                 <x-table.heading class="dark:bg-gray-900">Website</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
+                <x-table.heading class="dark:bg-gray-900"></x-table.heading>
             </x-slot>
             <x-slot name="body">
                 @if ($selectPage)
@@ -88,6 +89,17 @@
                                         <div x-data="{ tooltip: 'This is crazy!' }">
                                         <i class="fa-solid fa-toggle-on text-green-400" x-tooltip="Live"></i>
                                         </div>
+                            @endif
+                        </x-table.cell>
+                        <x-table.cell class="text-right">
+                            @if($internship->featured)
+                                <div x-data="{ tooltip: 'This is crazy!' }">
+                                    <i class="fa-solid fa-eye text-blue-400" x-tooltip="Featured"></i>
+                                </div>
+                            @else
+                                <div x-data="{ tooltip: 'This is crazy!' }">
+                                    <i class="fa-solid fa-eye-slash text-red-400" x-tooltip="Not featured"></i>
+                                </div>
                             @endif
                         </x-table.cell>
                         <x-table.cell class="text-right pr-6">

@@ -41,7 +41,28 @@ class LanguageList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' languages');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' language(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($language) {
+            if ($language->featured == 0) {
+                Language::where('id', $language->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Language::where('id', $language->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' language(s)');
     }
 
     public function deleteSelected()
@@ -54,7 +75,7 @@ class LanguageList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' languages');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' language(s)');
     }
 
     public function getRowsQueryProperty ()

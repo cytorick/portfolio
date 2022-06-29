@@ -41,7 +41,28 @@ class InternshipList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' internships');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' internship(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($internship) {
+            if ($internship->featured == 0) {
+                Internship::where('id', $internship->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Internship::where('id', $internship->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' internship(s)');
     }
 
     public function deleteSelected()
@@ -54,7 +75,7 @@ class InternshipList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' internships');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' internship(s)');
     }
 
     public function getRowsQueryProperty ()

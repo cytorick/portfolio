@@ -41,7 +41,28 @@ class ProjectList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' projects');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' project(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($project) {
+            if ($project->featured == 0) {
+                Project::where('id', $project->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Project::where('id', $project->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' project(s)');
     }
 
     public function deleteSelected()
@@ -54,7 +75,7 @@ class ProjectList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' projects');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' project(s)');
     }
 
     public function getRowsQueryProperty ()

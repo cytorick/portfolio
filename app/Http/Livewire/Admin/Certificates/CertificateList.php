@@ -41,7 +41,7 @@ class CertificateList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' certificates');
+        $this->dispatchBrowserEvent('notify', 'You\'ve archived ' . $archiveCount . ' certificate(s)');
     }
 
     public function deleteSelected()
@@ -54,7 +54,28 @@ class CertificateList extends Component
 
         $this->deselectAll();
 
-        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' certificates');
+        $this->dispatchBrowserEvent('notify', 'You\'ve deleted ' . $deleteCount . ' certificate(s)');
+    }
+
+    public function featureSelected()
+    {
+        $archiveCount = $this->selectedRowsQuery->count();
+
+        $this->selectedRowsQuery->each(function ($certificate) {
+            if ($certificate->featured == 0) {
+                Certificate::where('id', $certificate->id)->update([
+                    'featured' => 1,
+                ]);
+            } else {
+                Certificate::where('id', $certificate->id)->update([
+                    'featured' => 0,
+                ]);
+            }
+        });
+
+        $this->deselectAll();
+
+        $this->dispatchBrowserEvent('notify', 'You\'ve featured ' . $archiveCount . ' certificate(s)');
     }
 
     public function getRowsQueryProperty ()
