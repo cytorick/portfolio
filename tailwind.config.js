@@ -24,5 +24,8 @@ module.exports = {
         require('@tailwindcss/typography'),
         require("daisyui"),
         require('flowbite/plugin'),
+        require('tailwindcss-plugins/pagination')({
+            /* Customizations here... */
+        }),
     ],
 };
