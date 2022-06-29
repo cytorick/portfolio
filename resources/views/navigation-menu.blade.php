@@ -22,37 +22,35 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin.schools') }}" :active="request()->routeIs('admin.schools')">
+                    <x-jet-nav-link href="{{ route('admin.schools') }}" :active="request()->routeIs('admin.schools', 'admin.create.schools', 'admin.edit.schools')">
                         {{ __('Schools') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin.jobs') }}" :active="request()->routeIs('admin.jobs')">
+                    <x-jet-nav-link href="{{ route('admin.jobs') }}" :active="request()->routeIs('admin.jobs', 'admin.create.jobs', 'admin.edit.jobs')">
                         {{ __('Jobs') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('admin.internships') }}"
-                                    :active="request()->routeIs('admin.internships')">
+                                    :active="request()->routeIs('admin.internships', 'admin.create.internships', 'admin.edit.internships')">
                         {{ __('Internships') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('admin.certificates') }}"
-                                    :active="request()->routeIs('admin.certificates*')">
+                                    :active="request()->routeIs('admin.certificates', 'admin.create.certificates', 'admin.edit.certificates')">
                         {{ __('Certificates') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin.projects') }}" :active="request()->routeIs('admin.projects*')">
+                    <x-jet-nav-link href="{{ route('admin.projects') }}" :active="request()->routeIs('admin.projects', 'admin.create.projects', 'admin.edit.projects')">
                         {{ __('Projects') }}
                     </x-jet-nav-link>
                 </div>
 
                 <x-nav.dropdown-group class="ml-10">
-                    <x-nav.dropdown-button :active="request()->routeIs('admin.languages')"
-                                           :active="request()->routeIs('admin.skills')"
-                                           :active="request()->routeIs('admin.links')">
+                    <x-nav.dropdown-button :active="request()->routeIs('admin.languages', 'admin.create.languages', 'admin.edit.languages', 'admin.skills', 'admin.create.skills', 'admin.edit.skills', 'admin.links', 'admin.create.link', 'admin.edit.link')">
                         {{ __('Other') }}
                     </x-nav.dropdown-button>
                     <x-nav.dropdown-panel>
