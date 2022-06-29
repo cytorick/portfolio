@@ -18,7 +18,7 @@
             </div>
         </nav>
         <div class="mt-8 flex justify-center space-x-6">
-            @foreach(\App\Models\Link::all() as $link)
+            @foreach(\App\Models\Link::where('archived', 0)->where('featured', 1)->get() as $link)
                 <a href="{{ $link->link }}" class="text-gray-400 hover:text-green-600" target="_blank">
                     <span class="sr-only">{{ $link->name }}</span>
                     <span class="text-lg">
