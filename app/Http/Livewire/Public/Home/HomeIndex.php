@@ -24,7 +24,7 @@ class HomeIndex extends Component
         $this->skills = Skill::where('archived', 0)->where('featured', 1)->orderBy('id', 'asc')->get();
         $this->schools = School::where('archived', 0)->where('featured', 1)->orderBy('end_date', 'desc')->get();
         $this->certificates = Certificate::where('archived', 0)->where('featured', 1)->orderBy('start_date', 'desc')->get();
-        $this->projects = Project::where('archived', 0)->where('featured', 1)->take(3)->orderBy('created_at', 'desc')->get();
+        $this->projects = Project::where('archived', 0)->where('featured', 1)->take(3)->orderBy('made_at', 'desc')->get();
     }
 
     public function render()
