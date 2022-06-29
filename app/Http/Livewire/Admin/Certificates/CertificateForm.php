@@ -19,7 +19,7 @@ class CertificateForm extends Component
     {
         return [
             'editing.name' => ['nullable'],
-            'editing.schools' => ['nullable'],
+            'editing.school' => ['nullable'],
             'editing.start_date' => [],
             'editing.end_date' => [],
             'editing.summary' => ['nullable'],
@@ -32,7 +32,7 @@ class CertificateForm extends Component
     {
         $this->validateOnly($fields, [
             'editing.name' => ['required'],
-            'editing.schools' => ['required'],
+            'editing.school' => ['required'],
             'editing.start_date' => [],
             'editing.end_date' => [],
             'editing.summary' => ['nullable'],
