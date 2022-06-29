@@ -13,9 +13,9 @@ class AboutIndex extends Component
     public function mount()
     {
         $this->age = Carbon::parse('1999-12-29')->age;
-        $this->skills = Skill::where('archived', 0)->orderBy('id', 'asc')->get();
-        $this->languages = Language::where('archived', 0)->orderBy('id', 'asc')->get();
-        $this->internships = Internship::where('archived', 0)->orderBy('end_date', 'asc')->get();
+        $this->skills = Skill::where('archived', 0)->where('featured', 1)->orderBy('id', 'asc')->get();
+        $this->languages = Language::where('archived', 0)->where('featured', 1)->orderBy('id', 'asc')->get();
+        $this->internships = Internship::where('archived', 0)->where('featured', 1)->orderBy('end_date', 'asc')->get();
     }
 
     public function render()

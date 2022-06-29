@@ -11,7 +11,7 @@ class ProjectIndex extends Component
 
     public function mount($id = null)
     {
-        $this->projects = Project::where('archived', 0)->orderBy('made_at', 'desc')->get();
+        $this->projects = Project::where('archived', 0)->where('featured', 1)->orderBy('made_at', 'desc')->get();
     }
 
     public function render()
