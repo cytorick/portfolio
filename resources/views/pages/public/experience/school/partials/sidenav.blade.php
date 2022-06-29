@@ -10,4 +10,7 @@
         </x-nav.sidebar-item>
 
     </nav>
+
+    <img src="{{ asset('/img/rick-pointing-reading.png') }}" alt="{{ asset('/img/rick-pointing-reading.png') }}" class="hidden sm:block" />
+
 </aside>

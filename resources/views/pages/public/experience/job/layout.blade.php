@@ -11,7 +11,7 @@
                 @include('pages.public.experience.job.partials.sidenav')
 
                 {{-- CONTENT PANEL --}}
-                <div class="md:col-span-3">
+                <div class="md:col-span-3 ">
 
                     @hasSection('content')
                         @yield('content')

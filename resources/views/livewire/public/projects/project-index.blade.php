@@ -9,15 +9,16 @@
                     Over the years I have
                     done a few <span class="text-green-600">projects</span>. Some small, some a little bigger.
                 </p>
-                <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
+                <div class="relative mx-auto px-4 sm:max-w-3xl sm:px-6 lg:px-0 pt-10">
 
-                    <img src="{{ asset('img/rick-standing-7.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80">
+                    <img src="{{ asset('img/rick-box-2.png') }}" alt="" class="rounded-xl hidden sm:block mt-10 min-h-100 mx-auto">
 
                 </div>
             </div>
             <div class="lg:col-span-2">
                 <ul role="list" class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
                     @foreach($projects as $project)
+                        <div class="block sm:hidden divide-y divide-gray-200 pt-5 pb-5"></div>
                         <li class="sm:py-8">
                             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                                 <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
