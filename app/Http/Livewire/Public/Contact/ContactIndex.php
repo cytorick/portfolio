@@ -9,7 +9,7 @@ class ContactIndex extends Component
 {
     public function mount ()
     {
-        $this->links = Link::where('archived', false)->get();
+        $this->links = Link::where('archived', false)->where('featured', 1)->get();
     }
 
     public function render()
