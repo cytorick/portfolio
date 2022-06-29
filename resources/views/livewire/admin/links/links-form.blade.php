@@ -41,7 +41,7 @@
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-5">
-                            <x-input.group stacked for="featured" label="{{ __('Is this your current jobs?') }}"
+                            <x-input.group stacked for="featured" label="{{ __('Do you want this link featured in the navbar?') }}"
                                            :error="$errors->first('editing.featured')">
                                 <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">
                                     <input type="checkbox" value="1" wire:model.lazy="editing.featured" id="default-toggle" class="sr-only peer">
