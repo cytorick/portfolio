@@ -31,7 +31,7 @@
             <x-slot name="body">
                 @if ($selectPage)
                     <x-table.row class="bg-gray-200" wire:key="row-message">
-                        <x-table.cell colspan="10">
+                        <x-table.cell colspan="12">
                             @unless ($selectAll)
                                 <div>
                                     <span>You have selected <strong>{{ $internships->count() }}</strong> internships, do you want to select all <strong>{{ $internships->total() }}</strong>?</span>
