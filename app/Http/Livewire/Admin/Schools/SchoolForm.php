@@ -18,7 +18,7 @@ class SchoolForm extends Component
     protected function rules()
     {
         return [
-            'editing.schools' => ['required'],
+            'editing.school' => ['required'],
             'editing.name' => ['required'],
             'editing.street' => ['required'],
             'editing.place' => ['required'],
@@ -35,7 +35,7 @@ class SchoolForm extends Component
     public function updated($fields)
     {
         $this->validateOnly($fields, [
-            'editing.schools' => ['nullable'],
+            'editing.school' => ['nullable'],
             'editing.name' => ['nullable'],
             'editing.street' => ['nullable'],
             'editing.place' => ['nullable'],
@@ -56,7 +56,7 @@ class SchoolForm extends Component
         if ($this->image) {
             $this->editing
                 ->addMedia($this->image)
-                ->toMediaCollection('schools-logo');
+                ->toMediaCollection('school-logo');
         }
 
         $this->editing->save();
