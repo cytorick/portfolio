@@ -49,7 +49,7 @@
                     </x-jet-nav-link>
                 </div>
 
-                <x-nav.dropdown-group class="ml-10">
+                <x-nav.dropdown-group class="ml-10 shadow-xl">
                     <x-nav.dropdown-button :active="request()->routeIs('admin.languages', 'admin.create.languages', 'admin.edit.languages', 'admin.skills', 'admin.create.skills', 'admin.edit.skills', 'admin.links', 'admin.create.link', 'admin.edit.link')">
                         {{ __('Other') }}
                     </x-nav.dropdown-button>
@@ -61,11 +61,15 @@
                         </x-nav.dropdown-item>
                         <x-nav.dropdown-item href="{{ route('admin.skills') }}">
                             <x-slot name="title">{{ __('Skills') }}</x-slot>
-                            <x-slot name="description">{{ __('Here you can add, edit and view the skills') }}</x-slot>
+                            <x-slot name="description">{{ __('Here you can add, edit and view the skills.') }}</x-slot>
                         </x-nav.dropdown-item>
                         <x-nav.dropdown-item href="{{ route('admin.links') }}">
                             <x-slot name="title">{{ __('Links') }}</x-slot>
-                            <x-slot name="description">{{ __('Here you can add, edit and view the links') }}</x-slot>
+                            <x-slot name="description">{{ __('Here you can add, edit and view the links.') }}</x-slot>
+                        </x-nav.dropdown-item>
+                        <x-nav.dropdown-item href="{{ route('admin.links') }}">
+                            <x-slot name="title">{{ __('Texts') }}</x-slot>
+                            <x-slot name="description">{{ __('Here you can edit the static text on the website.') }}</x-slot>
                         </x-nav.dropdown-item>
                     </x-nav.dropdown-panel>
                 </x-nav.dropdown-group>
