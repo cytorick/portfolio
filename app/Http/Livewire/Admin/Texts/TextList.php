@@ -15,7 +15,7 @@ class TextList extends Component
 
     public $search;
 
-    protected $defaultSorting = ['field' => 'page', 'order' => 'asc'];
+    protected $defaultSorting = ['field' => 'page', 'order' => 'desc'];
 
     protected $listeners = ['refreshSkills' => '$refresh'];
 

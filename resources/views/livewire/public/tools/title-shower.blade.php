@@ -1,7 +1,7 @@
-<div>
+<span>
     @if($text)
         {!! $text->title !!}
     @else
 
     @endif
-</div>
+</span>

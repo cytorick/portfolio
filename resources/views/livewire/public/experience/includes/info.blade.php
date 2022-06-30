@@ -6,18 +6,12 @@
 
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
                     <p class="mt-1 max-w-xl text-4xl font-extrabold mx-auto text-gray-900 dark:text-gray-100 sm:text-5xl lg:text-6xl">
-                        My <span class="text-green-600">experience</span>
+                        @livewire('public.tools.title-shower', ['page' => 'Experience', 'number' => 1])
                     </p>
                 </h2>
 
                 <div class="mt-6 text-gray-500 space-y-6 dark:text-gray-200">
-                    <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-200">
-                        On this page you can find the
-                        <span class="text-green-600">experience</span> I have. On this page I have listed the <span class="text-green-600">Jobs</span> I had, the <span class="text-green-600">Internships</span> I
-                        had, the <span class="text-green-600">Schools</span> I went to and the <span class="text-green-600">Certificates</span>
-                        I got. If you click on one of the <span class="text-green-600">experiences</span> than you will see
-                        a description of the <span class="text-green-600">experience</span>.
-                    </p>
+                    @livewire('public.tools.text-shower', ['page' => 'Experience', 'number' => 1])
                 </div>
             </div>
         </div>
