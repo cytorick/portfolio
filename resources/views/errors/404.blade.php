@@ -2,12 +2,12 @@
     <div class="bg-gray-100 dark:bg-gray-800">
         <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-center pt-16 mx-auto">
-                <i class="fa-solid fa-r h-8 block text-error text-2xl"></i>
-                <i class="fa-solid fa-v h-8 block text-error text-2xl"></i>
+                <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
+                <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
             </div>
             <div class="max-w-xl mx-auto py-16 sm:py-24">
                 <div class="text-center">
-                    <p class="text-sm font-semibold uppercase tracking-wide text-red-400">404 error</p>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-green-600">404 error</p>
                     <h1 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl dark:text-gray-100">
                         This page does not
                         exist.</h1>
@@ -22,7 +22,7 @@
                             <div class="flex-shrink-0">
               <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-300 dark:bg-gray-700">
                 <!-- Heroicon name: outline/book-open -->
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24"
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round"
         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -55,7 +55,7 @@
                             <div class="flex-shrink-0">
               <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-300 dark:bg-gray-700">
                 <!-- Heroicon name: outline/rss -->
-                <svg class="h-6 w-6 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z"/>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-base font-medium text-gray-900 dark:text-gray-100">
-                <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-400">
+                <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-green-600">
                   <a href="{{ route('projects') }}" class="focus:outline-none">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     Projects
@@ -85,7 +85,7 @@
                         </li>
                     </ul>
                     <div class="mt-8">
-                        <a href="{{ route('home') }}" class="text-base font-medium text-red-400 hover:text-red-500">Or go back
+                        <a href="{{ route('home') }}" class="text-base font-medium text-green-600 hover:text-green-500">Or go back
                             home<span aria-hidden="true"> &rarr;</span></a>
                     </div>
                 </div>
