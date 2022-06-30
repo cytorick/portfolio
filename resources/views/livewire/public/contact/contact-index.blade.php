@@ -3,7 +3,7 @@
         <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div>
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
-                    @livewire('public.tools.title-shower', ['page' => 'Projects', 'number' => 1])
+                    @livewire('public.tools.title-shower', ['page' => 'Contact', 'number' => 1])
                 </h2>
 
             </div>
