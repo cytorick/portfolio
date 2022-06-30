@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Text extends Model
+class Text extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
 
     /**
      * @param $query
@@ -26,11 +28,12 @@ class Text extends Model
                 ->orWhere('page', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('content', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('title', 'like', '%' . $filters['search'] . '%'));
-//            // Apply the auctionId filter settings.
-//            ->when(!empty($filters['status']), fn($query, $status) => $query->where('status', $filters['status']))
-//
-//            ->when(!empty($filters['type']), fn($query, $type) => $query->where('type', $filters['type']))
-//
-//            ->when($filters['archived'] == 0, fn($query) => $query->where('archived', 0));
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this
+            ->addMediaCollection('text-image')
+            ->singleFile();
     }
 }

@@ -23,8 +23,10 @@
 
         <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-            <img src="{{ asset('img/rick-standing-3.png') }}" alt="" class="rounded-xl hidden sm:block">
-            <img src="{{ asset('img/rick-standing.png') }}" alt="" class="rounded-xl block sm:hidden">
+            @livewire('public.tools.image-shower', ['page' => 'Home', 'number' => 4, 'class' => 'rounded-xl hidden sm:block'])
+            @livewire('public.tools.image-shower', ['page' => 'Home', 'number' => 4, 'class' => 'rounded-xl block sm:hidden'])
+
+{{--            <img src="{{ asset('img/rick-standing.png') }}" alt="" class="">--}}
 
         </div>
 

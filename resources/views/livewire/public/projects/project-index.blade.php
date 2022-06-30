@@ -8,8 +8,7 @@
                 @livewire('public.tools.text-shower', ['page' => 'Projects', 'number' => 1])
                 <div class="relative mx-auto px-4 sm:max-w-3xl sm:px-6 lg:px-0 pt-10">
 
-                    <img src="{{ asset('img/rick-box-2.png') }}" alt=""
-                         class="rounded-xl hidden sm:block mt-10 min-h-100 mx-auto">
+                    @livewire('public.tools.image-shower', ['page' => 'Projects', 'number' => 1, 'class' => 'rounded-xl hidden sm:block mt-10 min-h-100 mx-auto'])
 
                 </div>
             </div>
