@@ -50,7 +50,7 @@
                 </div>
 
                 <x-nav.dropdown-group class="ml-10 shadow-xl">
-                    <x-nav.dropdown-button :active="request()->routeIs('admin.languages', 'admin.create.languages', 'admin.edit.languages', 'admin.skills', 'admin.create.skills', 'admin.edit.skills', 'admin.links', 'admin.create.link', 'admin.edit.link')">
+                    <x-nav.dropdown-button :active="request()->routeIs('admin.languages', 'admin.create.languages', 'admin.edit.languages', 'admin.skills', 'admin.create.skills', 'admin.edit.skills', 'admin.links', 'admin.create.link', 'admin.edit.link' , 'admin.texts', 'admin.edit.texts')">
                         {{ __('Other') }}
                     </x-nav.dropdown-button>
                     <x-nav.dropdown-panel>

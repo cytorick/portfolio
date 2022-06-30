@@ -88,7 +88,6 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group( functio
     });
     Route::controller(TextsController::class)->prefix('texts')->group( function () {
         Route::get('/', 'renderIndex')->name('admin.texts');
-        Route::get('/create','renderCreateForm')->name('admin.create.texts');
         Route::get('/{textId}/edit','renderEditForm')->name('admin.edit.texts');
     });
 });
