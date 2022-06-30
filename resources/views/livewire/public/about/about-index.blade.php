@@ -32,8 +32,7 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                 src="{{ asset('img/rick-computer.jpeg') }}" alt="">
+            @livewire('public.tools.image-shower', ['page' => 'About', 'number' => 1, 'class' => 'h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'])
         </div>
     </div>
 
@@ -160,9 +159,7 @@
             </div>
 
             <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
-
-                <img src="{{ asset('img/rick-standing.png') }}" alt="" class="rounded-xl sm:block">
-
+                @livewire('public.tools.image-shower', ['page' => 'About', 'number' => 3, 'class' => 'rounded-xl sm:block'])
             </div>
 
         </div>

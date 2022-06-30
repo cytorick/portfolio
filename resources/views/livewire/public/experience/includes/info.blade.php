@@ -18,8 +18,8 @@
 
         <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-            <img src="{{ asset('img/rick-tape-3.png') }}" alt="" class="rounded-xl hidden sm:block max-h-80">
-
+            @livewire('public.tools.image-shower', ['page' => 'Experience', 'number' => 1, 'class' => '"rounded-xl hidden sm:block max-h-80'])
+            
         </div>
 
     </div>

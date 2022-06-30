@@ -4,10 +4,13 @@ namespace App\Http\Livewire\Admin\Texts;
 
 use App\Models\Text;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class TextForm extends Component
 {
-    public $save;
+    use WithFileUploads;
+
+    public $save, $image;
 
     public Text $editing;
 
@@ -18,6 +21,7 @@ class TextForm extends Component
             'editing.number' => ['nullable'],
             'editing.title' => ['nullable'],
             'editing.content' => ['nullable'],
+            'image' => ['nullable'],
         ];
     }
 
@@ -28,12 +32,19 @@ class TextForm extends Component
             'editing.number' => ['nullable'],
             'editing.title' => ['nullable'],
             'editing.content' => ['nullable'],
+            'image' => ['nullable'],
         ]);
     }
 
     public function save()
     {
         $this->validate();
+
+        if ($this->image) {
+            $this->editing
+                ->addMedia($this->image)
+                ->toMediaCollection('text-image');
+        }
 
         $this->editing->save();
 

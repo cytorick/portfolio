@@ -47,6 +47,32 @@
                         </div>
                     </div>
 
+                    <div class="grid grid-cols-9 gap-5">
+                        <div class="col-span-9">
+                            <input type="file" wire:model="image">
+                            @if ($errors->first('image'))
+                                <div class="mt-1 text-red-500 text-sm">{{ $errors->first('image') }}</div>
+                            @endif
+                            <div class="grid grid-cols-9 gap-5">
+                                <div class="col-span-4">
+                                    @if ($this->editing->media)
+                                        @foreach($this->editing->media as $media)
+                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                        @endforeach
+                                    @endif
+                                </div>
+                                @if ($image)
+                                    <div class="col-span-1 my-auto">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="col-span-4">
+                                        <img src="{{ $image->temporaryUrl() }}" alt="">
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
