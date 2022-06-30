@@ -6,7 +6,13 @@
             @include('livewire.admin.shared.search', [ 'subject' => 'skills' ])
         </div>
         <div class="space-x-2 flex items-center">
-            @include('livewire.admin.shared.bulk-actions', ['route' => route('admin.create.skills')])
+            <form wire:submit.prevent="archiveSelected">
+                <div x-data="{ tooltip: 'This is crazy!' }">
+                    <button x-tooltip="Archive record(s)" type="submit"
+                            class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-purple-400">
+                        <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+            </form>
         </div>
     </div>
 
