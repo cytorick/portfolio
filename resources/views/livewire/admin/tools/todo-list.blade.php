@@ -3,6 +3,7 @@
     <x-table>
         <x-slot name="head">
             <x-table.heading class="bg-gray-900">#</x-table.heading>
+            <x-table.heading class="bg-gray-900"><i class="fa-solid fa-exclamation"></i></x-table.heading>
             <x-table.heading class="bg-gray-900">{{__('Title')}}</x-table.heading>
             <x-table.heading class="bg-gray-900"><i class="fa-solid fa-check"></i></x-table.heading>
         </x-slot>
@@ -10,6 +11,7 @@
             @forelse ($todos as $todo)
                 <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $todo->id }}">
                     <x-table.cell> {{ $todo->id }} </x-table.cell>
+                    <x-table.cell> {{ $todo->importance }} </x-table.cell>
                     <x-table.cell>
                         {{ $todo->title }}
                     </x-table.cell>
@@ -20,6 +22,7 @@
             @empty
                 <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-">
                     <x-table.cell>#</x-table.cell>
+                    <x-table.cell></x-table.cell>
                     <x-table.cell>
                         NO TASKS
                     </x-table.cell>
