@@ -9,7 +9,7 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">{{ __('Basic details') }}</h3>
-                            <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">{{ __('Here you have to specify the name, icon and type.') }}</p>
+                            <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">{{ __('Here you have to specify the title, content and image.') }}</p>
                         </div>
                         <div></div>
                     </div>
@@ -82,7 +82,7 @@
             <div class="mt-6">
                 <div class="text-right">
                     <x-button.submit>
-                        {{__('Save skills')}}
+                        {{__('Save text')}}
                     </x-button.submit>
                 </div>
             </div>

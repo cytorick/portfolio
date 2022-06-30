@@ -8,7 +8,7 @@
             <div class="flex items-center justify-between">
 
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight dark:text-gray-100">
-                    Edit "text"
+                    Edit "{!! $text->title !!}"
                 </h2>
                 <div wire:loading class="text-gray-400 italic text-xs font-medium ml-4">
                     Saving...
