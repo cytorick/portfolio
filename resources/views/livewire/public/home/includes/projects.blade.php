@@ -4,10 +4,10 @@
     </div>
     <div class="relative max-w-7xl mx-auto">
         <div class="text-center">
-            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">Most recent
-                <span class="text-green-500">projects</span></h2>
-            <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-100 sm:mt-4">Here you can find the
-                most recent <span class="text-green-500">project</span> I did.</p>
+            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">
+                @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 7])
+            </h2>
+          @livewire('public.tools.text-shower', ['page' => 'Home', 'number' => 7])
             <div class="mt-8 sm:flex justify-center">
                 <div class="rounded-md shadow">
                     <a href="{{ route('projects') }}"

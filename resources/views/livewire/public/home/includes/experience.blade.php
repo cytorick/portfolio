@@ -6,7 +6,8 @@
                     <a href="{{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}">
                         <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
                             @foreach($job->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="max-h-16">
+                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
+                                     class="max-h-16">
                             @endforeach
                         </div>
                     </a>
@@ -15,18 +16,18 @@
                     <a href="{{ route('internships.show', ['internshipId' => $internship->id, 'page' => 'overview']) }}">
                         <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
                             @foreach($internship->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="max-h-16">
+                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
+                                     class="max-h-16">
                             @endforeach
                         </div>
                     </a>
                 @endforeach
             </div>
             <div>
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">The <span class="text-green-600">experience</span> I
-                    have</h2>
-                <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">Here you see a short list of the
-                    <span class="text-green-600">experience</span> I have. These are <span class="text-green-600">internships</span> and regular <span class="text-green-600">jobs</span>. When you click on a logo you go to the
-                    information page of the specific job.</p>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">
+                    @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 2])
+                </h2>
+                @livewire('public.tools.text-shower', ['page' => 'Home', 'number' => 2])
                 <div class="mt-8 sm:flex">
                     <div class="rounded-md shadow">
                         <a href="{{ route('experience') }}"

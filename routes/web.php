@@ -13,6 +13,7 @@ use App\Http\Controllers\SchoolsController;
 use App\Http\Controllers\CertificatesController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\LinksController;
+use App\Http\Controllers\TextsController;
 
 Route::controller(PagesController::class)->group( function (){
     Route::get('/', 'renderHome')->name('home');
@@ -84,5 +85,10 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group( functio
         Route::get('/', 'renderIndex')->name('admin.links');
         Route::get('/create','renderCreateForm')->name('admin.create.link');
         Route::get('/{linkId}/edit','renderEditForm')->name('admin.edit.link');
+    });
+    Route::controller(TextsController::class)->prefix('texts')->group( function () {
+        Route::get('/', 'renderIndex')->name('admin.texts');
+        Route::get('/create','renderCreateForm')->name('admin.create.texts');
+        Route::get('/{textId}/edit','renderEditForm')->name('admin.edit.texts');
     });
 });

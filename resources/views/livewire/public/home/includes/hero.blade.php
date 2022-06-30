@@ -6,19 +6,12 @@
                     <h1>
                         <br>
                         <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-           <span class="block text-gray-900 dark:text-gray-100">Hi, my name is <span
-                       class="text-green-600">Rick Visser</span></span>
-            </span>
+                            <span class="block text-gray-900 dark:text-gray-100">
+                                @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 1])
+                            </span>
+                        </span>
                     </h1>
-                    <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        I am a {{ $age }} year-old <span
-                                class="text-green-600">Full-Stack development</span> student from The Netherlands.</p>
-                    <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        This <span class="text-green-600">website</span> is my personal portfolio, here you can find my
-                        experience, the schools I went to, my certificates, my skills, my past projects and the
-                        languages I speak.</p>
-                    <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Are you curious what I look like?</p>
+                    @livewire('public.tools.text-shower', ['page' => 'Home', 'number' => 1])
                     <div class="mt-4 sm:flex">
                         <div class="rounded-md shadow">
                             <a href="{{ route('about') }}"
@@ -31,7 +24,8 @@
                     <div class="mx-auto w-full">
                         <div class="mockup-code bg-gray-200 dark:bg-gray-900">
                             <pre data-prefix="$"
-                                 class="dark:text-white text-black"><code><a href="{{ route('login') }}" class="cursor-text">laravel</a> new Portfolio</code></pre>
+                                 class="dark:text-white text-black"><code><a href="{{ route('login') }}"
+                                                                             class="cursor-text">laravel</a> new Portfolio</code></pre>
                             <pre data-prefix=">" class="dark:text-yellow-400 text-blue-600"><code>installing jetstream...</code></pre>
                             <pre data-prefix=">"
                                  class="dark:text-yellow-400 text-blue-600"><code>installing livewire...</code></pre>

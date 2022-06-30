@@ -67,7 +67,7 @@
                             <x-slot name="title">{{ __('Links') }}</x-slot>
                             <x-slot name="description">{{ __('Here you can add, edit and view the links.') }}</x-slot>
                         </x-nav.dropdown-item>
-                        <x-nav.dropdown-item href="{{ route('admin.links') }}">
+                        <x-nav.dropdown-item href="{{ route('admin.texts') }}">
                             <x-slot name="title">{{ __('Texts') }}</x-slot>
                             <x-slot name="description">{{ __('Here you can edit the static text on the website.') }}</x-slot>
                         </x-nav.dropdown-item>

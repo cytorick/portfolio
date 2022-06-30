@@ -4,27 +4,12 @@
             <!-- Content area -->
             <div class="pt-12 sm:pt-16 lg:pt-20">
 
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">The <span
-                        class="text-green-600">skills</span> I have learned over the years</h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
+                    @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 4])
+                </h2>
 
                 <div class="mt-6 text-gray-500 space-y-6 dark:text-gray-200">
-                    <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">Over the years I have
-                        collected a
-                        few <span class="text-green-600">skills</span>. I have learned these <span
-                            class="text-green-600">skills</span> at school, at a <span
-                            class="text-green-600">job</span> or at
-                        an <span class="text-green-600">internship</span>. These <span
-                            class="text-green-600">skills</span>
-                        range from a basic state to a more advanced state.</p>
-                    <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">I would say that in
-                        programming
-                        <span class="text-red-600"><i class="fa-brands fa-laravel"></i> Laravel</span> is the <span
-                            class="text-green-600">skill</span> I am most proud of. I luckily got the chance the
-                        past years
-                        to get better at <span class="text-red-600"><i
-                                class="fa-brands fa-laravel"></i> Laravel</span>
-                        and learn a lot of things I didn't expect to learn.</p>
-                    <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">See all my skills.</p>
+                    @livewire('public.tools.text-shower', ['page' => 'Home', 'number' => 4])
                     <div class="mt-8 sm:flex">
                         <div class="rounded-md shadow">
                             <a href="{{ route('about') }}"
