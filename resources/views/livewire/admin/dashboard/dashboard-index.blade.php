@@ -17,6 +17,9 @@
                 </div>
             </dl>
         </div>
+        <div class="mt-5">
+            @livewire('admin.tools.todo-list')
+        </div>
     </div>
 
     <div class="col-span-8">
@@ -101,6 +104,9 @@
 {{--                </div>--}}
             </dl>
         </div>
+
+    </div>
+    <div class="col-span-12 mt-5">
 
     </div>
 
