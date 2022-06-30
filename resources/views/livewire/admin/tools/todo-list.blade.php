@@ -11,7 +11,15 @@
             @forelse ($todos as $todo)
                 <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $todo->id }}">
                     <x-table.cell> {{ $todo->id }} </x-table.cell>
-                    <x-table.cell> {{ $todo->importance }} </x-table.cell>
+                    <x-table.cell>
+                        @if($todo->importance == '!')
+                            <span class="text-green-500">{{ $todo->importance }}</span>
+                            @elseif($todo->importance == '!!')
+                            <span class="text-orange-500">{{ $todo->importance }}</span>
+                            @elseif($todo->importance == '!!!')
+                            <span class="text-red-500">{{ $todo->importance }}</span>
+                        @endif
+                    </x-table.cell>
                     <x-table.cell>
                         {{ $todo->title }}
                     </x-table.cell>
