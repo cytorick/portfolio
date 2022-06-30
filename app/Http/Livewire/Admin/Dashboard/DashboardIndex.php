@@ -10,6 +10,7 @@ use App\Models\Link;
 use App\Models\Project;
 use App\Models\School;
 use App\Models\Skill;
+use App\Models\Text;
 use App\Models\User;
 use Livewire\Component;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -29,6 +30,7 @@ class DashboardIndex extends Component
         $this->userCount = User::count();
         $this->linkCount = Link::count();
         $this->languageCount = Language::count();
+        $this->textCount = Text::count();
     }
 
     public function render()
