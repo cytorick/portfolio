@@ -30,7 +30,7 @@
                         <x-table.cell colspan="12">
                             @unless ($selectAll)
                                 <div>
-                                    <span>{{__('You have selected ')}}<strong>{{ $text->count() }}</strong> {{__('skills, do you want to select all')}} <strong>{{ $text->total() }}</strong>?</span>
+                                    <span>{{__('You have selected ')}}<strong>{{ $texts->count() }}</strong> {{__('skills, do you want to select all')}} <strong>{{ $texts->total() }}</strong>?</span>
                                     <x-button.link wire:click="selectAll" class="ml-1 text-blue-600">Select All
                                     </x-button.link>
                                 </div>

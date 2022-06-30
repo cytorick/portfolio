@@ -2,7 +2,9 @@
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div>
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100"><span class="text-green-600">Interested?</span> Contact <span class="text-green-600">me!</span></h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
+                    @livewire('public.tools.title-shower', ['page' => 'Projects', 'number' => 1])
+                </h2>
 
             </div>
             <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
@@ -23,7 +25,8 @@
         <div class="col-span-4">
             <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
 
-                <img src="{{ asset('img/rick-pointing-2.png') }}" alt="" class="rounded-xl hidden sm:block  mt-10 mx-auto">
+                <img src="{{ asset('img/rick-pointing-2.png') }}" alt=""
+                     class="rounded-xl hidden sm:block  mt-10 mx-auto">
 
             </div>
         </div>

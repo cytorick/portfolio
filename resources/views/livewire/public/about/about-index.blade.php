@@ -15,23 +15,11 @@
                 <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block text-gray-900 dark:text-gray-100">Hi, my name is <span
-                                    class="text-green-600">Rick Visser</span></span>
+                            <span class="block text-gray-900 dark:text-gray-100">
+                                @livewire('public.tools.title-shower', ['page' => 'About', 'number' => 1])
+                            </span>
                         </h1>
-                        <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            I am a {{ $age }} year-old <span
-                                class="text-green-600">Full-Stack development</span> student from The Netherlands.
-                        </p>
-                        <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            If I have to describe my self I would say that I am <span class="text-green-600">"Inquisitive, innovative &
-                            stress-resistant"</span>. I am a very social guy. I like to chat with co-workers and maybe
-                            drink a
-                            beer with some of my co-workers.
-                        </p>
-                        <p class="mt-3 text-base text-gray-600 dark:text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            Did you get <span class="text-green-600">enthusiastic</span>, contact me! <span
-                                class="text-green-600">:)</span>
-                        </p>
+                        @livewire('public.tools.text-shower', ['page' => 'About', 'number' => 1])
                         <div class="mt-4 sm:flex">
                             <div class="rounded-md shadow">
                                 <a href="{{ route('contact') }}"
@@ -136,15 +124,11 @@
                     </div>
                 </div>
                 <div class="mt-10">
-                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl"><span
-                            class="block text-gray-900 dark:text-gray-100">How I started my programming <span
-                                class="text-green-600">journey</span></span>
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        @livewire('public.tools.title-shower', ['page' => 'About', 'number' => 2])
                     </h2>
                     <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">
-                        I started my journey when I was 18 years old. I had just picked a study which I didn't like and
-                        was looking for a new study when I stumbled across <span class="text-green-600">"Software Development"</span>.
-                        I was immediately
-                        hyped because I always had a joy for computers.
+                        @livewire('public.tools.text-shower', ['page' => 'About', 'number' => 2])
                     </p>
                 </div>
             </div>
@@ -158,29 +142,12 @@
                 <!-- Content area -->
                 <div class="pt-12 sm:pt-16 lg:pt-20">
 
-                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">The <span
-                            class="text-green-600">skills</span> I have learned over the years</h2>
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
+                        @livewire('public.tools.title-shower', ['page' => 'About', 'number' => 3])
+                    </h2>
 
                     <div class="mt-6 text-gray-500 space-y-6 dark:text-gray-200">
-                        <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">Over the years I have
-                            collected a
-                            few <span class="text-green-600">skills</span>. I have learned these <span
-                                class="text-green-600">skills</span> at school, at a <span
-                                class="text-green-600">job</span> or at
-                            an <span class="text-green-600">internship</span>. These <span
-                                class="text-green-600">skills</span>
-                            range from a basic state to a more advanced state.</p>
-                        <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">I would say that in
-                            programming
-                            <span class="text-red-600"><i class="fa-brands fa-laravel"></i> Laravel</span> is the <span
-                                class="text-green-600">skill</span> I am most proud of. I luckily got the chance the
-                            past years
-                            to get better at <span class="text-red-600"><i
-                                    class="fa-brands fa-laravel"></i> Laravel</span>
-                            and learn a lot of things I didn't expect to learn.</p>
-                        <p class="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-200">See here what I have made
-                            with
-                            these skills.</p>
+                        @livewire('public.tools.text-shower', ['page' => 'About', 'number' => 3])
                         <div class="mt-8 sm:flex">
                             <div class="rounded-md shadow">
                                 <a href="{{ route('projects') }}"
@@ -204,7 +171,7 @@
                 <div class="relative z-10 mb-8 md:mb-2">
                     <div class="text-base max-w-prose lg:max-w-none">
                         <h2 class="leading-6 text-green-600 font-semibold tracking-wide uppercase dark:text-green-600">
-                            Skills</h2>
+                            My Skills</h2>
                     </div>
                 </div>
                 <div class="relative">
