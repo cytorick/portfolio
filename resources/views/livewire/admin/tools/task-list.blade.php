@@ -58,7 +58,7 @@
                             <x-input.group stacked for="importance" label="{{ __('!*') }}"
                                            :error="$errors->first('importance')">
                                 <x-input.select id="importance" wire:model="importance"
-                                              :error="$errors->first('importance')">
+                                              :error="$errors->first('importance')" placeholder="{{__('Select importance level')}}">
                                     <option value="!">{{__('!')}}</option>
                                     <option value="!!">{{__('!!')}}</option>
                                     <option value="!!!">{{__('!!!')}}</option>

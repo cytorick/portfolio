@@ -42,7 +42,7 @@
                             <x-input.group stacked for="status" label="{{ __('Status*') }}"
                                            :error="$errors->first('editing.status')">
                                 <x-input.select id="status" wire:model="editing.status"
-                                                :error="$errors->first('editing.status')">
+                                                :error="$errors->first('editing.status')" placeholder="{{__('Select school status')}}">
                                     <option value="Active">{{__('Active')}}</option>
                                     <option value="Graduated">{{__('Graduated')}}</option>
                                     <option value="Terminated (no diploma)">{{__('Terminated (no diploma)')}}</option>
