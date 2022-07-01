@@ -27,6 +27,7 @@
                 <x-table.heading class="bg-gray-900">{{__('Page')}}</x-table.heading>
                 <x-table.heading class="bg-gray-900">{{__('Number')}}</x-table.heading>
                 <x-table.heading class="bg-gray-900">{{__('Title')}}</x-table.heading>
+                <x-table.heading class="bg-gray-900"><i class="fa-solid fa-image"></i></x-table.heading>
                 <x-table.heading class="bg-gray-900"></x-table.heading>
                 <x-table.heading class="bg-gray-900"></x-table.heading>
             </x-slot>
@@ -61,6 +62,13 @@
                         <x-table.cell>
                             {!! $text->title !!}
                         </x-table.cell>
+                        <x-table.cell>
+                            @if($text->hasMedia('text-image'))
+                                <i class="fa-solid fa-check"></i>
+                            @else
+                                <i class="fa-solid fa-xmark"></i>
+                            @endif
+                        </x-table.cell>
                         <x-table.cell class="text-right">
                             @if($text->archived)
                                 <div x-data="{ tooltip: 'This is crazy!' }">
@@ -74,7 +82,9 @@
                         </x-table.cell>
                         <x-table.cell class="text-right pr-6">
                             <div x-data="{ tooltip: 'This is crazy!' }">
-                                <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-green-600" href="{{ route('admin.edit.texts', ['textId' => $text->id]) }}"><i class="fa-solid fa-pen-to-square"></i></x-a.link>
+                                <x-a.link x-tooltip="Edit" class="dark:text-gray-100 dark:hover:text-green-600"
+                                          href="{{ route('admin.edit.texts', ['textId' => $text->id]) }}"><i
+                                        class="fa-solid fa-pen-to-square"></i></x-a.link>
                             </div>
                         </x-table.cell>
                     </x-table.row>
