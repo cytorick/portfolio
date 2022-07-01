@@ -3,7 +3,7 @@
     <div class="flex justify-between">
         <div class="w-2/4 flex space-x-4">
             {{-- SEARCH & ADVANCED SEARCH --}}
-            @include('livewire.admin.shared.search', [ 'subject' => 'skills' ])
+            @include('livewire.admin.shared.search', [ 'subject' => 'texts' ])
         </div>
         <div class="space-x-2 flex items-center">
             <form wire:submit.prevent="archiveSelected">
