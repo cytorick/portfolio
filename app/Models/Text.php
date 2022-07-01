@@ -24,8 +24,7 @@ class Text extends Model implements HasMedia
     {
         return $query
             ->when(!empty($filters['search']), fn($query, $search) =>
-            $query->where('name', 'like', '%' . $filters['search'] . '%')
-                ->orWhere('page', 'like', '%' . $filters['search'] . '%')
+            $query->Where('page', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('content', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('title', 'like', '%' . $filters['search'] . '%'));
     }
