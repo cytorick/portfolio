@@ -3,11 +3,17 @@
 namespace App\Http\Livewire\Admin\Tools;
 
 use App\Models\Task;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class TaskList extends Component
 {
-    public $tasks, $hidden, $title;
+    public $tasks, $hidden;
+    public $title;
+
+    protected $rules = [
+        'title' => 'required',
+    ];
 
     protected $listeners = [
         'refreshTodos' => '$refresh',
@@ -18,13 +24,21 @@ class TaskList extends Component
     {
         $this->hidden = $hidden;
         $this->tasks = Task::where('completed', 0)->get();
+//        dump($this->title);
     }
 
-    public function save(Request $request)
+    public function createRecord()
     {
-        return Task::make([
-            'title' => $request->title,
+        $this->validate();
+
+        Task::create([
+            'title' => $this->title,
+            'completed' => 0,
         ]);
+
+        $this->reset('title');
+        $this->emitSelf('refreshRecords');
+        $this->dispatchBrowserEvent('notify', 'Successfully created task!');
     }
 
     public function setCompleted($todoId)

@@ -1,32 +1,5 @@
 <div>
     <h1 class="mb-2 text-xl font-semibold text-gray-900 dark:text-gray-100">Tasks:</h1>
-
-    <div class="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg mb-5">
-        {{-- CONTENT PANEL --}}
-        <div class="px-4 py-5 sm:px-6 space-y-4">
-            <form wire:submit.prevent="save" class="space-y-6" enctype="multipart/form-data">
-                <div class="grid grid-cols-9 gap-5">
-                    <div class="col-span-9">
-                        <x-input.group stacked for="title" label="{{ __('Title*') }}"
-                                       :error="$errors->first('title')">
-                            <x-input.text id="title" wire:model.lazy="title"
-                                          :error="$errors->first('title')"/>
-                        </x-input.group>
-                    </div>
-                </div>
-
-                <div class="mt-6">
-                    <div class="text-right">
-                        <x-button.submit>
-                            {{__('Save task')}}
-                        </x-button.submit>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-    </div>
-
     <x-table>
         <x-slot name="head">
             <x-table.heading class="bg-gray-900">#</x-table.heading>
@@ -68,4 +41,31 @@
             @endforelse
         </x-slot>
     </x-table>
+    @if($hidden == false)
+        <div class="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg mb-5 mt-5">
+            {{-- CONTENT PANEL --}}
+            <div class="px-4 py-5 sm:px-6 space-y-4">
+                <form wire:submit.prevent="createRecord" class="space-y-6" enctype="multipart/form-data">
+                    <div class="grid grid-cols-9 gap-5">
+                        <div class="col-span-9">
+                            <x-input.group stacked for="title" label="{{ __('Title*') }}"
+                                           :error="$errors->first('title')">
+                                <x-input.text id="title" wire:model="title"
+                                              :error="$errors->first('title')"/>
+                            </x-input.group>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="text-right">
+                            <x-button.submit>
+                                {{__('Save task')}}
+                            </x-button.submit>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    @endif
 </div>
