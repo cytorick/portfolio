@@ -117,5 +117,6 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $jobs->links('vendor.pagination.tailwind') }}
     </div>
 </div>
