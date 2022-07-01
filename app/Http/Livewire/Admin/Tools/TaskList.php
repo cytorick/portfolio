@@ -14,7 +14,7 @@ class TaskList extends Component
 
     protected $rules = [
         'title' => 'required',
-        'importance' => 'required',
+        'importance' => 'nullable',
     ];
 
     protected $listeners = [
@@ -35,7 +35,7 @@ class TaskList extends Component
 
         Task::create([
             'title' => $this->title,
-            'importance' => $this->importance,
+            'importance' => $this->importance ?? '!',
             'completed' => 0,
         ]);
 
