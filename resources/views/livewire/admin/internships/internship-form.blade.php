@@ -41,8 +41,10 @@
                         <div class="col-span-5">
                             <x-input.group stacked for="contract_type" label="{{ __('Contract Type*') }}"
                                            :error="$errors->first('editing.contract_type')">
-                                <x-input.text id="contract_type" wire:model.lazy="editing.contract_type"
-                                              :error="$errors->first('editing.contract_type')"/>
+                                <x-input.select id="status" wire:model="editing.status"
+                                                :error="$errors->first('editing.status')">
+                                    <option value="Internship">{{__('Internship')}}</option>
+                                </x-input.select>
                             </x-input.group>
                         </div>
                     </div>

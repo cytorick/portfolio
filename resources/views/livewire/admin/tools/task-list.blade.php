@@ -47,11 +47,22 @@
             <div class="px-4 py-5 sm:px-6 space-y-4">
                 <form wire:submit.prevent="createRecord" class="space-y-6" enctype="multipart/form-data">
                     <div class="grid grid-cols-9 gap-5">
-                        <div class="col-span-9">
+                        <div class="col-span-7">
                             <x-input.group stacked for="title" label="{{ __('Title*') }}"
                                            :error="$errors->first('title')">
                                 <x-input.text id="title" wire:model="title"
                                               :error="$errors->first('title')"/>
+                            </x-input.group>
+                        </div>
+                        <div class="col-span-2">
+                            <x-input.group stacked for="importance" label="{{ __('!*') }}"
+                                           :error="$errors->first('importance')">
+                                <x-input.select id="importance" wire:model="importance"
+                                              :error="$errors->first('importance')">
+                                    <option value="!">{{__('!')}}</option>
+                                    <option value="!!">{{__('!!')}}</option>
+                                    <option value="!!!">{{__('!!!')}}</option>
+                                </x-input.select>
                             </x-input.group>
                         </div>
                     </div>
