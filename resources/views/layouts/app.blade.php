@@ -124,7 +124,7 @@
             <div id="mySidenav" class="sidenav bg-gray-600 shadow-2xl">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="p-5">
-                    @livewire('admin.tools.todo-list')
+                    @livewire('admin.tools.task-list')
                 </div>
             </div>
 
