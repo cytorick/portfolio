@@ -100,13 +100,6 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
                         </a>
                     </div>
                     @livewire('admin.tools.flush-cache')
-                    <div class="tooltip">
-                        <a href="{{ route('profile.show') }}"
-                           x-tooltip.raw="Profile"
-                           class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-yellow-400 mr-2">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    </div>
                     <form method="POST" action="{{ route('logout') }}" x-data>
                         @csrf
                         <div class="tooltip">
