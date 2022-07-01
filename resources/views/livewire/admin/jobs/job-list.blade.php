@@ -117,5 +117,6 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $jobs->links() }}
     </div>
 </div>

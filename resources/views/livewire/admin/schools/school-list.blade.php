@@ -119,6 +119,7 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $schools->links() }}
     </div>
 
 </div>

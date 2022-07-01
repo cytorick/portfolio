@@ -112,5 +112,6 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $certificates->links() }}
     </div>
 </div>

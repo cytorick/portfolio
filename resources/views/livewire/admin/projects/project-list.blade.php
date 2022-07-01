@@ -106,5 +106,6 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $projects->links() }}
     </div>
 </div>

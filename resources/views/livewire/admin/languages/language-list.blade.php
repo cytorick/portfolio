@@ -105,6 +105,7 @@
                 @endforelse
             </x-slot>
         </x-table>
+        {{ $languages->links() }}
     </div>
 
 </div>
