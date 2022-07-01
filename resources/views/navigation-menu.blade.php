@@ -97,6 +97,9 @@
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </a>
                 </form>
+                <span x-tooltip.raw="Tasks" class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-yellow-400 mr-2" onclick="openNav()">
+                   <i class="fa-solid fa-list-check"></i>
+                </span>
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative justify-end">
 
