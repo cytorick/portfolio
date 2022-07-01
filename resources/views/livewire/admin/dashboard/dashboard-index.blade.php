@@ -18,7 +18,7 @@
             </dl>
         </div>
         <div class="mt-5">
-            @livewire('admin.tools.todo-list', ['hidden' => true])
+            @livewire('admin.tools.task-list', ['hidden' => true])
         </div>
     </div>
 
