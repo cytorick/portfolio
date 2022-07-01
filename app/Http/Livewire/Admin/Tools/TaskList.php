@@ -10,9 +10,11 @@ class TaskList extends Component
 {
     public $tasks, $hidden;
     public $title;
+    public $importance;
 
     protected $rules = [
         'title' => 'required',
+        'importance' => 'required',
     ];
 
     protected $listeners = [
@@ -33,6 +35,7 @@ class TaskList extends Component
 
         Task::create([
             'title' => $this->title,
+            'importance' => $this->importance,
             'completed' => 0,
         ]);
 
