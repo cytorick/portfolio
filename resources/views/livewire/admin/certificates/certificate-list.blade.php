@@ -112,6 +112,6 @@
                 @endforelse
             </x-slot>
         </x-table>
-        {{ $certificates->links() }}
+        {{ $certificates->links('vendor.pagination.tailwind') }}
     </div>
 </div>

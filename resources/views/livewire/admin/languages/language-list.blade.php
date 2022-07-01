@@ -105,7 +105,7 @@
                 @endforelse
             </x-slot>
         </x-table>
-        {{ $languages->links() }}
+        {{ $languages->links('vendor.pagination.tailwind') }}
     </div>
 
 </div>

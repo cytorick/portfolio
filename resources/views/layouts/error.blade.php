@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@
         gtag('config', 'G-THCCJHCYDC');
     </script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-800 selection:bg-red-300 min-h-screen">
+<body class="bg-gray-100 dark:bg-gray-800 selection:bg-red-300 w-full h-full">
 
 <div>
 

@@ -122,6 +122,6 @@
                 @endforelse
             </x-slot>
         </x-table>
-        {{ $internships->links() }}
+        {{ $internships->links('vendor.pagination.tailwind') }}
     </div>
 </div>
