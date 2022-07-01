@@ -10,6 +10,7 @@ use App\Models\Link;
 use App\Models\Project;
 use App\Models\School;
 use App\Models\Skill;
+use App\Models\Task;
 use App\Models\Text;
 use App\Models\User;
 use Livewire\Component;
@@ -31,6 +32,7 @@ class DashboardIndex extends Component
         $this->linkCount = Link::count();
         $this->languageCount = Language::count();
         $this->textCount = Text::count();
+        $this->taskCount = Task::where('completed', 0)->count();
     }
 
     public function render()

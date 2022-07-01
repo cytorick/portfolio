@@ -93,6 +93,11 @@
                     <dd class="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-100">{{ $languageCount }}</dd>
                 </div>
 
+                <div class="px-4 py-5 bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden sm:p-6">
+                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-200 truncate">Total tasks</dt>
+                    <dd class="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-100">{{ $taskCount }}</dd>
+                </div>
+
 {{--                <div class="px-4 py-5 bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden sm:p-6">--}}
 {{--                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-200 truncate">Total skills</dt>--}}
 {{--                    <dd class="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-100">{{ $skillCount }}</dd>--}}
