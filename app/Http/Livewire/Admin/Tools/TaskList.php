@@ -25,7 +25,7 @@ class TaskList extends Component
     public function mount($hidden = false)
     {
         $this->hidden = $hidden;
-        $this->tasks = Task::where('completed', 0)->get();
+        $this->tasks = Task::where('completed', 0)->orderBy('importance', 'desc')->get();
 //        dump($this->title);
     }
 
