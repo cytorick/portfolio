@@ -23,6 +23,7 @@ class CreateCertificatesTable extends Migration
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->boolean('archived')->default(0);
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }

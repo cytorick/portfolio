@@ -25,6 +25,7 @@ class CreateJobsTable extends Migration
             $table->date('end_date')->nullable();
             $table->string('contract_type')->nullable();
             $table->boolean('is_active')->default(0);
+            $table->boolean('featured')->default(0);
             $table->boolean('archived')->default(0);
             $table->timestamps();
         });

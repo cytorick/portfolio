@@ -18,6 +18,7 @@ class CreateLinksTable extends Migration
             $table->string('name');
             $table->string('link');
             $table->string('icon');
+            $table->boolean('featured')->default(0);
             $table->boolean('archived')->default(0);
             $table->timestamps();
         });

@@ -25,7 +25,8 @@ return new class extends Migration
             $table->string('image_4');
             $table->string('image_5');
             $table->string('company_logo');
-            $table->boolean('archived');
+            $table->boolean('archived')->default(0);
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ class CreateSkillsTable extends Migration
             $table->string('name');
             $table->string('color');
             $table->boolean('archived')->default(0);
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }

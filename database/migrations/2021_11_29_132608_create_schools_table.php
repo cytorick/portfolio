@@ -25,6 +25,7 @@ class CreateSchoolsTable extends Migration
             $table->boolean('is_active')->default(0);
             $table->string('status');
             $table->boolean('archived')->default(0);
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }
