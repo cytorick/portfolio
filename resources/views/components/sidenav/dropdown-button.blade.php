@@ -7,7 +7,7 @@
 <div class="relative w-full" {{ $attributes->merge(['x-data' => $data]) }} @click.away="open = false"
      @close.stop="open = false">
     <div @click="open = ! open">
-        <span class="text-gray-200 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-md font-semibold rounded-md">
+        <span class="text-gray-200 hover:bg-gray-800 hover:text-green-600 group flex items-center px-2 py-2 text-md font-semibold rounded-md">
         {{ $trigger }}
         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 20 20" fill="currentColor">
