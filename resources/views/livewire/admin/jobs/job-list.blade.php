@@ -16,12 +16,10 @@
                 <x-table.heading class="dark:bg-gray-900 pr-0 w-8"><x-input.checkbox wire:model="selectPage" /></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">#</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Image</x-table.heading>
-                <x-table.heading class="dark:bg-gray-900">Company</x-table.heading>
-                <x-table.heading class="dark:bg-gray-900">Function</x-table.heading>
+                <x-table.heading class="dark:bg-gray-900">Role & Company</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Address</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Dates</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Contract</x-table.heading>
-                <x-table.heading class="dark:bg-gray-900">Website</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900"></x-table.heading>
@@ -51,17 +49,16 @@
                         </x-table.cell>
                         <x-table.cell>
                             @foreach($job->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="h-5">
+                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="h-7 w-auto">
                             @endforeach
                         </x-table.cell>
-                        <x-table.cell>
-                            {{ $job->company }}
+                        <x-table.cell class="whitespace-nowrap py-4 pl-4 text-sm">
+                            <div class="font-bold text-md">{{ $job->function }}</div>
+                            <div class="text-sm">{{ $job->company }}</div>
                         </x-table.cell>
-                        <x-table.cell>
-                            {{ $job->function }}
-                        </x-table.cell>
-                        <x-table.cell>
-                            {{ $job->street }}, {{ $job->place }}
+                        <x-table.cell class="whitespace-nowrap py-4 pl-4 text-sm">
+                            <div class="text-md">{{ $job->street }}</div>
+                            <div class="text-sm">{{ $job->place }}</div>
                         </x-table.cell>
                         <x-table.cell>
                             {{ date('M Y', strtotime($job->start_date)) }} -
@@ -73,9 +70,6 @@
                         </x-table.cell>
                         <x-table.cell>
                             {{ $job->contract_type }}
-                        </x-table.cell>
-                        <x-table.cell>
-                            {{ $job->website }}
                         </x-table.cell>
                         <x-table.cell class="text-right">
                             @if($job->archived)
