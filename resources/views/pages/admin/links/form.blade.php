@@ -8,7 +8,7 @@
 
     {{-- HERO SECTION --}}
     <x-slot name="header">
-        <div class="max-w-7xl mx-auto">
+        <div class="mx-auto">
             <div class="flex items-center justify-between">
 
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight dark:text-gray-100">
@@ -38,8 +38,7 @@
 
     {{-- MAIN CONTENT --}}
     <div class="bg-gray-100 dark:bg-gray-700">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
-
+{{--        <div class="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:px-8">--}}
             @isset( $link )
                 @livewire('admin.links.links-form', [
                 'linkId' => $link->id
@@ -47,8 +46,7 @@
             @else
                 @livewire('admin.links.links-form')
             @endif
-
-        </div>
+{{--        </div>--}}
     </div>
 
 </x-app-layout>

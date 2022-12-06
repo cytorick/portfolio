@@ -27,11 +27,7 @@
     </x-slot>
 
     <div class="py-3">
-        <div class="max-w-full mx-auto sm:px-6 lg:px-8">
-
-            @livewire('admin.internships.internship-list')
-
-        </div>
+        @livewire('admin.internships.internship-list')
     </div>
 
 </x-app-layout>

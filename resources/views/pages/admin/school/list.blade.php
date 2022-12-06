@@ -3,7 +3,7 @@
     @section('title', 'Schools')
 
     <x-slot name="header">
-        <div class="max-w-7xl mx-auto">
+        <div class="mx-auto">
             <div class="flex items-center justify-between">
 
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight dark:text-gray-100">
@@ -27,11 +27,7 @@
     </x-slot>
 
     <div class="py-3">
-        <div class="max-w-full mx-auto sm:px-6 lg:px-8">
-
-            @livewire('admin.schools.school-list')
-
-        </div>
+        @livewire('admin.schools.school-list')
     </div>
 
 </x-app-layout>
