@@ -17,7 +17,7 @@
              x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0"
              x-transition:leave-end="-translate-x-full"
              x-description="Off-canvas menu, show/hide based on off-canvas menu state."
-             class="relative flex-1 flex flex-col max-w-xs w-full bg-white" @click.away="open = false"
+             class="relative flex-1 flex flex-col max-w-xs w-full bg-white dark:bg-gray-900" @click.away="open = false"
              style="display: none;">
 
             <div x-show="open" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0"
@@ -39,9 +39,12 @@
 
             <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <div class="flex-shrink-0 flex items-center px-4">
-                    <img class="h-8 w-auto"
-                         src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                         alt="Workflow">
+                    <div class="flex items-center flex-shrink-0 px-4 pb-5 mx-auto">
+                        <a href="{{ route('dashboard') }}" class="flex items-center">
+                            <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
+                            <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
+                        </a>
+                    </div>
                 </div>
                 <nav class="mt-5 px-2 space-y-1">
                     {{ $slot }}
@@ -55,10 +58,10 @@
                                  src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">
                         </div>
                         <div class="ml-3">
-                            <p class="text-sm font-medium text-gray-100 group-hover:text-gray-900">
+                            <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">
                                 {{ auth()->user()->name }}
                             </p>
-                            <p class="text-xs font-medium text-gray-200 group-hover:text-gray-700">
+                            <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">
                                 View profile
                             </p>
                         </div>
@@ -76,7 +79,7 @@
 
 <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 shadow">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
-    <div class="flex-1 flex flex-col min-h-0 bg-gray-900">
+    <div class="flex-1 flex flex-col min-h-0 bg-white dark:bg-gray-900">
         <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div class="flex items-center flex-shrink-0 px-4 pb-5 mx-auto">
                 <a href="{{ route('dashboard') }}" class="flex items-center">
@@ -84,10 +87,10 @@
                     <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
                 </a>
             </div>
-            <div class="flex items-center flex-shrink-0 px-4 py-5 text-gray-200">
+            <div class="flex items-center flex-shrink-0 px-4 py-5 dark:text-gray-200">
                 <livewire:tools.time/>
             </div>
-            <nav class="mt-5 flex-1 px-2 bg-gray-900 space-y-1">
+            <nav class="mt-5 flex-1 px-2 dark:bg-gray-900 space-y-1">
                 {{ $slot }}
             </nav>
         </div>
@@ -101,10 +104,10 @@
                                      src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">
                             </div>
                             <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-100 group-hover:text-gray-900">
+                                <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">
                                     {{ auth()->user()->name }}
                                 </p>
-                                <p class="text-xs font-medium text-gray-200 group-hover:text-gray-700">
+                                <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">
                                     View profile
                                 </p>
                             </div>
