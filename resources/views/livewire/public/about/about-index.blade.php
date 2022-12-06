@@ -148,7 +148,7 @@
                     <div class="mt-6 text-gray-500 space-y-6 dark:text-gray-200">
                         @livewire('public.tools.text-shower', ['page' => 'About', 'number' => 3])
                         <div class="mt-8 sm:flex">
-                            <div class="rounded-md shadow">
+                            <div class="rounded-md">
                                 <a href="{{ route('projects') }}"
                                    class="flex items-center justify-center my-5 px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
                                     All projects </a>
