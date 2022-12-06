@@ -3,7 +3,7 @@
     @section('title', 'Internships')
 
     <x-slot name="header">
-        <div class="max-w-7xl mx-auto">
+        <div class="mx-auto">
             <div class="flex items-center justify-between">
 
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight dark:text-gray-100">
