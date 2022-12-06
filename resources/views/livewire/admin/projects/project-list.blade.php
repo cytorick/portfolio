@@ -16,6 +16,7 @@
             <x-slot name="head">
                 <x-table.heading class="dark:bg-gray-900 pr-0 w-8"><x-input.checkbox wire:model="selectPage" /></x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">#</x-table.heading>
+                <x-table.heading class="dark:bg-gray-900">Image</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Title & company</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Description</x-table.heading>
                 <x-table.heading class="dark:bg-gray-900">Made at</x-table.heading>
@@ -45,6 +46,11 @@
                         </x-table.cell>
                         <x-table.cell>
                             {{ $project->id }}
+                        </x-table.cell>
+                        <x-table.cell>
+                            @foreach($project->media as $media)
+                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="w-20 h-auto">
+                            @endforeach
                         </x-table.cell>
                         <x-table.cell class="whitespace-nowrap py-4 pl-4 text-sm">
                             <div class="font-bold text-md">{{ $project->title }}</div>
