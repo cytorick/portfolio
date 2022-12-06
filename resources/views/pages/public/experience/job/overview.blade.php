@@ -39,6 +39,8 @@
                             @else
                                 {{ date('M Y', strtotime($job->end_date)) }}
                             @endif
+{{--                                                            ({{ $job->start_date->diffInMonths($job->end_date) }} months)--}}
+
                         </p>
                     </dd>
                 </div>
