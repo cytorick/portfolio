@@ -54,7 +54,7 @@
                         </x-table.cell>
                         <x-table.cell>
                             @foreach($internship->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="h-5">
+                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="" class="h-5">
                             @endforeach
                         </x-table.cell>
                         <x-table.cell>

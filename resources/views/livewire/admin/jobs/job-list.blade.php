@@ -49,7 +49,7 @@
                         </x-table.cell>
                         <x-table.cell>
                             @foreach($job->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="h-7 w-auto">
+                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="" class="h-7 w-auto">
                             @endforeach
                         </x-table.cell>
                         <x-table.cell class="whitespace-nowrap py-4 pl-4 text-sm">
