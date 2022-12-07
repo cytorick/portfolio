@@ -16,7 +16,7 @@
                             </x-slot>
                             <x-slot name="image">
                                 @foreach($school->media as $media)
-                                    <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="inline-block align-middle px-3">
+                                    <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt="" class="inline-block align-middle px-3">
                                 @endforeach
                             </x-slot>
                             <x-slot name="dates">

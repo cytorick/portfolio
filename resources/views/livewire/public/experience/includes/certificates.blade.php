@@ -15,7 +15,8 @@
                             {{--                        </x-slot>--}}
                             <x-slot name="image">
                                 <img
-                                    src="{{ asset('img/' . $certificate->media[0]->id .'/'. $certificate->media[0]->file_name) }}"
+{{--                                    src="{{ asset('img/' . $certificate->media[0]->id .'/'. $certificate->media[0]->file_name) }}"--}}
+                                    src="https://images.cytorick.nl{{ $certificate->media[0]->id }}/{{ $certificate->media[0]->file_name }}"
                                     alt="{{ $certificate->media[0]->file_name }}"
                                     class="inline-block align-middle px-3">
                             </x-slot>

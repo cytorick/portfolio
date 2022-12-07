@@ -5,7 +5,7 @@
                 @foreach($certificates as $certificate)
                     <div class="col-span-1 flex justify-center py-8 px-8 rounded-xl bg-transparent">
                         @foreach($certificate->media as $media)
-                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="" class="max-h-12">
+                            <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt="" class="max-h-12">
                         @endforeach
                     </div>
                 @endforeach

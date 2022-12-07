@@ -6,7 +6,7 @@
                     <a href="{{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}">
                         <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
                             @foreach($job->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
+                                <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt=""
                                      class="max-h-16">
                             @endforeach
                         </div>
@@ -16,7 +16,7 @@
                     <a href="{{ route('internships.show', ['internshipId' => $internship->id, 'page' => 'overview']) }}">
                         <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
                             @foreach($internship->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
+                                <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt=""
                                      class="max-h-16">
                             @endforeach
                         </div>

@@ -13,7 +13,7 @@
                             <dt>
                                 <div class="absolute bg-green-600 rounded-md p-3">
                                     @foreach($language->media as $media)
-                                        <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="vlag" class="h-6 w-8">
+                                        <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt="vlag" class="h-6 w-8">
                                     @endforeach
                                 </div>
                             </dt>

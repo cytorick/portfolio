@@ -21,7 +21,7 @@
                             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                                 <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                                     @foreach($project->media as $media)
-                                        <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
+                                        <img src="https://images.cytorick.nl{{ $media->id }}/{{ $media->file_name }}" alt=""
                                              class="object-cover rounded-lg">
                                     @endforeach
                                 </div>
