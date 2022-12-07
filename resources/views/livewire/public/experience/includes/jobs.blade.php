@@ -15,7 +15,7 @@
                                 {{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}
                             </x-slot>
                             <x-slot name="image">
-                                <img src="https://images.cytorick.nl{{ $job->media[0]->id }}/{{ $job->media[0]->file_name }}"
+                                <img src="https://images.cytorick.nl/{{ $job->media[0]->id }}/{{ $job->media[0]->file_name }}"
                                      alt="{{ $job->media[0]->file_name }}" class="inline-block align-middle px-3">
                             </x-slot>
                             <x-slot name="dates">

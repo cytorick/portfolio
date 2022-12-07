@@ -16,7 +16,7 @@
                             </x-slot>
                             <x-slot name="image">
                                 <img
-                                    src="https://images.cytorick.nl{{ $school->media[0]->id }}/{{ $school->media[0]->file_name }}"
+                                    src="https://images.cytorick.nl/{{ $school->media[0]->id }}/{{ $school->media[0]->file_name }}"
                                     alt="{{ $school->media[0]->file_name }}" class="inline-block align-middle px-3">
                             </x-slot>
                             <x-slot name="dates">
