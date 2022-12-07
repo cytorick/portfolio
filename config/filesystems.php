@@ -38,8 +38,8 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => '/',
-            'url' => 'https://images.cytorick.nl/',
+            'root' => '../../img',
+//            'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
 
