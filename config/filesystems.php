@@ -39,7 +39,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => '.../img',
-            'url' => env('APP_URL').'/public',
+//            'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
 
