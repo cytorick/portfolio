@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <a href="{{ route('home') }}" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
                 <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
             </a>

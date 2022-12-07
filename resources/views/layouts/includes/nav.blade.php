@@ -3,7 +3,7 @@
         <div class="relative h-16 flex justify-between">
             <div class="relative z-10 px-2 flex lg:px-0">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('home') }}" class="flex items-center">
+                    <a href="/" class="flex items-center">
                         <i class="fa-solid fa-r h-8 block text-green-500 text-2xl"></i>
                         <i class="fa-solid fa-v h-8 block text-green-500 text-2xl"></i>
                     </a>

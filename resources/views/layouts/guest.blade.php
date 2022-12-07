@@ -40,13 +40,13 @@
 
 <div>
 
-    @include('layouts.includes.nav')
+{{--    @include('layouts.includes.nav')--}}
 
     <div class="min-h-screen">
         {{ $slot }}
     </div>
 
-    @include('layouts.includes.footer')
+{{--    @include('layouts.includes.footer')--}}
 
     <x-notification />
 

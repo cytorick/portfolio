@@ -123,7 +123,7 @@
     </x-sidenav.dropdown-button>
     <br>
     @livewire('admin.tools.flush-cache')
-    <x-sidenav.item class="text-green-600 dark:text-green-600 hover:text-gray-900 hover:dark:text-gray-50" href="{{ route('home') }}">
+    <x-sidenav.item class="text-green-600 dark:text-green-600 hover:text-gray-900 hover:dark:text-gray-50" href="cytorick.nl">
         <div class="mr-4 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                  stroke="currentColor" class="w-6 h-6">

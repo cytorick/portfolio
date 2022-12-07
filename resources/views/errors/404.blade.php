@@ -32,7 +32,7 @@
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-base font-medium text-gray-900 dark:text-gray-100">
                 <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                  <a href="{{ route('about') }}" class="focus:outline-none">
+                  <a href="" class="focus:outline-none">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     About me
                   </a>
@@ -65,7 +65,7 @@
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-base font-medium text-gray-900 dark:text-gray-100">
                 <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-green-600">
-                  <a href="{{ route('projects') }}" class="focus:outline-none">
+                  <a href="" class="focus:outline-none">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     Projects
                   </a>
@@ -85,7 +85,7 @@
                         </li>
                     </ul>
                     <div class="mt-8">
-                        <a href="{{ route('home') }}" class="text-base font-medium text-green-600 hover:text-green-500">Or go back
+                        <a href="" class="text-base font-medium text-green-600 hover:text-green-500">Or go back
                             home<span aria-hidden="true"> &rarr;</span></a>
                     </div>
                 </div>
