@@ -89,30 +89,6 @@ Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class
             </a>
 
         </nav>
-        @auth()
-            <nav class="hidden lg:py-2 lg:flex lg:space-x-8 justify-center">
-                <span class="mt-2 inline-flex">
-                    <div class="tooltip">
-                        <a href="{{ route('dashboard') }}"
-                           x-tooltip.raw="Admin Dashboard"
-                           class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-orange-400 mr-2">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        </a>
-                    </div>
-                    @livewire('admin.tools.flush-cache')
-                    <form method="POST" action="{{ route('logout') }}" x-data>
-                        @csrf
-                        <div class="tooltip">
-                            <a href="{{ route('logout') }}" @click.prevent="$root.submit();"
-                               x-tooltip.raw="Log Out"
-                               class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-red-600">
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                            </a>
-                        </div>
-                    </form>
-                </span>
-            </nav>
-        @endauth
     </div>
 
     <nav x-description="Mobile menu, show/hide based on menu state." class="lg:hidden __WebInspectorHideElement__"
