@@ -32,13 +32,13 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => '../portfolio/'.public_path(). '/img',
+            'root' => public_path(). '/img',
             'throw' => false,
         ],
 
         'public' => [
             'driver' => 'local',
-            'root' => public_path(). '/img',
+            'root' => '/img',
             'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
