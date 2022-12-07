@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => '/www/portfolio/'.public_path(). '/img',
+            'root' => '../portfolio/'.public_path(). '/img',
             'throw' => false,
         ],
 
