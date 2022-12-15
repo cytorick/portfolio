@@ -51,7 +51,7 @@
                                 <div class="col-span-4">
                                     @if ($this->editing)
                                         @foreach($this->editing->media as $media)
-                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                                         @endforeach
                                     @endif
                                 </div>
@@ -87,9 +87,9 @@
         <dl class="grid grid-cols-1 gap-5 sm:grid-cols-1 lg:grid-cols-1">
                 <div class="bg-gray-200 dark:bg-gray-900 pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden">
                     <dt>
-                        <div class="absolute bg-error rounded-md p-3">
+                        <div class="absolute bg-green-600 rounded-md p-3">
                             @foreach($this->editing->media as $media)
-                                <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="vlag" class="h-6 w-8">
+                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                             @endforeach
                         </div>
                     </dt>
@@ -98,7 +98,7 @@
                         <p class="text-sm font-semibold text-gray-900 dark:text-gray-200">{{ $this->editing->level }}</p>
                     </dd>
                     <p class="text-xs mt-6">Level:</p>
-                    <progress class="progress progress-error dark:bg-gray-900" value="{{ $this->editing->percentage }}" max="100" />
+                    <progress class="progress progress-success dark:bg-gray-900" value="{{ $this->editing->percentage }}" max="100" />
 
                 </div>
 

@@ -57,7 +57,7 @@
                                 <div class="col-span-4">
                                     @if ($this->editing->media)
                                         @foreach($this->editing->media as $media)
-                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                                         @endforeach
                                     @endif
                                 </div>

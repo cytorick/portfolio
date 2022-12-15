@@ -78,7 +78,7 @@
                                 <div class="col-span-4">
                                     @if ($this->editing)
                                         @foreach($this->editing->media as $media)
-                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                                         @endforeach
                                     @endif
                                 </div>
@@ -136,8 +136,7 @@
                 <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                         @foreach($this->editing->media as $media)
-                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt=""
-                                 class="object-cover rounded-lg">
+                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                         @endforeach
                     </div>
                     <div class="sm:col-span-2">

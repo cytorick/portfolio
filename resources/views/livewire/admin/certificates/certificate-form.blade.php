@@ -118,7 +118,7 @@
                                 <div class="col-span-4">
                                     @if ($this->editing)
                                         @foreach($this->editing->media as $media)
-                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                                         @endforeach
                                     @endif
                                 </div>
@@ -176,15 +176,10 @@
     <div class="col-span-4">
         <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-1 lg:grid-cols-1">
                 <x-card.card title="{{ $this->editing->name }}" sub-title="{{ $this->editing->school }}" >
-                    {{--                        <x-slot name="link">--}}
-                    {{--                            {{ route('certificates.show', ['certificateId' => $certificates->id, 'page' => 'overview']) }}--}}
-                    {{--                        </x-slot>--}}
                     <x-slot name="image">
-                        @if($this->editing->image)
-                            <img
-                                src="{{ asset('img/' . $this->editing->media[0]->id .'/'. $this->editing->media[0]->file_name) }}"
-                                alt="{{ $this->editing->media[0]->file_name }}" class="inline-block align-middle px-3">
-                        @endif                    </x-slot>
+                        @foreach($this->editing->media as $media)
+                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
+                        @endforeach         </x-slot>
                     <x-slot name="dates">
                         {{ date('M Y', strtotime($this->editing->start_date)) }}
                         @if($this->editing->end_date == !null)
