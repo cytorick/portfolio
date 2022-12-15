@@ -148,7 +148,7 @@
                                 <div class="col-span-4">
                                     @if ($this->editing)
                                         @foreach($this->editing->media as $media)
-                                            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" alt="">
+                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
                                         @endforeach
                                     @endif
                                 </div>
@@ -210,7 +210,7 @@
                 <x-slot name="image">
                     @if($this->editing->image)
                         <img
-                            src="{{ asset('img/' . $this->editing->media[0]->id .'/'. $this->editing->media[0]->file_name) }}"
+                            src="https://images.cytorick.nl/{{ $this->media[0]->id }}/{{ $this->media[0]->file_name }}"
                             alt="{{ $this->editing->media[0]->file_name }}" class="inline-block align-middle px-3">
                     @endif
                 </x-slot>
