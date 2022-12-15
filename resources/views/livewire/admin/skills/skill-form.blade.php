@@ -83,8 +83,7 @@
                         <span style="color: {{ $this->editing->color }} @if($this->editing->name == 'Mac') black @endif">{!! $this->editing->icon !!}</span> {{ $this->editing->name }}
                     </p>
                 </div>
-
-            <div class="mt-5">
+            <div class="mt-1">
                 <div class="collapse collapse-open collapse-arrow bg-white dark:bg-gray-900 shadow-xl rounded-box px-3">
                     <input type="checkbox"/>
                     <div class="collapse-title text-xl font-medium">

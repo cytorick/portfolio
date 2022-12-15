@@ -63,7 +63,7 @@
         Schools
     </x-sidenav.item>
     <x-sidenav.dropdown-button
-        :active="request()->routeIs('admin.languages', 'admin.edit.languages', 'admin.create.languages', 'admin.skills', 'admin.edit.skills', 'admin.create.skills', 'admin.links', 'admin.edit.links', 'admin.create.links', 'admin.texts', 'admin.edit.texts')">
+        :active="request()->routeIs('admin.languages', 'admin.edit.languages', 'admin.create.languages', 'admin.skills', 'admin.edit.skills', 'admin.create.skills', 'admin.links', 'admin.edit.link', 'admin.create.link', 'admin.texts', 'admin.edit.texts')">
         <x-slot name="trigger">
             <div class="mr-4 flex-shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -98,7 +98,7 @@
                 Skills
             </x-sidenav.dropdown-item>
             <x-sidenav.dropdown-item href="{{ route('admin.links') }}"
-                                     :active="request()->routeIs('admin.links', 'admin.edit.links', 'admin.create.links')">
+                                     :active="request()->routeIs('admin.links', 'admin.edit.link', 'admin.create.link')">
                 <div class="mr-4 ml-4 flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-6 h-6">
