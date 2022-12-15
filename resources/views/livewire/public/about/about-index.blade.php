@@ -82,8 +82,9 @@
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4 pl-2">
                                                     <div>
                                                         <p class="text-sm text-gray-600 dark:text-gray-200">Got a
-                                                            internship at <span class="font-bold text-green-600">{{ $internship->company }}</span>!
-                                                           </p>
+                                                            internship at <span
+                                                                class="font-bold text-green-600">{{ $internship->company }}</span>!
+                                                        </p>
                                                     </div>
                                                     <div
                                                         class="text-right text-sm whitespace-nowrap text-gray-600 dark:text-gray-300">
@@ -172,27 +173,43 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <div class="relative md:bg-white md:dark:bg-gray-800">
-                        <div class="lg:grid lg:grid-cols-1 lg:gap-6">
-
-                            <div class="grid sm:grid-cols-12 grid-cols-3 gap-5">
+                    <div class="relative dark:bg-gray-800">
+                        <dl class=" grid sm:grid-cols-12 grid-cols-3 gap-5">
                                 @foreach($skills as $skill)
-                                    <div class="col-span-3">
-                                        <div class="collapse collapse-arrow bg-white dark:bg-gray-900 shadow-xl rounded-box px-3">
-                                            <input type="checkbox"/>
-                                            <div class="collapse-title text-xl font-medium">
+                                    <div x-data="{ open: false }" class="col-span-3 pt-6">
+                                        <dt class="text-lg">
+                                            <button type="button"
+                                                    x-description="Expand/collapse question button"
+                                                    class="flex w-full justify-between bg-gray-200 dark:bg-gray-900 rounded-md p-4"
+                                                    aria-controls="faq-0" @click="open = !open"
+                                                    aria-expanded="false"
+                                                    x-bind:aria-expanded="open.toString()">
                                                 <span
                                                     style="color: {{ $skill->color }}">{!! $skill->icon !!}</span> {{ $skill->name }}
-                                            </div>
-                                            <div class="collapse-content px-3">
-                                                <p>{!! $skill->description !!}</p>
-                                            </div>
-                                        </div>
+                                                <span class="ml-6 flex h-7 items-center">
+                                                        <svg class="h-6 w-6 transform rotate-0"
+                                                             x-state:on="Open" x-state:off="Closed"
+                                                             :class="{ '-rotate-180': open, 'rotate-0': !(open) }"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             fill="none" viewBox="0 0 24 24"
+                                                             stroke-width="1.5" stroke="currentColor"
+                                                             aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                                        </svg>
+                                                    </span>
+                                            </button>
+                                        </dt>
+                                        <dd class="mt-2 pr-12 bg-gray-200 dark:bg-gray-900 p-4 rounded-md" id="faq-0"
+                                            x-show="open"
+                                            style="display: none;">
+                                            <p class="text-base">
+                                                {!! $skill->description !!}
+                                            </p>
+                                        </dd>
                                     </div>
-                                @endforeach
-                            </div>
-
-                        </div>
+                        @endforeach
+                        </dl>
                     </div>
                 </div>
             </div>
