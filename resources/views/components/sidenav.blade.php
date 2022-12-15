@@ -40,7 +40,7 @@
             <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <div class="flex-shrink-0 flex items-center px-4">
                     <div class="flex items-center flex-shrink-0 px-4 pb-5 mx-auto">
-                        <a href="{{ route('dashboard') }}" class="flex items-center">
+                        <a href="{{ route('home') }}" class="flex items-center">
                             <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
                             <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
                         </a>
@@ -50,24 +50,24 @@
                     {{ $slot }}
                 </nav>
             </div>
-            <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
-                <a href="{{ route('profile.show') }}" class="flex-shrink-0 w-full group block">
-                    <div class="flex items-center">
-                        <div>
-                            <img class="inline-block h-9 w-9 rounded-full"
-                                 src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">
-                                {{ auth()->user()->name }}
-                            </p>
-                            <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">
-                                View profile
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+{{--            <div class="flex-shrink-0 flex border-t border-gray-200 p-4">--}}
+{{--                <a href="{{ route('profile.show') }}" class="flex-shrink-0 w-full group block">--}}
+{{--                    <div class="flex items-center">--}}
+{{--                        <div>--}}
+{{--                            <img class="inline-block h-9 w-9 rounded-full"--}}
+{{--                                 src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">--}}
+{{--                        </div>--}}
+{{--                        <div class="ml-3">--}}
+{{--                            <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">--}}
+{{--                                {{ auth()->user()->name }}--}}
+{{--                            </p>--}}
+{{--                            <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">--}}
+{{--                                View profile--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
+{{--            </div>--}}
         </div>
 
         <div class="flex-shrink-0 w-14">
@@ -82,58 +82,58 @@
     <div class="flex-1 flex flex-col min-h-0 bg-white dark:bg-gray-900">
         <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div class="flex items-center flex-shrink-0 px-4 pb-5 mx-auto">
-                <a href="{{ route('dashboard') }}" class="flex items-center">
+                <a href="{{ route('home') }}" class="flex items-center">
                     <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
                     <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
                 </a>
             </div>
             <div class="flex items-center flex-shrink-0 px-4 py-5 dark:text-gray-200">
-                <livewire:tools.time/>
+{{--                <livewire:tools.time/>--}}
             </div>
             <nav class="mt-5 flex-1 px-2 dark:bg-gray-900 space-y-1">
                 {{ $slot }}
             </nav>
         </div>
-        <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
-            <div class="grid grid-cols-12 inline">
-                <div class="col-span-10">
-                    <a href="{{ route('profile.show') }}" class="flex-shrink-0 w-full group block">
-                        <div class="flex items-center">
-                            <div>
-                                <img class="inline-block h-9 w-9 rounded-full"
-                                     src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">
-                                    {{ auth()->user()->name }}
-                                </p>
-                                <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">
-                                    View profile
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-span-2 align-middle">
-                    <form method="POST" action="{{ route('logout') }}" x-data>
-                        @csrf
-                        <a href="{{ route('logout') }}"
-                           @click.prevent="$root.submit();" class="align-middle mx-auto flex-shrink-0 group block">
-                            <div class="flex items-center">
-                                <div class="ml-3">
-                                    <p class="align-middle text-xs font-medium text-red-500 group-hover:text-red-700">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
-                                        </svg>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </form>
-                </div>
-            </div>
-        </div>
+{{--        <div class="flex-shrink-0 flex border-t border-gray-200 p-4">--}}
+{{--            <div class="grid grid-cols-12 inline">--}}
+{{--                <div class="col-span-10">--}}
+{{--                    <a href="{{ route('profile.show') }}" class="flex-shrink-0 w-full group block">--}}
+{{--                        <div class="flex items-center">--}}
+{{--                            <div>--}}
+{{--                                <img class="inline-block h-9 w-9 rounded-full"--}}
+{{--                                     src="https://ui-avatars.com/api/{{ auth()->user()->name }}" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="ml-3">--}}
+{{--                                <p class="text-sm font-medium dark:text-gray-100 group-hover:text-gray-900">--}}
+{{--                                    {{ auth()->user()->name }}--}}
+{{--                                </p>--}}
+{{--                                <p class="text-xs font-medium dark:text-gray-200 group-hover:text-gray-700">--}}
+{{--                                    View profile--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--                <div class="col-span-2 align-middle">--}}
+{{--                    <form method="POST" action="{{ route('logout') }}" x-data>--}}
+{{--                        @csrf--}}
+{{--                        <a href="{{ route('logout') }}"--}}
+{{--                           @click.prevent="$root.submit();" class="align-middle mx-auto flex-shrink-0 group block">--}}
+{{--                            <div class="flex items-center">--}}
+{{--                                <div class="ml-3">--}}
+{{--                                    <p class="align-middle text-xs font-medium text-red-500 group-hover:text-red-700">--}}
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"--}}
+{{--                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">--}}
+{{--                                            <path stroke-linecap="round" stroke-linejoin="round"--}}
+{{--                                                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>--}}
+{{--                                        </svg>--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </a>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 </div>
