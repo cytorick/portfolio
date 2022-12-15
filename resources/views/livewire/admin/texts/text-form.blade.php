@@ -19,28 +19,35 @@
 
                     <div class="grid grid-cols-10 gap-5">
                         <div class="col-span-5">
-                            <x-input.group stacked for="page" label="{{ __('Page') }}" :error="$errors->first('editing.page')">
-                                <x-input.text disabled id="page" wire:model.lazy="editing.page" :error="$errors->first('editing.page')" />
+                            <x-input.group stacked for="page" label="{{ __('Page') }}"
+                                           :error="$errors->first('editing.page')">
+                                <x-input.text disabled id="page" wire:model.lazy="editing.page"
+                                              :error="$errors->first('editing.page')"/>
                             </x-input.group>
                         </div>
                         <div class="col-span-5">
-                            <x-input.group stacked for="number" label="{{ __('Number') }}" :error="$errors->first('editing.number')">
-                                <x-input.text disabled id="number" wire:model.lazy="editing.number" :error="$errors->first('editing.number')" />
+                            <x-input.group stacked for="number" label="{{ __('Number') }}"
+                                           :error="$errors->first('editing.number')">
+                                <x-input.text disabled id="number" wire:model.lazy="editing.number"
+                                              :error="$errors->first('editing.number')"/>
                             </x-input.group>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-9">
-                            <x-input.group stacked for="title" label="{{ __('Title*') }}" :error="$errors->first('editing.title')">
-                                <x-input.text id="title" wire:model.lazy="editing.title" :error="$errors->first('editing.title')" />
+                            <x-input.group stacked for="title" label="{{ __('Title*') }}"
+                                           :error="$errors->first('editing.title')">
+                                <x-input.text id="title" wire:model.lazy="editing.title"
+                                              :error="$errors->first('editing.title')"/>
                             </x-input.group>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-9 gap-5">
                         <div class="col-span-9">
-                            <x-input.group stacked for="content" label="{{ __('content') }}" :error="$errors->first('editing.content')">
+                            <x-input.group stacked for="content" label="{{ __('content') }}"
+                                           :error="$errors->first('editing.content')">
                                 <x-input.textarea id="content" wire:model.lazy="editing.content" rows="10"
                                                   :error="$errors->first('editing.content')"/>
                             </x-input.group>
@@ -57,7 +64,9 @@
                                 <div class="col-span-4">
                                     @if ($this->editing->media)
                                         @foreach($this->editing->media as $media)
-                                            <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="">
+                                            <img
+                                                src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
+                                                alt="">
                                         @endforeach
                                     @endif
                                 </div>
@@ -72,7 +81,6 @@
                             </div>
                         </div>
                     </div>
-
 
 
                 </div>
@@ -93,9 +101,7 @@
     <div class="col-span-4 gap-4">
         <div class="py-8 px-8 dark:bg-gray-900 rounded-xl shadow-xl">
             {!! $this->editing->title !!}
-        </div>
-        <div class="mt-8 py-8 px-8 dark:bg-gray-900 rounded-xl shadow-xl">
-               {!! $this->editing->content !!}
+            {!! $this->editing->content !!}
         </div>
     </div>
 
