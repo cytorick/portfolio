@@ -11,7 +11,7 @@
     </div>
     <div class="col-span-3">
         @foreach($school->media as $media)
-            <img src="{{ asset('/img/' . $media->id .'/'. $media->file_name) }}" class="inline-block align-middle">
+            <img src="https://images.cytorick.nl/{{ $text->media[0]->id }}/{{ $text->media[0]->file_name }}" class="inline-block align-middle">
         @endforeach
     </div>
 </div>

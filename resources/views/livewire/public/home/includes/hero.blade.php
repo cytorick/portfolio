@@ -24,8 +24,7 @@
                     <div class="mx-auto w-full">
                         <div class="mockup-code bg-gray-200 dark:bg-gray-900">
                             <pre data-prefix="$"
-                                 class="dark:text-white text-black"><code><a href="{{ route('login') }}"
-                                                                             class="cursor-text">laravel</a> new Portfolio</code></pre>
+                                 class="dark:text-white text-black"><code>laravel new Portfolio</code></pre>
                             <pre data-prefix=">" class="dark:text-yellow-400 text-blue-600"><code>installing jetstream...</code></pre>
                             <pre data-prefix=">"
                                  class="dark:text-yellow-400 text-blue-600"><code>installing livewire...</code></pre>

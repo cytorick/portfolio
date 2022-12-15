@@ -11,7 +11,7 @@
         </div>
         <div class="col-span-3">
             <a href="{{ $job->website }}" target="_blank">
-                <img src="{{ asset('img/' . $job->media[0]->id .'/'. $job->media[0]->file_name) }}"
+                <img src="https://images.cytorick.nl/{{ $text->media[0]->id }}/{{ $text->media[0]->file_name }}"
                      alt="{{ $job->media[0]->file_name }}" class="inline-block align-middle">
             </a>
         </div>
