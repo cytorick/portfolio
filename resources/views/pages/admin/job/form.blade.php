@@ -24,17 +24,6 @@
                     Saving...
                 </div>
                 <div class="inline-flex">
-                    @isset( $job )
-                        <div x-data="{ tooltip: 'This is crazy!' }">
-                            <a href="{{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}"
-                               target="_blank"
-                               x-tooltip="View page"
-                               class="inline-flex items-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md bg-gray-800 hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:text-white text-teal-400 mr-2
-                       ">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    @endif
                     <div x-data="{ tooltip: 'This is crazy!' }">
                         <a href="{{ route('admin.jobs') }}"
                            x-tooltip="Back to Jobs"
