@@ -6,6 +6,7 @@ use App\Models\Certificate;
 use App\Models\Internship;
 use App\Models\Job;
 use App\Models\Language;
+use App\Models\Link;
 use App\Models\PageComponent;
 use App\Models\Project;
 use App\Models\School;
@@ -26,6 +27,7 @@ class HomeIndex extends Component
         $this->schools = School::where('archived', 0)->where('featured', 1)->orderBy('end_date', 'desc')->get();
         $this->certificates = Certificate::where('archived', 0)->where('featured', 1)->orderBy('start_date', 'desc')->get();
         $this->projects = Project::where('archived', 0)->where('featured', 1)->take(3)->orderBy('made_at', 'desc')->get();
+        $this->links = Link::where('archived', 0)->where('featured', 1)->get();
 
         $this->text = Text::where('archived', 0)->where('page', 'Home')->get();
     }
