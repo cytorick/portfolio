@@ -20,7 +20,7 @@
             @endif
 
             @if ($helpText)
-                <p class="mt-2 text-xs text-gray-500">{{ $helpText }}</p>
+                <p class="mt-2 text-xs text-gray-900">{{ $helpText }}</p>
             @endif
         </div>
     </div>
@@ -38,7 +38,7 @@
             @endif
 
             @if ($helpText)
-                <p class="mt-2 text-xs text-gray-500">{{ $helpText }}</p>
+                <p class="mt-2 text-xs text-gray-900">{{ $helpText }}</p>
             @endif
         </div>
     </div>

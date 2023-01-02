@@ -2,7 +2,7 @@
     'leadingAddOn' => false,
     'error' => false,
     'errorClasses' => ' border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500',
-    'defaultClasses' => ' border-gray-300 focus:ring-green-600 focus:border-green-600',
+    'defaultClasses' => ' border-gray-300 focus:ring-green-600 focus:border-green-600 text-gray-600',
 ])
 
 <div class="mt-1 relative flex rounded-md shadow-sm">
