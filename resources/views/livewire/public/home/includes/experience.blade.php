@@ -19,7 +19,7 @@
                     Over de jaren heb ik verscheiden ervaringen mogen op doen in verschillende sectoren. Zo heb ik de
                     standaard bijbaantjes gehad bij verscheiden winkels. Hier heb ik veel kansen gehad en heb ik veel
                     geleerd over werken in teamverband en het stellen van doelen, en het behalen van deze doelen. <a
-                        href="" class="text-green-600 hover:text-green-700">Lees meer...</a>
+                        href="{{ route('experience') }}" class="text-green-600 hover:text-green-700">Bekijk meer...</a>
                 </p>
 
                 <dl class="mt-10 space-y-10">
@@ -139,7 +139,7 @@
                         In de afgelopen jaren heb ik mijzelf veel skills aan kunnen leren. Mijn skills variëren tussen
                         IT-gerelateerde skills en people-skills. Binnen deze skills ben ik in de ene een master en in de
                         andere een beginner. Ik hoop mij steeds meer te ontwikkelen zodat ik en beter wordt en ik meer
-                        skills kan bemachtigen. <a href="" class="text-green-600 hover:text-green-700">Lees meer...</a>
+                        skills kan bemachtigen. <a href="{{ route('about') }}" class="text-green-600 hover:text-green-700">Bekijk meer...</a>
                     </p>
 
                     <dl class="mt-10 space-y-10">
@@ -171,7 +171,7 @@
                             </dt>
                             <dd class="mt-2 ml-16 text-base text-gray-500">
                                 Van nature ben ik een leidinggevend type. Ik kan snel herkennen hoe iemand het prettig
-                                vind benaderd te worden. Hierdoor als iemand moeite heeft met meekomen kan ik hem/haar
+                                vind benaderd te worden. Hierdoor als iemand moeite heeft met meekomen kan ik diegene
                                 de juiste ondersteuning bieden.
                             </dd>
                         </div>
@@ -195,46 +195,3 @@
         </div>
     </div>
 </div>
-
-
-{{--<div class="bg-gray-100 dark:bg-gray-800">--}}
-{{--    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">--}}
-{{--        <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">--}}
-{{--            <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">--}}
-{{--                @foreach($jobs as $job)--}}
-{{--                    <a href="{{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}">--}}
-{{--                        <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">--}}
-{{--                            @foreach($job->media as $media)--}}
-{{--                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt=""--}}
-{{--                                     class="max-h-16">--}}
-{{--                            @endforeach--}}
-{{--                        </div>--}}
-{{--                    </a>--}}
-{{--                @endforeach--}}
-{{--                @foreach($internships as $internship)--}}
-{{--                    <a href="{{ route('internships.show', ['internshipId' => $internship->id, 'page' => 'overview']) }}">--}}
-{{--                        <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">--}}
-{{--                            @foreach($internship->media as $media)--}}
-{{--                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt=""--}}
-{{--                                     class="max-h-16">--}}
-{{--                            @endforeach--}}
-{{--                        </div>--}}
-{{--                    </a>--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
-{{--            <div>--}}
-{{--                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">--}}
-{{--                    @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 2])--}}
-{{--                </h2>--}}
-{{--                @livewire('public.tools.text-shower', ['page' => 'Home', 'number' => 2])--}}
-{{--                <div class="mt-8 sm:flex">--}}
-{{--                    <div class="rounded-md shadow">--}}
-{{--                        <a href="{{ route('experience') }}"--}}
-{{--                           class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">--}}
-{{--                            All experience </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}

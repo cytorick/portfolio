@@ -1,43 +1,3 @@
-{{--<div class="bg-gray-100 dark:bg-gray-800">--}}
-{{--    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">--}}
-{{--        <div class="lg:gap-8 lg:items-center">--}}
-
-{{--            <div>--}}
-{{--                <h3 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">--}}
-{{--                    @livewire('public.tools.title-shower', ['page' => 'Home', 'number' => 5])--}}
-{{--                </h3>--}}
-
-{{--                <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">--}}
-{{--                    @foreach($schools as $school)--}}
-{{--                        <x-card.card title="{{ $school->name }}" sub-title="{{ $school->school }}" address="{{ $school->street }}, {{ $school->place }}"--}}
-{{--                                     hover>--}}
-{{--                            <x-slot name="link">--}}
-{{--                                {{ route('schools.show', ['schoolId' => $school->id, 'page' => 'overview']) }}--}}
-{{--                            </x-slot>--}}
-{{--                            <x-slot name="image">--}}
-{{--                                @foreach($school->media as $media)--}}
-{{--                                    <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}" alt="" class="inline-block align-middle px-3">--}}
-{{--                                @endforeach--}}
-{{--                            </x-slot>--}}
-{{--                            <x-slot name="dates">--}}
-{{--                                {{ date('M Y', strtotime($school->start_date)) }} ---}}
-{{--                                @if($school->is_active == 1)--}}
-{{--                                    Present--}}
-{{--                                @else--}}
-{{--                                    {{ date('M Y', strtotime($school->end_date)) }}--}}
-{{--                                @endif--}}
-{{--                            </x-slot>--}}
-{{--                            <x-card.status status="{{ $school->status }}"/>--}}
-{{--                        </x-card.card>--}}
-{{--                    @endforeach--}}
-{{--                </dl>--}}
-{{--            </div>--}}
-
-
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
 <div class="overflow-hidden bg-gray-50 py-16 lg:py-24">
     <div class="relative mx-auto max-w-xl px-6 lg:max-w-7xl lg:px-8">
 
@@ -46,20 +6,20 @@
                 <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Mijn schoolcarrière door de
                     jaren heen</h3>
                 <p class="mt-3 text-lg text-gray-500">
-                    Over de jaren heb ik verscheiden ervaringen mogen op doen in verschillende sectoren. Zo heb ik de
-                    standaard bijbaantjes gehad bij verscheiden winkels. Hier heb ik veel kansen gehad en heb ik veel
-                    geleerd over werken in teamverband en het stellen van doelen, en het behalen van deze doelen.
+                    In totaal heb ik drie opleidingen gedaan. Waar natuurlijke de eerste mijn middelbare school is. Waar
+                    ik uiteindelijk mijn mavo-diploma voor heb ontvangen. Daarna ben ik na een lastige keuzeperiode de
+                    opleiding Bouw en Infra gaan doen aan het Alfa-college.
                 </p>
                 <p class="mt-3 text-lg text-gray-500">
-                    Over de jaren heb ik verscheiden ervaringen mogen op doen in verschillende sectoren. Zo heb ik de
-                    standaard bijbaantjes gehad bij verscheiden winkels. Hier heb ik veel kansen gehad en heb ik veel
-                    geleerd over werken in teamverband en het stellen van doelen, en het behalen van deze doelen.
-                </p>
+                    Uiteindelijk kwam ik er snel achter dat dit niet een geschikte opleding was. Het werk leek mij
+                    geweldig maar de weg ernaar toe gimng mij niet altijd goed af. Vandaar dat ik uiteindelijk ben gaan
+                    orienteren naar een andere studie. Tijdens het zoeken heb ik verschillende opleidingen bekeken en
+                    uiteindelijk viel ik voor de opleiding software-ontwikkelaar. </p>
                 <p class="mt-3 text-lg text-gray-500">
-                    Over de jaren heb ik verscheiden ervaringen mogen op doen in verschillende sectoren. Zo heb ik de
-                    standaard bijbaantjes gehad bij verscheiden winkels. Hier heb ik veel kansen gehad en heb ik veel
-                    geleerd over werken in teamverband en het stellen van doelen, en het behalen van deze doelen. <a
-                        href="" class="text-green-600 hover:text-green-700">Lees meer...</a>
+                    In September 2018 ben ik dan eindelijk begonnen aan een opleiding die mij wel wat leek. Het startte
+                    simpel en soms werd het even lastig maar uiteindelijk heb ik mijn diploma mogen behalen en mag ik
+                    mij nu een afgestuurd software-ontwikkelaar noemen.
+                    <a href="{{ route('experience') }}" class="text-green-600 hover:text-green-700">Bekijk meer...</a>
                 </p>
             </div>
 
@@ -128,10 +88,11 @@
                         Certificaten en talen die ik spreek
                     </h3>
                     <p class="mt-3 text-lg text-gray-500">
-                        In de afgelopen jaren heb ik mijzelf veel skills aan kunnen leren. Mijn skills variëren tussen
-                        IT-gerelateerde skills en people-skills. Binnen deze skills ben ik in de ene een master en in de
-                        andere een beginner. Ik hoop mij steeds meer te ontwikkelen zodat ik en beter wordt en ik meer
-                        skills kan bemachtigen. <a href="" class="text-green-600 hover:text-green-700">Lees meer...</a>
+                        In de afgelopen jaren heb ik mijzelf veel skills aan kunnen leren. Daarnaast heb ik door de
+                        jaren heen oook een aanrtal certificaten gehaald. Sommige heb ik via mijn opleidingen kunnen
+                        halen of via werkgevers en sommige heb ik in eigen tijd behaalt. <a href="{{ route('experience') }}"
+                                                                                            class="text-green-600 hover:text-green-700">Bekijk
+                            meer...</a>
                     </p>
 
                     <dl class="mt-10 space-y-10">
