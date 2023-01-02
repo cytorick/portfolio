@@ -193,8 +193,8 @@
 
                                                 <div>
                                                     <p>Nieuw bericht van <strong>{{ $data['name'] }}</strong></p>
-                                                    <p>Bereikbaar via <strong>{{ $data['email'] }}, {{ $data['phone'] }}</strong></p>
-                                                    @if($data['company'])<p><strong>Werkt voor {{ $data['company']  }}.</strong></p>@endif
+                                                    <p>Bereikbaar via <strong>{{ $data['email'] }}, <a href="tel:{{ $data['phone'] }}">{{ $data['phone'] }}</a></strong></p>
+                                                    @if($data['company'])<p>Werkt voor <strong>{{ $data['company']  }}</strong></p>@endif
                                                     <br><br>
                                                     <h3 style="margin-bottom: 0px;">{{ $data['subject'] }}</h3>
                                                     <p style="margin-top: 0px;">{!! $data['message'] !!}</p>
