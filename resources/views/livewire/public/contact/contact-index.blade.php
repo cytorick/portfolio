@@ -1,42 +1,42 @@
-<div>
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-            <div>
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
-                    @livewire('public.tools.title-shower', ['page' => 'Contact', 'number' => 1])
-                </h2>
+<x-header>
+    Enthousiast geworden? Stuur <span class="text-green-600">mij een berichtje</span>...
+</x-header>
 
-            </div>
-            <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-                @foreach($links as $link)
-                    <div class="col-span-1 flex justify-center py-8 px-8 hover:text-green-600">
-                        <a href="{{ $link->link }}" target="_blank">
-                            <p>{!! $link->icon !!} {{ $link->name }}</p>
-                        </a>
-                    </div>
-                @endforeach
+<div class="overflow-hidden bg-gray-50 py-16 lg:py-24">
+    <div class="relative mx-auto max-w-xl px-6 lg:max-w-7xl lg:px-8">
+
+        <svg class="absolute right-full hidden translate-x-1/2 translate-y-12 transform lg:block" width="404"
+             height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+            <defs>
+                <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20"
+                         patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
+                </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"/>
+        </svg>
+
+        <div class="relative mt-12 sm:mt-16 lg:mt-24">
+            <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
+                <div class="lg:col-start-2">
+                    @livewire('public.contact.contact-form')
+                </div>
+
+                <div class="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
+                    <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden" width="784"
+                         height="404" fill="none" viewBox="0 0 784 404" aria-hidden="true">
+                        <defs>
+                            <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20" height="20"
+                                     patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
+                            </pattern>
+                        </defs>
+                        <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"/>
+                    </svg>
+                    @livewire('public.tools.image-shower', ['page' => 'Home', 'number' => 4, 'class' => 'rounded-xl hidden sm:block transform -scale-x-100'])
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="bg-gray-100 dark:bg-gray-800">
-    <div class="grid grid-cols-12">
-        <div class="col-span-4">
-            <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 my-auto">
-                
-                @livewire('public.tools.image-shower', ['page' => 'Contact', 'number' => 1, 'class' => 'rounded-xl hidden sm:block mt-10 mx-auto'])
-
-
-            </div>
-        </div>
-        <div class="col-span-12 sm:col-span-8">
-            <div class="max-w-3xl px-4 pb-8 sm:px-6 lg:px-8">
-
-                @livewire('public.contact.contact-form')
-
-            </div>
-        </div>
-    </div>
-
 </div>
