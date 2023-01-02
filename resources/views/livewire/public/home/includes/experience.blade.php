@@ -93,26 +93,22 @@
                 </svg>
                 <div class="p-5 mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                     @foreach($jobs->take(5) as $job)
-                        <a href="{{ route('jobs.show', ['jobId' => $job->id, 'page' => 'overview']) }}">
-                            <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
-                                @foreach($job->media as $media)
-                                    <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
-                                         alt=""
-                                         class="max-h-16">
-                                @endforeach
-                            </div>
-                        </a>
+                        <div class="col-span-1 flex justify-center py-8 px-8">
+                            @foreach($job->media as $media)
+                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
+                                     alt=""
+                                     class="max-h-16">
+                            @endforeach
+                        </div>
                     @endforeach
                     @foreach($internships as $internship)
-                        <a href="{{ route('internships.show', ['internshipId' => $internship->id, 'page' => 'overview']) }}">
-                            <div class="col-span-1 flex justify-center py-8 px-8 hover:bg-green-600 hover:rounded-3xl">
-                                @foreach($internship->media as $media)
-                                    <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
-                                         alt=""
-                                         class="max-h-16">
-                                @endforeach
-                            </div>
-                        </a>
+                        <div class="col-span-1 flex justify-center py-8 px-8">
+                            @foreach($internship->media as $media)
+                                <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
+                                     alt=""
+                                     class="max-h-16">
+                            @endforeach
+                        </div>
                     @endforeach
                 </div>
             </div>
@@ -139,7 +135,8 @@
                         In de afgelopen jaren heb ik mijzelf veel skills aan kunnen leren. Mijn skills variëren tussen
                         IT-gerelateerde skills en people-skills. Binnen deze skills ben ik in de ene een master en in de
                         andere een beginner. Ik hoop mij steeds meer te ontwikkelen zodat ik en beter wordt en ik meer
-                        skills kan bemachtigen. <a href="{{ route('about') }}" class="text-green-600 hover:text-green-700">Bekijk meer...</a>
+                        skills kan bemachtigen. <a href="{{ route('about') }}"
+                                                   class="text-green-600 hover:text-green-700">Bekijk meer...</a>
                     </p>
 
                     <dl class="mt-10 space-y-10">

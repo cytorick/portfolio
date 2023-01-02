@@ -27,54 +27,52 @@
                 <div class="p-5 mt-8 grid grid-cols-1 gap-0.5 md:grid-cols-1 lg:mt-0 lg:grid-cols-1">
                     @foreach($schools as $school)
                         <div
-                            class="col-span-1 my-4 bg-gray-200 pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden max-h-100 hover:bg-green-600 hover:text-gray-100">
-                            <a href="{{ route('schools.show', ['schoolId' => $school->id, 'page' => 'overview']) }}">
-                                <div class="grid grid-cols-5">
-                                    <div class="col-span-2 justify-center my-auto mx-auto">
-                                        @foreach($school->media as $media)
-                                            <img
-                                                src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
-                                                alt="" class="inline-block align-middle px-3">
-                                        @endforeach
-                                    </div>
-                                    <div class="col-span-3">
-                                        <h1 class="text-lg font-semibold text-gray-900">{{ $school->name }}</h1>
-                                        <p class="text-xs text-green-600">{{ $school->school }}</p>
-                                        <br>
-                                        <div class="grid grid-cols-10">
-                                            <div class="col-span-1 text-center mb-auto">
+                            class="col-span-1 my-4 bg-gray-200 pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden max-h-100">
+                            <div class="grid grid-cols-5">
+                                <div class="col-span-2 justify-center my-auto mx-auto">
+                                    @foreach($school->media as $media)
+                                        <img
+                                            src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
+                                            alt="" class="inline-block align-middle px-3">
+                                    @endforeach
+                                </div>
+                                <div class="col-span-3">
+                                    <h1 class="text-lg font-semibold text-gray-900">{{ $school->name }}</h1>
+                                    <p class="text-xs text-green-600">{{ $school->school }}</p>
+                                    <br>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-1 text-center mb-auto">
                                                 <span class="text-red-500"><i
                                                         class="fa-solid fa-location-dot"></i></span>
-                                            </div>
-                                            <div class="col-span-9 ml-1 my-auto">
-                                                <p class="text-sm text-gray-900"> {{ $school->street }}
-                                                    , {{ $school->place }}</p>
-                                            </div>
-                                            <div class="col-span-1 text-center my-auto">
+                                        </div>
+                                        <div class="col-span-9 ml-1 my-auto">
+                                            <p class="text-sm text-gray-900"> {{ $school->street }}
+                                                , {{ $school->place }}</p>
+                                        </div>
+                                        <div class="col-span-1 text-center my-auto">
                             <span class="text-yellow-500" wire:loading.class.remove="text-yellow-600"><i
                                     class="fa-solid fa-calendar-days"></i></span>
-                                            </div>
-                                            <div class="col-span-9 ml-1 my-auto">
-                                                <p class="text-sm text-gray-900">
-                                                    {{ date('M Y', strtotime($school->start_date)) }} -
-                                                    @if($school->is_active == 1)
-                                                        Present
-                                                    @else
-                                                        {{ date('M Y', strtotime($school->end_date)) }}
-                                                    @endif
-                                                </p>
-                                            </div>
-                                            <div class="col-span-1 text-center my-auto">
+                                        </div>
+                                        <div class="col-span-9 ml-1 my-auto">
+                                            <p class="text-sm text-gray-900">
+                                                {{ date('M Y', strtotime($school->start_date)) }} -
+                                                @if($school->is_active == 1)
+                                                    Present
+                                                @else
+                                                    {{ date('M Y', strtotime($school->end_date)) }}
+                                                @endif
+                                            </p>
+                                        </div>
+                                        <div class="col-span-1 text-center my-auto">
                                                 <span class="text-green-600"><i
                                                         class="fa-solid fa-file-contract"></i></span>
-                                            </div>
-                                            <div class="col-span-9 ml-1 my-auto">
-                                                <p class="text-sm text-gray-900"> {{ $school->status }}</p>
-                                            </div>
+                                        </div>
+                                        <div class="col-span-9 ml-1 my-auto">
+                                            <p class="text-sm text-gray-900"> {{ $school->status }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -90,8 +88,9 @@
                     <p class="mt-3 text-lg text-gray-500">
                         In de afgelopen jaren heb ik mijzelf veel skills aan kunnen leren. Daarnaast heb ik door de
                         jaren heen oook een aanrtal certificaten gehaald. Sommige heb ik via mijn opleidingen kunnen
-                        halen of via werkgevers en sommige heb ik in eigen tijd behaalt. <a href="{{ route('experience') }}"
-                                                                                            class="text-green-600 hover:text-green-700">Bekijk
+                        halen of via werkgevers en sommige heb ik in eigen tijd behaalt. <a
+                            href="{{ route('experience') }}"
+                            class="text-green-600 hover:text-green-700">Bekijk
                             meer...</a>
                     </p>
 
