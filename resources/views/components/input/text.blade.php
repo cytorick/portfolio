@@ -2,7 +2,7 @@
     'leadingAddOn' => false,
     'error' => false,
     'errorClasses' => ' border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500',
-    'defaultClasses' => ' border-gray-300 focus:ring-gray-900 focus:border-gray-900',
+    'defaultClasses' => ' border-gray-300 focus:ring-green-600 focus:border-green-600',
 ])
 
 <div class="mt-1 relative flex rounded-md shadow-sm">
@@ -11,8 +11,8 @@
 			{{ $leadingAddOn }}
 		</span>
 	@endif
-	<input type="text" {{ $attributes->merge([ 'class' => 'flex-1 block w-full rounded-l-md rounded-r-md sm:text-sm dark:border-gray-700 dark:bg-gray-700' . ($leadingAddOn ? ' rounded-none rounded-r-md' : ' rounded-md') . ($error ? $errorClasses : $defaultClasses) ]) }}>
-	
+	<input type="text" {{ $attributes->merge([ 'class' => 'flex-1 block w-full rounded-l-md rounded-r-md sm:text-sm' . ($leadingAddOn ? ' rounded-none rounded-r-md' : ' rounded-md') . ($error ? $errorClasses : $defaultClasses) ]) }}>
+
 	@if( $error )
 		<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
 			<svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
