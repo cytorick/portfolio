@@ -5,7 +5,7 @@
                 <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900">Welke opleidingen ik heb
                     gevolgd</h2>
                 <p class="text-xl text-gray-500">
-                    In totaal heb 2 mbo-opleidingen waarvan 1 afgerond. Daarnaast heb ik ook mijn middelbare school afgerond.
+                    In totaal heb 2 mbo-opleidingen waarvan 1 afgerond. Daarnaast heb ik ook mijn middelbare school afgerond. <i class="fa-solid fa-check text-green-600"></i> betekent diploma behaald.
                 </p>
             </div>
             <div class="lg:col-span-2">
@@ -17,7 +17,7 @@
                                      src="https://images.cytorick.nl/{{ $school->media[0]->id }}/{{ $school->media[0]->file_name }}"
                                      alt="">
                                 <div class="space-y-1 text-lg font-medium leading-6">
-                                    <h3 class="text-gray-900">{{ $school->name }}</h3>
+                                    <h3 class="text-gray-900">{{ $school->name }} {!! $school->status ? '<i class="fa-solid fa-check text-green-600"></i>' : '' !!}</h3>
                                     <p class="text-green-600 text-sm">{{ $school->school }}</p>
                                     <p class="text-gray-500 text-sm">
                                         {{ date('M Y', strtotime($school->start_date)) }} -
@@ -26,9 +26,6 @@
                                         @else
                                             {{ date('M Y', strtotime($school->end_date)) }}
                                         @endif
-                                    </p>
-                                    <p class="text-gray-500 text-sm">
-                                        {{ $school->status }}
                                     </p>
                                 </div>
                             </div>
