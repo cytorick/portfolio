@@ -27,6 +27,9 @@
                                             {{ date('M Y', strtotime($school->end_date)) }}
                                         @endif
                                     </p>
+                                    <p class="text-gray-500 text-sm">
+                                        {{ $school->status }}
+                                    </p>
                                 </div>
                             </div>
                         </li>
