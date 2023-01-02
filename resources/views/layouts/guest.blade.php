@@ -36,11 +36,9 @@
         gtag('config', 'G-THCCJHCYDC');
     </script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-800 selection:bg-green-300 min-h-screen">
+<body class="selection:bg-green-500 min-h-screen">
 
 <div>
-
-    @include('layouts.includes.nav')
 
     <div class="min-h-screen">
         {{ $slot }}
