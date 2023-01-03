@@ -149,7 +149,7 @@
 
         <div class="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div class="relative">
-                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">War hou ik nou van</h3>
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Wat vind ik interessant</h3>
                 <p class="mt-3 text-lg text-gray-500">
                     Ik ben geboren in het mooie Groningen. Vanaf kinds af aan ben ik altijd al bezig met computers. Van
                     familie helpen met mail instellen als kind tot gehele web-applicaties ontwikkelen.
