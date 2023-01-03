@@ -17,7 +17,7 @@
         </svg>
     </div>
     <div class="relative pt-6">
-        <div>
+        <div x-data="{ open: false }">
             <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
                  aria-label="Global">
                 <div class="flex flex-1 items-center">
@@ -28,8 +28,11 @@
                         </a>
                         <div class="-mr-2 flex items-center md:hidden">
                             <button type="button"
-                                    class="focus-ring-inset inline-flex items-center justify-center rounded-md bg-green-600 p-2 text-gray-400 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white"
-                                    aria-expanded="false">
+                                    x-description="Expand/collapse question button"
+                                    class="focus-ring-inset inline-flex items-center justify-center rounded-md bg-green-600 p-2 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white"
+                                    aria-controls="faq-0" @click="open = !open"
+                                    aria-expanded="false"
+                                    x-bind:aria-expanded="open.toString()">
                                 <span class="sr-only">Open main menu</span>
                                 <!-- Heroicon name: outline/bars-3 -->
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -51,33 +54,40 @@
                             class="fa-solid fa-house"></i></a>
 
                     <a href="{{ route('about') }}"
-                       class="font-medium p-3 {{ (request()->is('about*')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Over
+                       class="font-medium p-3 {{ (request()->is('over*')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Over
                         mij</a>
 
                     <a href="{{ route('experience') }}"
-                       class="font-medium p-3 {{ (request()->is('experience*')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Ervaring</a>
+                       class="font-medium p-3 {{ (request()->is('ervaring*')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Ervaring</a>
 
                     <a href="{{ route('projects') }}"
-                       class="font-medium p-3 {{ (request()->is('projects')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Projecten</a>
+                       class="font-medium p-3 {{ (request()->is('projecten')) ? 'text-green-600' : 'hover:text-green-600 text-gray-500' }}">Projecten</a>
 
                     <a href="{{ route('contact') }}"
                        class="font-medium text-white bg-green-600 hover:bg-green-700 rounded-full p-3 px-6">Bericht
                         mij!</a>
                 </div>
             </nav>
-            <div class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
-                <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
+            <div class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden" x-show="open"
+                 style="display: none;">
+                <div class="overflow-hidden rounded-lg bg-gray-200 shadow-md ring-1 ring-black ring-opacity-5">
                     <div class="flex items-center justify-between px-5 pt-4">
                         <div>
-                            <img class="h-8 w-auto"
-                                 src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600" alt="">
+                            <a href="{{ route('home') }}" class="flex items-center">
+                                <i class="fa-solid fa-r h-8 block text-green-600 text-2xl"></i>
+                                <i class="fa-solid fa-v h-8 block text-green-600 text-2xl"></i>
+                            </a>
                         </div>
                         <div class="-mr-2">
                             <button type="button"
-                                    class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                                    class="inline-flex items-center justify-center rounded-md bg-white p-2 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                                    aria-controls="faq-0" @click="open = !open"
+                                    aria-expanded="false"
+                                    x-bind:aria-expanded="open.toString()">
                                 <span class="sr-only">Close menu</span>
                                 <!-- Heroicon name: outline/x-mark -->
-                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                <svg class="h-6 w-6 text-green-600 hover:text-green-700"
+                                     xmlns="http://www.w3.org/2000/svg" fill="none"
                                      viewBox="0 0 24 24"
                                      stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -85,22 +95,23 @@
                             </button>
                         </div>
                     </div>
-                    <div class="space-y-1 px-2 pt-2 pb-3">
-                        <a href="#"
-                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
+                    <div class="space-y-1 px-2 pt-2 pb-3 text-center">
+                        <a href="{{ route('home') }}"
+                           class="block rounded-md px-3 py-2 text-base font-medium {{ (request()->is('/')) ? 'text-green-600 bg-white' : 'hover:text-green-600 text-gray-500' }}"><i
+                                class="fa-solid fa-house"></i></a>
 
-                        <a href="#"
-                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
+                        <a href="{{ route('about') }}"
+                           class="block rounded-md px-3 py-2 text-base font-medium {{ (request()->is('over*')) ? 'text-green-600 bg-white' : 'hover:text-green-600 text-gray-500' }}">Over
+                            mij</a>
 
-                        <a href="#"
-                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
+                        <a href="{{ route('experience') }}"
+                           class="block rounded-md px-3 py-2 text-base font-medium {{ (request()->is('ervaring*')) ? 'text-green-600 bg-white' : 'hover:text-green-600 text-gray-500' }}">Ervaring</a>
 
-                        <a href="#"
-                           class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
+                        <a href="{{ route('projects') }}"
+                           class="block rounded-md px-3 py-2 text-base font-medium {{ (request()->is('projecten*')) ? 'text-green-600 bg-white' : 'hover:text-green-600 text-gray-500' }}">Projecten</a>
                     </div>
                     <a href="#"
-                       class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-green-600 hover:bg-gray-100">Log
-                        in</a>
+                       class="block w-full bg-green-600 px-5 py-3 text-center font-medium {{ (request()->is('/')) ? 'bg-green-700 text-white' : 'hover:text-gray-100 hover:bg-green-700 text-white' }}">Bericht mij!</a>
                 </div>
             </div>
         </div>
@@ -111,7 +122,7 @@
                     <div
                         class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
                         <div>
-                                                        @livewire('tools.available')
+                            @livewire('tools.available')
                             <h1 class="mt-4 text-5xl font-bold tracking-tight text-gray-900">
                                 {{ $slot }}
                             </h1>
