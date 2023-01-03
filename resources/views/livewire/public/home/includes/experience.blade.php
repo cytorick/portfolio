@@ -93,7 +93,7 @@
                 </svg>
                 <div class="p-5 mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                     @foreach($jobs->take(5) as $job)
-                        <div class="col-span-1 flex justify-center py-8 px-8">
+                        <div class="col-span-1 flex justify-center py-8 px-8 z-50">
                             @foreach($job->media as $media)
                                 <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
                                      alt=""
@@ -102,7 +102,7 @@
                         </div>
                     @endforeach
                     @foreach($internships as $internship)
-                        <div class="col-span-1 flex justify-center py-8 px-8">
+                        <div class="col-span-1 flex justify-center py-8 px-8 z-50">
                             @foreach($internship->media as $media)
                                 <img src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
                                      alt=""

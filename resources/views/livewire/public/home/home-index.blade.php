@@ -161,14 +161,14 @@
         <div class="mt-8 flow-root lg:mt-10">
             <div class="carousel">
                 @foreach($links as $link)
-                <div class="carousel-item">
-                    <div
-                        class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0 text-2xl text-green-600 hover:text-green-700 font-bold">
-                        <a href="{{ $link->link }}" target="_blank">
-                            {!! $link->icon !!} {{ $link->name }}
-                        </a>
+                    <div class="carousel-item">
+                        <div
+                            class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0 text-2xl text-green-600 hover:text-green-700 font-bold">
+                            <a href="{{ $link->link }}" target="_blank">
+                                {!! $link->icon !!} {{ $link->name }}
+                            </a>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -223,19 +223,19 @@
             opnemen</h2>
         <div class="mt-8 flow-root lg:mt-10">
             <div class="carousel">
-                    <div class="carousel-item">
-                        <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
-                            <a href="https://www.jetbrains.com/phpstorm/" target="_blank">
-                                <img class="h-16" src="{{ asset('img/phpstorm-rework.png') }}" alt="PhpStorm">
-                            </a>
-                        </div>
+                <div class="carousel-item">
+                    <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
+                        <a href="https://www.jetbrains.com/phpstorm/" target="_blank">
+                            <img class="h-16" src="{{ asset('img/phpstorm-rework.png') }}" alt="PhpStorm">
+                        </a>
                     </div>
-                    <div class="carousel-item">
-                        <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
-                            <a href="https://slack.com/" target="_blank">
-                                <img class="h-16" src="{{ asset('img/slack.png') }}"
-                                     alt="Slack">
-                            </a>
+                </div>
+                <div class="carousel-item">
+                    <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
+                        <a href="https://slack.com/" target="_blank">
+                            <img class="h-16" src="{{ asset('img/slack.png') }}"
+                                 alt="Slack">
+                        </a>
                     </div>
                     <div class="carousel-item">
                         <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
@@ -261,6 +261,7 @@
                             </a>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -296,37 +297,38 @@
     </div>
 </div>
 
-    <div class="bg-gray-50 md:hidden">
-        <div class="mx-auto max-w-7xl py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Waarmee je ook contact met mij kan
-                opnemen</h2>
-            <div class="mt-8 flow-root lg:mt-10">
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
-                            <a href="https://www.europeanwhiskyauctions.com/" target="_blank">
-                                <img class="h-16" src="{{ asset('img/ewa.png') }}" alt="EWA">
-                            </a>
-                        </div>
+<div class="bg-gray-50 md:hidden">
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Waarmee je ook contact met mij kan
+            opnemen</h2>
+        <div class="mt-8 flow-root lg:mt-10">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
+                        <a href="https://www.europeanwhiskyauctions.com/" target="_blank">
+                            <img class="h-16" src="{{ asset('img/ewa.png') }}" alt="EWA">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
+                        <a href="https://praes.nl/" target="_blank">
+                            <img class="h-16" src="{{ asset('img/praes.png') }}"
+                                 alt="Praes">
+                        </a>
                     </div>
                     <div class="carousel-item">
                         <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
-                            <a href="https://praes.nl/" target="_blank">
-                                <img class="h-16" src="{{ asset('img/praes.png') }}"
-                                     alt="Praes">
+                            <a href="https://customwebsite.nl/" target="_blank">
+                                <img class="h-16" src="{{ asset('img/customwebsite.png') }}"
+                                     alt="CW">
                             </a>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0">
-                                <a href="https://customwebsite.nl/" target="_blank">
-                                    <img class="h-16" src="{{ asset('img/customwebsite.png') }}"
-                                         alt="CW">
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 @include('livewire.public.home.includes.projects')

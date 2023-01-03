@@ -207,11 +207,11 @@
             <div class="lg:col-span-2">
                 <ul role="list"
                     class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-                    <div class="carousel carousel-center rounded-box">
+                    <div class="carousel carousel-center">
                         @foreach($projects as $project)
                             <li class="w-full carousel-item">
-                                <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                                    <div class="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
+                                <div class="space-y-4 grid grid-cols-1 sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                                    <div class="sm:h-0 sm:aspect-w-3 sm:aspect-h-4">
                                         @foreach($project->media as $media)
                                             <img
                                                 src="https://images.cytorick.nl/{{ $media->id }}/{{ $media->file_name }}"
@@ -219,7 +219,7 @@
                                                 class="object-cover rounded-lg">
                                         @endforeach
                                     </div>
-                                    <div class="sm:col-span-2">
+                                    <div class="col-span-1 sm:col-span-2">
                                         <div class="space-y-4">
                                             <div class="space-y-1 text-lg font-medium leading-6">
                                                 <h3 class="text-gray-900">{{ $project->title }}</h3>
