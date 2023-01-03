@@ -9,7 +9,7 @@
             @endforeach
         </div>
         <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-base text-gray-400">&copy; {{ date('Y') }} <span class="font-semibold">Rick Visser</span> | All rights reserved.</p>
+            <p class="text-center text-base text-gray-400">&copy; {{ date('Y') }} <span class="font-semibold">Rick Visser</span> | Alle rechten voorbehouden.</p>
         </div>
     </div>
 </footer>

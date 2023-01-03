@@ -40,7 +40,7 @@
                                             <div class="flex-1">
                                                 <p class="text-lg font-medium text-green-600">
                                                     @foreach($project->skills as $skill)
-                                                        {!! $skill->icons->icon !!}
+                                                        <span class="mx-1">{!! $skill->icons->icon !!}</span>
                                                     @endforeach
                                                 </p>
                                                 <div class="mt-2 block">
