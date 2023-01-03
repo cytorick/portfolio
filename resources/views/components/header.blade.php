@@ -110,7 +110,7 @@
                         <a href="{{ route('projects') }}"
                            class="block rounded-md px-3 py-2 text-base font-medium {{ (request()->is('projecten*')) ? 'text-green-600 bg-white' : 'hover:text-green-600 text-gray-500' }}">Projecten</a>
                     </div>
-                    <a href="#"
+                    <a href="{{ route('contact') }}"
                        class="block w-full bg-green-600 px-5 py-3 text-center font-medium {{ (request()->is('/')) ? 'bg-green-700 text-white' : 'hover:text-gray-100 hover:bg-green-700 text-white' }}">Bericht mij!</a>
                 </div>
             </div>
