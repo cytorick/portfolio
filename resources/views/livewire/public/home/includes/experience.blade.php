@@ -186,7 +186,7 @@
                         </defs>
                         <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"/>
                     </svg>
-                    @livewire('public.tools.image-shower', ['page' => 'Home', 'number' => 4, 'class' => 'rounded-xl hidden sm:block transform -scale-x-100'])
+                    <img src="{{ asset('img/rick-standing-2.png') }}" alt="" class="rounded-xl hidden sm:block transform -scale-x-100">
                 </div>
             </div>
         </div>
