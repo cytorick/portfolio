@@ -171,7 +171,7 @@
 
             <div class="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
                 <img src="{{ asset('img/20180826_123127.JPG') }}" alt=""
-                     class="rounded-xl hidden sm:block transform -scale-x-100">
+                     class="rounded-xl transform -scale-x-100">
             </div>
         </div>
 
@@ -213,7 +213,7 @@
 
                 <div class="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0  mr-5">
                     <img src="{{ asset('img/20180820_170458.JPG') }}" alt=""
-                         class="rounded-xl hidden sm:block transform -scale-x-100">
+                         class="rounded-xl transform -scale-x-100">
                 </div>
             </div>
         </div>
