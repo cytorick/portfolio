@@ -6,8 +6,7 @@
     <div class="relative mx-auto max-w-xl px-6 lg:max-w-7xl lg:px-8">
         <div class="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div class="relative">
-                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Verscheiden ervaringen over de
-                    jaren</h3>
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Wie ben ik?</h3>
                 <p class="mt-3 text-lg text-gray-500">
                     Ik ben een vanuit nature enthousiast persoon. Ik bekijk elke taak met volle enthousiastme. Ergens
                     zou ik mijzelf misschien een avonturier noemen. Ik hou ervan om (nieuwe) dingen te ontdekken
@@ -150,8 +149,7 @@
 
         <div class="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div class="relative">
-                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Mijn schoolcarrière door de
-                    jaren heen</h3>
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">War hou ik nou van</h3>
                 <p class="mt-3 text-lg text-gray-500">
                     Ik ben geboren in het mooie Groningen. Vanaf kinds af aan ben ik altijd al bezig met computers. Van
                     familie helpen met mail instellen als kind tot gehele web-applicaties ontwikkelen.
@@ -179,7 +177,7 @@
             <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
                 <div class="lg:col-start-2">
                     <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                        Certificaten en talen die ik spreek
+                        Mijn talenkennis
                     </h3>
                     <p class="mt-3 text-lg text-gray-500">
                         Nederlands als moedertaal en Engels als (bijna) tweede taal. Van als kind geen woord Engels
