@@ -222,7 +222,6 @@
     <div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">De skills die ik onder de knie
             heb</p>
-        <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">Ik verzamel skills als Pokemon kaarten. Ik wil van alles een beetje kunnen. :)</p>
         <div class="mt-10">
             <div class="relative">
                 <dl class=" grid sm:grid-cols-12 grid-cols-3 gap-5">
