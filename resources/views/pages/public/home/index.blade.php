@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    @section('title', 'Home')
+    @section('title', 'Welkom!')
 
     @livewire('public.home.home-index')
 

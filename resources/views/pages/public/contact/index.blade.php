@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    @section('title', 'Contact')
+    @section('title', 'Bericht mij!')
 
     @livewire('public.contact.contact-index')
 

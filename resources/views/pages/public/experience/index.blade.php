@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    @section('title', 'Experience')
+    @section('title', 'Ervaring')
 
     @livewire('public.experience.experience-index')
 

@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    @section('title', 'About me')
+    @section('title', 'Over mij')
 
     @livewire('public.about.about-index')
 
