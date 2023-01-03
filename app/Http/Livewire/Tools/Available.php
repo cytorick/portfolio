@@ -10,7 +10,7 @@ class Available extends Component
 
     public function mount()
     {
-        $this->available = Setting::where('name', 'available')->get('active');
+        $this->available = Setting::where('name', 'available')->get();
     }
     public function render()
     {
