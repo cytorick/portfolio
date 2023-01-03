@@ -36,7 +36,7 @@
         gtag('config', 'G-THCCJHCYDC');
     </script>
 </head>
-<body class="selection:bg-green-500 min-h-screen">
+<body class="selection:bg-green-500 min-h-screen bg-gray-50">
 
 <div>
 
